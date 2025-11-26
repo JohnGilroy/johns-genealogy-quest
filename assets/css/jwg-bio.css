@@ -1,0 +1,393 @@
+/* jwg-bio.css
+ * Layout and typography for John’s Genealogy Quest biographies
+ */
+
+/* ------------------------------
+   Root & global defaults
+--------------------------------*/
+
+:root {
+  --jwg-blue:       #1e96ed;
+  --jwg-blue-dark:  #1774b5;
+  --jwg-yellow:     #f0c220;
+  --jwg-brown:      #965b1a;
+  --jwg-beige:      #fdf8ea;
+  --jwg-page-bg:    #fdf8ea;
+  --jwg-card-bg:    #ffffff;
+  --jwg-text:       #222222;
+  --jwg-text-muted: #555555;
+  --jwg-border-subtle: #e3dccb;
+
+  --jwg-radius-lg:  12px;
+  --jwg-radius-sm:  6px;
+
+  --jwg-shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.06);
+  --jwg-shadow-header: 0 2px 6px rgba(0, 0, 0, 0.12);
+
+  --jwg-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+                   -system-ui, sans-serif;
+  --jwg-font-serif: "Georgia", "Palatino Linotype", "Book Antiqua",
+                    "Times New Roman", serif;
+
+  --jwg-max-width: 72rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* 16px default */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--jwg-page-bg);
+  color: var(--jwg-text);
+  font-family: var(--jwg-font-serif);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Links */
+
+a {
+  color: var(--jwg-blue);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--jwg-blue-dark);
+  text-decoration: underline;
+}
+
+/* Utility */
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* ------------------------------
+   Site header / nav
+--------------------------------*/
+
+.site-header {
+  background: var(--jwg-blue);
+  color: #ffffff;
+  box-shadow: var(--jwg-shadow-header);
+}
+
+.site-header-inner {
+  max-width: var(--jwg-max-width);
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.site-title {
+  font-family: var(--jwg-font-sans);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.site-title:hover,
+.site-title:focus {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.site-nav a {
+  font-family: var(--jwg-font-sans);
+  font-size: 0.95rem;
+  margin-left: 1rem;
+  color: #eaf6ff;
+}
+
+.site-nav a:first-child {
+  margin-left: 0;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ------------------------------
+   Main layout
+--------------------------------*/
+
+.bio-page {
+  padding: 2rem 1rem 3rem;
+}
+
+.bio-article {
+  max-width: var(--jwg-max-width);
+  margin: 0 auto;
+  background: var(--jwg-card-bg);
+  border-radius: var(--jwg-radius-lg);
+  box-shadow: var(--jwg-shadow-soft);
+  padding: 2rem 1.75rem 2.5rem;
+}
+
+/* Tighter padding on small screens */
+@media (max-width: 600px) {
+  .bio-article {
+    padding: 1.5rem 1.25rem 2rem;
+  }
+}
+
+/* ------------------------------
+   Hero / summary block
+--------------------------------*/
+
+.bio-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 2.4fr) minmax(0, 1.3fr);
+  gap: 2rem;
+  border-bottom: 1px solid var(--jwg-border-subtle);
+  padding-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.bio-hero-main {
+  min-width: 0;
+}
+
+.bio-name {
+  font-family: var(--jwg-font-sans);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.bio-lifespan {
+  margin: 0.1rem 0 0.4rem;
+  font-family: var(--jwg-font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--jwg-text-muted);
+}
+
+.bio-tagline {
+  margin: 0.4rem 0 1rem;
+  font-family: var(--jwg-font-serif);
+  font-size: 1rem;
+  color: var(--jwg-brown);
+}
+
+/* Key facts summary */
+
+.bio-summary {
+  margin-top: 0.75rem;
+}
+
+.bio-facts {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.75rem 1.5rem;
+}
+
+.bio-fact {
+  display: flex;
+  flex-direction: column;
+}
+
+.bio-fact dt {
+  font-family: var(--jwg-font-sans);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--jwg-text-muted);
+  margin-bottom: 0.15rem;
+}
+
+.bio-fact dd {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+/* Hero media block (portrait placeholder) */
+
+.bio-hero-media {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.bio-portrait {
+  margin: 0;
+  text-align: center;
+}
+
+.bio-portrait img {
+  display: block;
+  max-width: 100%;
+  border-radius: var(--jwg-radius-lg);
+  box-shadow: var(--jwg-shadow-soft);
+}
+
+.bio-portrait figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--jwg-text-muted);
+}
+
+/* Stack hero layout on narrow screens */
+
+@media (max-width: 800px) {
+  .bio-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-hero-media {
+    justify-content: flex-start;
+  }
+}
+
+/* ------------------------------
+   Section headings & structure
+--------------------------------*/
+
+.bio-page h2 {
+  font-family: var(--jwg-font-sans);
+  font-size: 1.35rem;
+  margin: 2rem 0 0.75rem;
+  line-height: 1.3;
+  color: var(--jwg-brown);
+}
+
+.bio-page h3 {
+  font-family: var(--jwg-font-sans);
+  font-size: 1.15rem;
+  margin: 1.5rem 0 0.5rem;
+  line-height: 1.3;
+}
+
+/* Introduction */
+
+.bio-intro p {
+  margin: 0 0 1rem;
+}
+
+/* Author notes */
+
+.bio-author-notes {
+  margin-top: 1.5rem;
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--jwg-blue);
+  background: #f1f7ff;
+  font-size: 0.98rem;
+}
+
+/* ------------------------------
+   Life story blocks
+--------------------------------*/
+
+.bio-story {
+  margin-top: 1.5rem;
+}
+
+.bio-block {
+  border-radius: var(--jwg-radius-sm);
+  border: 1px solid var(--jwg-border-subtle);
+  padding: 1.25rem 1.25rem 1.1rem;
+  margin-bottom: 1.2rem;
+  background: #ffffff;
+}
+
+.bio-block-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.bio-block-title {
+  margin: 0;
+}
+
+.bio-block-years {
+  margin: 0;
+  font-family: var(--jwg-font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--jwg-text-muted);
+}
+
+.bio-block-body p {
+  margin: 0 0 0.85rem;
+}
+
+/* Slightly tighter paragraphs within blocks on small screens */
+@media (max-width: 600px) {
+  .bio-block {
+    padding: 1rem 0.9rem 0.9rem;
+  }
+}
+
+/* ------------------------------
+   Footer / small-print (if added)
+--------------------------------*/
+
+.bio-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--jwg-border-subtle);
+  font-size: 0.9rem;
+  color: var(--jwg-text-muted);
+}
+
+/* ------------------------------
+   Print-friendly tweaks
+--------------------------------*/
+
+@media print {
+  body {
+    background: #ffffff;
+    font-size: 11pt;
+  }
+
+  .site-header {
+    box-shadow: none;
+  }
+
+  .bio-page {
+    padding: 0;
+  }
+
+  .bio-article {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
