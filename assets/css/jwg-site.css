@@ -1,0 +1,358 @@
+/* jwg-site.css
+ * John’s Genealogy Quest — shared site-wide styling
+ * - Colours: from index.html palette
+ * - Fonts: system-ui stack (as per spotlight pages)
+ * - Shared “chrome”: header, nav, containers, cards, buttons
+ */
+
+:root {
+  /* Palette (from your existing index.html) */
+  --jwg-blue:       #1e96ed;
+  --jwg-blue-dark:  #1774b5;
+  --jwg-yellow:     #f0c220;
+  --jwg-brown:      #965b1a;
+
+  --jwg-page-bg:    #fdf8ea;  /* warm paper */
+  --jwg-card-bg:    #ffffff;
+  --jwg-text:       #222222;
+  --jwg-text-muted: #555555;
+  --jwg-border-subtle: #e3dccb;
+
+  --jwg-radius-sm: 8px;
+  --jwg-shadow-header: 0 2px 6px rgba(0, 0, 0, 0.12);
+
+
+  --jwg-radius-lg:  12px;
+  --jwg-shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.06);
+
+  /* Fonts (spotlight style) */
+  --jwg-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   sans-serif;
+
+  --jwg-font-serif: Georgia, "Times New Roman", serif;
+ 
+ /* Layout */
+  --jwg-max-width:  72rem;
+}
+
+/* --------------------------------
+   Base reset & global defaults
+--------------------------------- */
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--jwg-font-sans);
+  background: var(--jwg-page-bg);
+  color: var(--jwg-text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; }
+
+a {
+  color: var(--jwg-blue);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: var(--jwg-blue-dark);
+  text-decoration: underline;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--jwg-border-subtle);
+  margin: 1.25rem 0;
+}
+
+/* --------------------------------
+   Page framing (site-wide)
+--------------------------------- */
+
+.page-main {
+  background: var(--jwg-page-bg);
+  min-height: calc(100vh - 120px); /* header + footer allowance */
+  padding: 1rem 1rem 3rem;
+}
+
+.page-inner {
+  max-width: var(--jwg-max-width);
+  margin: 0 auto;
+}
+
+
+/* --------------------------------
+   Reusable card (home + hubs)
+--------------------------------- */
+
+.card {
+  background: var(--jwg-card-bg);
+  border-radius: var(--jwg-radius-lg);
+  box-shadow: var(--jwg-shadow-soft);
+  padding: 1.8rem 1.75rem 2rem;
+  border: 1px solid var(--jwg-border-subtle);
+}
+
+@media (max-width: 600px) {
+  .card { padding: 1.4rem 1.25rem 1.6rem; }
+}
+
+.card h1 {
+  font-family: var(--jwg-font-sans);
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+  color: var(--jwg-brown);
+}
+
+.card h2 {
+  font-family: var(--jwg-font-sans);
+  font-size: 1.15rem;
+  margin: 1.25rem 0 0.4rem;
+  color: var(--jwg-brown);
+}
+
+.card-lede {
+  font-style: italic;
+  margin: 0 0 1rem;
+}
+
+.card p { margin: 0 0 0.9rem; }
+
+/* --------------------------------
+   Reusable lists (home + hubs)
+--------------------------------- */
+
+.branch-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 1.3rem;
+}
+.branch-list li { margin: 0.25rem 0; }
+
+.branch-label {
+  font-weight: 600;
+  font-family: var(--jwg-font-sans);
+}
+
+.bio-list-heading {
+  font-family: var(--jwg-font-sans);
+  font-size: 1.05rem;
+  margin: 1.25rem 0 0.4rem;
+}
+
+.bio-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.bio-list li { margin: 0.25rem 0; }
+
+.small-note {
+  font-size: 0.9rem;
+  color: var(--jwg-text-muted);
+}
+
+/* Header wrap on tiny screens */
+@media (max-width: 480px) {
+  .site-header-inner { flex-wrap: wrap; }
+}
+
+/* --------------------------------
+   Standard footer (site-wide)
+--------------------------------- */
+
+.site-footer {
+  border-top: 1px solid var(--jwg-border-subtle);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.site-footer-inner {
+  max-width: var(--jwg-max-width);
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--jwg-text-muted);
+}
+
+.site-footer a {
+  color: var(--jwg-blue-dark);
+}
+
+/* --------------------------------
+   Shared layout helpers
+--------------------------------- */
+
+.home-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0rem 0 1rem;
+}
+
+.home-nav-btn {
+  display: inline-block;
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  font-weight: 650;
+  border: 1px solid var(--jwg-border-subtle);
+  background: #fff;
+  color: var(--jwg-blue-dark);
+  text-decoration: none;
+}
+
+.home-nav-btn:hover,
+.home-nav-btn:focus {
+  border-color: var(--jwg-blue);
+  text-decoration: none;
+}
+
+.nav-icon {
+  height: 18px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+
+.jwg-container {
+  max-width: var(--jwg-max-width);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.jwg-muted { color: var(--jwg-text-muted); }
+
+.jwg-card {
+  background: var(--jwg-card-bg);
+  border: 1px solid var(--jwg-border-subtle);
+  border-radius: var(--jwg-radius-lg);
+  box-shadow: var(--jwg-shadow-soft);
+}
+
+.jwg-card-pad { padding: 1.25rem; }
+
+.jwg-btn {
+  display: inline-block;
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  font-weight: 650;
+  border: 1px solid var(--jwg-border-subtle);
+  background: var(--jwg-card-bg);
+  color: var(--jwg-blue-dark);
+  text-decoration: none;
+}
+.jwg-btn:hover,
+.jwg-btn:focus {
+  border-color: var(--jwg-blue);
+  text-decoration: none;
+}
+
+.wikitree-logo {
+  height: 28px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+
+/* --------------------------------
+   Site header + nav (shared chrome)
+--------------------------------- */
+
+.site-header {
+  background: var(--jwg-blue);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.site-header-inner {
+  max-width: var(--jwg-max-width);
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* Optional logo variant (used by your home page) */
+.site-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  object-fit: cover;
+}
+
+.site-title-block { display: flex; flex-direction: column; gap: 0.1rem; }
+
+.site-title,
+.site-title:visited {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.site-subtitle {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+/* Simple nav (used by bio/spotlight templates) */
+.site-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-nav a,
+.site-nav a:visited {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 650;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: rgba(255, 255, 255, 0.14);
+  text-decoration: none;
+}
+
+/* --------------------------------
+   Page heading helpers (optional)
+--------------------------------- */
+
+.page-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.9rem;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.page-kicker {
+  margin: 0;
+  color: var(--jwg-text-muted);
+  font-size: 1.05rem;
+}

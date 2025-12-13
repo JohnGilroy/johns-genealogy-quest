@@ -2,36 +2,6 @@
  * Layout and typography for John’s Genealogy Quest biographies
  */
 
-/* ------------------------------
-   Root & global defaults
---------------------------------*/
-
-:root {
-  --jwg-blue:       #1e96ed;
-  --jwg-blue-dark:  #1774b5;
-  --jwg-yellow:     #f0c220;
-  --jwg-brown:      #965b1a;
-  --jwg-beige:      #fdf8ea;
-  --jwg-page-bg:    #fdf8ea;
-  --jwg-card-bg:    #ffffff;
-  --jwg-text:       #222222;
-  --jwg-text-muted: #555555;
-  --jwg-border-subtle: #e3dccb;
-
-  --jwg-radius-lg:  12px;
-  --jwg-radius-sm:  6px;
-
-  --jwg-shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.06);
-  --jwg-shadow-header: 0 2px 6px rgba(0, 0, 0, 0.12);
-
-  --jwg-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
-                   -system-ui, sans-serif;
-  --jwg-font-serif: "Georgia", "Palatino Linotype", "Book Antiqua",
-                    "Times New Roman", serif;
-
-  --jwg-max-width: 72rem;
-}
-
 *,
 *::before,
 *::after {
@@ -45,9 +15,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--jwg-page-bg);
-  color: var(--jwg-text);
-  font-family: var(--jwg-font-serif);
   font-size: 1.125rem; /* 18px */
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -79,57 +46,6 @@ a:focus {
   border: 0;
 }
 
-/* ------------------------------
-   Site header / nav
---------------------------------*/
-
-.site-header {
-  background: var(--jwg-blue);
-  color: #ffffff;
-  box-shadow: var(--jwg-shadow-header);
-}
-
-.site-header-inner {
-  max-width: var(--jwg-max-width);
-  margin: 0 auto;
-  padding: 0.75rem 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.site-title {
-  font-family: var(--jwg-font-sans);
-  font-weight: 600;
-  font-size: 1.2rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.site-title:hover,
-.site-title:focus {
-  text-decoration: none;
-  opacity: 0.9;
-}
-
-.site-nav a {
-  font-family: var(--jwg-font-sans);
-  font-size: 0.95rem;
-  margin-left: 1rem;
-  color: #eaf6ff;
-}
-
-.site-nav a:first-child {
-  margin-left: 0;
-}
-
-.site-nav a:hover,
-.site-nav a:focus {
-  color: #ffffff;
-  text-decoration: underline;
-}
 
 /* ------------------------------
    Main layout
@@ -347,18 +263,6 @@ a:focus {
   .bio-block {
     padding: 1rem 0.9rem 0.9rem;
   }
-}
-
-/* ------------------------------
-   Footer / small-print (if added)
---------------------------------*/
-
-.bio-footer {
-  margin-top: 2.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--jwg-border-subtle);
-  font-size: 0.9rem;
-  color: var(--jwg-text-muted);
 }
 
 /* ------------------------------

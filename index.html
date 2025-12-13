@@ -2,180 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>John’s Genealogy Quest · Family Biographies</title>
+  <title>John’s Genealogy Quest · Family History</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Simple site-wide styling; kept self-contained for GitHub Pages -->
-  <style>
-    :root {
-      --jwg-blue:       #1e96ed;
-      --jwg-blue-dark:  #1774b5;
-      --jwg-yellow:     #f0c220;
-      --jwg-brown:      #965b1a;
-      --jwg-page-bg:    #fdf8ea;
-      --jwg-card-bg:    #ffffff;
-      --jwg-text:       #222222;
-      --jwg-text-muted: #555555;
-      --jwg-border-subtle: #e3dccb;
-      --jwg-radius-lg:  12px;
-      --jwg-shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.06);
-      --jwg-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                       system-ui, -system-ui, sans-serif;
-      --jwg-font-serif: "Georgia", "Palatino Linotype", "Book Antiqua",
-                        "Times New Roman", serif;
-      --jwg-max-width:  72rem;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background: var(--jwg-page-bg);
-      color: var(--jwg-text);
-      font-family: var(--jwg-font-serif);
-      font-size: 1.05rem;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--jwg-blue);
-      text-decoration: none;
-    }
-    a:hover,
-    a:focus {
-      color: var(--jwg-blue-dark);
-      text-decoration: underline;
-    }
-
-    /* Header */
-
-    .site-header {
-      background: var(--jwg-blue);
-      color: #ffffff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-    }
-
-    .site-header-inner {
-      max-width: var(--jwg-max-width);
-      margin: 0 auto;
-      padding: 0.75rem 1.25rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem 1.25rem;
-    }
-
-    .site-logo {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .site-title-block {
-      display: flex;
-      flex-direction: column;
-      gap: 0.1rem;
-    }
-
-    .site-title {
-      font-family: var(--jwg-font-sans);
-      font-weight: 600;
-      font-size: 1.25rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin: 0;
-    }
-
-    .site-subtitle {
-      font-family: var(--jwg-font-sans);
-      font-size: 0.9rem;
-      margin: 0;
-      opacity: 0.9;
-    }
-
-    /* Main content */
-
-    .page-main {
-      padding: 2rem 1rem 3rem;
-    }
-
-    .page-inner {
-      max-width: var(--jwg-max-width);
-      margin: 0 auto;
-    }
-
-    .card {
-      background: var(--jwg-card-bg);
-      border-radius: var(--jwg-radius-lg);
-      box-shadow: var(--jwg-shadow-soft);
-      padding: 1.8rem 1.75rem 2rem;
-      border: 1px solid var(--jwg-border-subtle);
-    }
-
-    @media (max-width: 600px) {
-      .card {
-        padding: 1.4rem 1.25rem 1.6rem;
-      }
-    }
-
-    .card h1 {
-      font-family: var(--jwg-font-sans);
-      font-size: 1.8rem;
-      margin: 0 0 0.5rem;
-      color: var(--jwg-brown);
-    }
-
-    .card-lede {
-      font-style: italic;
-      margin: 0 0 1rem;
-    }
-
-    .card p {
-      margin: 0 0 0.9rem;
-    }
-
-    .branch-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 0.5rem 0 1.3rem;
-    }
-    .branch-list li {
-      margin: 0.25rem 0;
-    }
-    .branch-label {
-      font-weight: 600;
-      font-family: var(--jwg-font-sans);
-    }
-
-    .bio-list-heading {
-      font-family: var(--jwg-font-sans);
-      font-size: 1.05rem;
-      margin: 1.25rem 0 0.4rem;
-    }
-
-    .bio-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-    .bio-list li {
-      margin: 0.25rem 0;
-    }
-
-    .small-note {
-      font-size: 0.9rem;
-      color: var(--jwg-text-muted);
-    }
-
-    @media (max-width: 480px) {
-      .site-header-inner {
-        flex-wrap: wrap;
-      }
-    }
-  </style>
-</head>
+    <link rel="stylesheet" href="assets/css/jwg-site.css">
+ </head>
 <body>
   <header class="site-header">
     <div class="site-header-inner">
@@ -185,15 +15,33 @@
            class="site-logo">
       <div class="site-title-block">
         <h1 class="site-title">John’s Genealogy Quest</h1>
-        <p class="site-subtitle">Stories from the Gilroy, Wilson, Reynolds &amp; Laws families</p>
+        <p class="site-subtitle">Stories and highlights from the Gilroy, Wilson, Reynolds &amp; Laws family history</p>
       </div>
     </div>
   </header>
 
   <main class="page-main">
     <div class="page-inner">
+        <nav class="home-nav">
+             <a class="home-nav-btn" href="/spotlights/index.html">
+                <img src="/assets/img/icons/icon-spotlight.svg" class="nav-icon" alt="">
+              Spotlights
+            </a>
+            <a class="home-nav-btn" href="/bios/index.html">
+                <img src="/assets/img/icons/icon-bio.svg" class="nav-icon" alt="">
+              Biographies
+            </a>
+             <a class="home-nav-btn" href="https://www.wikitree.com/wiki/Gilroy-480#Ancestors"
+               target="_blank" rel="noopener">
+              <img src="assets/img/wikitree-logo.png"
+                   alt="WikiTree"
+                   class="nav-icon">
+              Family Tree
+            </a>
+    </nav>
+
       <article class="card">
-        <h1>Family Biographies</h1>
+        <h1>Family Background</h1>
         <p class="card-lede">
           Bankruptcy, bigamy, extramarital affairs, riots, forgery, imprisonment and deportation – as well as achievement, prosperity and artistic talent. Welcome to our family tree.
         </p>
@@ -217,11 +65,11 @@
             Agricultural labourers from Gloucestershire and Wiltshire, including family members transported to Australia after early 19th-century protests against agricultural mechanisation.
           </li>
         </ul>
-        <p class="small-note">
-          The full tree, including living relatives, is accessible on our private TNG site for registered family members.  This public site focuses on narrative biographies of ancestors.
-        </p>
+<p class="small-note">
+  Living individuals are redacted on this public site. For our collaborative family tree (and to explore connections), please visit our family tree on WikiTree.
+</p>
 
-        <h2 class="bio-list-heading">Available biographies</h2>
+        <h2 class="bio-list-heading">Recent biographies</h2>
         <ul class="bio-list">
           <li><a href="bios/I00009.html">George Blacklaw (1821–1899)</a></li>
           <!-- Future biographies can be added here -->
@@ -229,5 +77,16 @@
       </article>
     </div>
   </main>
+  <footer class="site-footer">
+  <div class="site-footer-inner">
+    <p>Created with the JWG Biography Production pipeline · Data from John’s research  · Design JWG and ChatGPT</p>
+    <p>
+      <a href="index.html">Home</a> ·
+      <a href="bios/index.html">Biographies</a> ·
+      <a href="spotlights/index.html">Spotlights</a>
+    </p>
+  </div>
+</footer>
+
 </body>
 </html>

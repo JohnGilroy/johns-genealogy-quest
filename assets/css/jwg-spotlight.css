@@ -1,0 +1,160 @@
+/* jwg-spotlight.css
+ * Spotlight page layout (inherits palette + fonts from jwg-site.css)
+ */
+
+body.spotlight {
+  margin: 0;
+  padding: 0;
+  background: var(--jwg-page-bg);
+  color: var(--jwg-text);
+}
+
+.spotlight-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.spotlight-hero {
+  background: var(--jwg-blue-dark);
+  color: #fff;
+  border-radius: var(--jwg-radius-lg);
+  padding: 20px 24px 24px;
+  margin: 20px 0 20px; /* allow for the site header */
+  box-shadow: var(--jwg-shadow-soft);
+}
+
+.spotlight-hero-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.spotlight-hero h1 {
+  margin: 6px 0 4px;
+  font-size: 1.8rem;
+}
+
+.spotlight-hero-metric {
+  margin-top: 10px;
+}
+
+.hero-metric-value {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  line-height: 1.1;
+}
+
+.hero-metric-caption {
+  margin: 2px 0 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+
+.spotlight-hero-lifespan {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.92;
+}
+
+.spotlight-hero-relationship {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.spotlight-main {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+  gap: 20px;
+}
+
+.spotlight-main > aside:empty {
+  display: none;
+}
+
+
+@media (max-width: 800px) {
+  .spotlight-main { grid-template-columns: 1fr; }
+}
+
+.spotlight-card {
+  background: var(--jwg-card-bg);
+  border-radius: var(--jwg-radius-lg);
+  padding: 16px 18px 18px;
+  box-shadow: var(--jwg-shadow-soft);
+  border: 1px solid var(--jwg-border-subtle);
+}
+
+.spotlight-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  color: var(--jwg-brown);
+}
+
+.spotlight-card p {
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+.spotlight-facts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.spotlight-facts-list li {
+  margin: 4px 0;
+  padding-left: 0;
+}
+
+.spotlight-facts-label {
+  font-weight: 700;
+}
+
+.spotlight-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.spotlight-timeline li {
+  margin: 6px 0;
+}
+
+/* Hide the sidebar completely if there are no rendered cards */
+.spotlight-main > aside:empty { display: none; }
+
+/* Oldest-ancestor layout: two equal columns for In Brief + Life & Times */
+.layout-oldest .spotlight-main {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+/* Optional: allow a wider layout on big screens */
+.layout-oldest .spotlight-wrap {
+  max-width: 1100px;
+}
+
+.spotlight-main > section {
+  min-width: 0;
+}
+
+/* Variant: oldest-style layout (two equal columns) */
+.layout-oldest .spotlight-main {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+/* Ensure the two main cards sit side-by-side and span the grid neatly */
+.layout-oldest .spotlight-main > section {
+  min-width: 0;
+}
+
+/* If aside is empty (as per your new conditional cards), hide it */
+.spotlight-main > aside:empty { display: none; }
