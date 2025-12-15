@@ -71,6 +71,16 @@ a:focus {
   }
 }
 
+.bio-actions {
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
 /* ------------------------------
    Hero / summary block
 --------------------------------*/

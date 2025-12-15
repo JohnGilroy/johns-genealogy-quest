@@ -263,6 +263,10 @@ hr {
   text-decoration: none;
 }
 
+.jwg-btn-wikitree {
+  border: 1px solid rgba(255,255,255,.25);
+}
+
 .wikitree-logo {
   height: 28px;
   width: auto;
