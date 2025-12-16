@@ -91,6 +91,7 @@
     "spotlights": [
         {
             "type": "oldest_ancestor",
+            "catalog_key": "longest_lived",
             "label": "Oldest ancestors",
             "category": "Longevity",
             "mode": "pipeline",
