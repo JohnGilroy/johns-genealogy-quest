@@ -87,6 +87,14 @@ hr {
   margin: 0 auto;
 }
 
+.spot-cat-icon{
+  width: 28px;
+  height: 28px;
+  display:block;
+  margin-top: .15rem;
+  opacity: .9;
+}
+
 
 /* --------------------------------
    Reusable card (home + hubs)
@@ -359,4 +367,126 @@ hr {
   margin: 0;
   color: var(--jwg-text-muted);
   font-size: 1.05rem;
+}
+
+.branch-group { margin: 1rem 0 1.25rem; }
+.branch-summary { cursor: pointer; display:flex; gap:.75rem; align-items: baseline; color: var(--jwg-brown); }
+.branch-title { font-weight: 700; }
+.branch-desc { opacity: .8; font-size: 0.95rem;}
+.branch-count { margin-left:auto; opacity:.7;}
+
+.branch-summary .branch-desc,
+.branch-summary .branch-count{
+  color: var(--jwg-muted);
+}
+
+.branch-group{
+  background: var(--jwg-card-bg);
+  border: 1px solid var(--jwg-border-subtle);
+  border-radius: var(--jwg-radius-lg);
+  box-shadow: var(--jwg-shadow-soft);
+  padding: .65rem .75rem .85rem;
+}
+
+.branch-group .cards-grid{
+  margin-top: .75rem;
+}
+
+.branch-group .bio-card{
+  background: transparent;              /* let the group provide the panel */
+  box-shadow: none;
+  border: 1px solid var(--jwg-border-subtle);
+}
+
+
+
+.bio-card-row { display:flex; gap: 1rem; }
+.bio-card-row-2{
+  margin-top: .25rem;       /* was .6rem */
+  padding-top: .35rem;
+  border-top: 1px solid var(--jwg-border-subtle);
+}
+
+.bio-card-rel{
+  opacity: .85;
+  font-size: .95rem;
+}
+
+.bio-card-row-1{
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bio-card-main{
+  display:flex;
+  align-items: baseline;
+  gap: .75rem;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.bio-card-title{
+  margin: 0;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bio-card-meta{
+  margin: 0;
+  opacity: .85;
+  font-size: .95rem;
+  white-space: nowrap;
+}
+
+.bio-card-side{
+  display:flex;
+  gap: .5rem;
+  align-items: center;
+  flex-wrap: nowrap; /* key: don’t stack badge/button */
+  justify-content: flex-end;
+}
+
+
+.badge { display:inline-block; padding:.2rem .55rem; border-radius:999px; font-size:.8rem; font-weight:700; }
+.badge-country { border: 1px solid rgba(255,255,255,.25); }
+.badge-flag{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .18rem .5rem;
+  line-height: 1;
+}
+
+.badge-flag img{
+  display: block;
+  width: 22px;   /* explicit size avoids line-height/auto-height weirdness */
+  height: 14px;  /* tweak to taste */
+}
+
+/* Grid used by manifest index pages */
+.cards-grid{
+  display:grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+/* Page header used by manifest index pages */
+.page-header h1{
+  margin: 0 0 .35rem 0;
+  font-size: 1.9rem;
+  font-weight: 900;
+  letter-spacing: .2px;
+  color: var(--jwg-brown);
+}
+.page-header p{ margin: 0 0 1rem; }
+
+/* Bio index cards should match site card styling */
+.bio-card{
+  background: var(--jwg-card-bg);
+  border: 1px solid var(--jwg-border-subtle);
+  border-radius: var(--jwg-radius-lg);
+  box-shadow: var(--jwg-shadow-soft);
+  padding: .75rem .85rem;   /* was 1rem */
 }
