@@ -3,91 +3,100 @@
   const qs = new URLSearchParams(location.search);
   if (qs.get('kiosk') !== '1') return;
 
-// --- Fullscreen keep-alive (ChromeOS friendly) ---
-function ensureFullscreen() {
-  const el = document.documentElement;
-
-  if (!document.fullscreenElement &&
-      el.requestFullscreen) {
-    el.requestFullscreen().catch(() => {
-      /* ChromeOS may block occasionally; retry later */
-    });
-  }
-}
-
-// Try immediately and again shortly after load
-window.addEventListener('load', () => {
-  setTimeout(ensureFullscreen, 300);
-  setTimeout(ensureFullscreen, 600);
-});
-
-// Also re-assert after navigation-triggered scroll completes
-document.addEventListener('visibilitychange', () => {
-  if (!document.hidden) {
-    setTimeout(ensureFullscreen, 100);
-  }
-});
-
-
   const playlist = readJson('jwg_kiosk_playlist', []);
   const config   = readJson('jwg_kiosk_config', {});
   const idxSaved = parseInt(localStorage.getItem('jwg_kiosk_idx') || '0', 10);
 
   if (!Array.isArray(playlist) || playlist.length === 0) return;
 
-  const speedPxPerSec = num(config.speed, 80);
+  // --- Behaviour knobs ---
+  // “Lock speed to viewport height”: seconds per screenful (not px/sec).
+  // You can override by setting in jwg_kiosk_config, or via kiosk.html query later if you like.
+  const secondsPerScreen = num(config.secondsPerScreen, 10); // e.g. 8–14 feels good
+
   const dwellMs       = num(config.dwell, 10000);
   const topPauseMs    = num(config.toppause, 700);
   const bottomPauseMs = num(config.bottompause, 700);
   const minScrollPx   = num(config.minscroll, 80);
 
+  // Fade timings (ms)
+  const fadeMs        = num(config.fadeMs, 350);     // duration of fade animation
+  const fadeHoldMs    = num(config.fadeHoldMs, 60);  // tiny hold at full black before navigation
+
   // Determine current page index based on pathname
   const current = normalisePath(location.pathname);
   let idx = playlist.findIndex(p => p === current);
   if (idx < 0) idx = (Number.isFinite(idxSaved) ? idxSaved : 0);
-
-  // Ensure stored index is aligned with what we're showing
   localStorage.setItem('jwg_kiosk_idx', String(idx));
 
-  // Optional: pause toggle (space)
-let paused = false;
+  // --- Hidden exit combo: Ctrl + Alt + Shift + X ---
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.altKey && e.shiftKey && (e.code === 'KeyX')) {
+      e.preventDefault();
+      exitKiosk();
+      return;
+    }
+  }, { passive: false });
 
-// Toggle pause with "P" only (keeps Chromebook fullscreen key untouched)
-document.addEventListener('keydown', (e) => {
-  if (e.code === 'KeyP') {
-    paused = !paused;
+  function exitKiosk() {
+    try {
+      localStorage.removeItem('jwg_kiosk_playlist');
+      localStorage.removeItem('jwg_kiosk_config');
+      localStorage.removeItem('jwg_kiosk_idx');
+    } catch {}
+    // Go back to normal home page
+    location.href = '/index.html';
   }
-});
 
+  // --- Pause toggle: P only (as per your stabilised setup) ---
+  let paused = false;
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'KeyP') paused = !paused;
+  });
 
-  // Wait for full load + a small settle
+  // --- Fade overlay ---
+  const veil = ensureVeil();
+  // Start faded-in very briefly during load, then fade out after load settles
+  veil.style.opacity = '1';
   window.addEventListener('load', () => {
+    setTimeout(() => fadeTo(0, fadeMs), 120);
     setTimeout(run, 250);
   });
 
   async function run() {
     await pauseWait(topPauseMs);
 
-    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const maxScroll = Math.max(
+      0,
+      document.documentElement.scrollHeight - window.innerHeight
+    );
 
+    // If not meaningfully scrollable, just dwell
     if (maxScroll < minScrollPx) {
       await pauseWait(dwellMs);
       return goNext();
     }
 
-    // Scroll from top to bottom at constant speed
+    // Scroll at “seconds per screenful”
     window.scrollTo(0, 0);
 
-    const durationMs = (maxScroll / Math.max(10, speedPxPerSec)) * 1000;
+    const viewportH = Math.max(1, window.innerHeight || 1);
+    const pxPerSec  = viewportH / Math.max(1, secondsPerScreen);
+    const durationMs = (maxScroll / Math.max(10, pxPerSec)) * 1000;
+
     await animateScroll(0, maxScroll, durationMs);
 
     await pauseWait(bottomPauseMs);
     goNext();
   }
 
-  function goNext() {
+  async function goNext() {
     const nextIdx = (idx + 1) % playlist.length;
     localStorage.setItem('jwg_kiosk_idx', String(nextIdx));
+
+    // Fade in to mask navigation
+    await fadeTo(1, fadeMs);
+    await pauseWait(fadeHoldMs);
 
     const nextUrl = addKioskParam(playlist[nextIdx]);
     location.href = nextUrl;
@@ -102,6 +111,7 @@ document.addEventListener('keydown', (e) => {
   function animateScroll(from, to, durationMs) {
     return new Promise((resolve) => {
       const t0 = performance.now();
+
       function step(now) {
         if (paused) return requestAnimationFrame(step);
 
@@ -112,6 +122,7 @@ document.addEventListener('keydown', (e) => {
         if (t >= 1 || Math.abs(window.scrollY - to) < 2) return resolve();
         requestAnimationFrame(step);
       }
+
       requestAnimationFrame(step);
     });
   }
@@ -136,10 +147,33 @@ document.addEventListener('keydown', (e) => {
   }
 
   function normalisePath(pathname) {
-    // convert "/bios/a.html" -> "bios/a.html"
     let p = (pathname || '').replace(/\\/g, '/');
     if (p.startsWith('/')) p = p.slice(1);
     if (p === '') p = 'index.html';
     return p;
+  }
+
+  function ensureVeil() {
+    let el = document.getElementById('jwg-kiosk-veil');
+    if (el) return el;
+
+    el = document.createElement('div');
+    el.id = 'jwg-kiosk-veil';
+    el.style.position = 'fixed';
+    el.style.inset = '0';
+    el.style.background = '#000';
+    el.style.pointerEvents = 'none';
+    el.style.opacity = '0';
+    el.style.transition = `opacity ${fadeMs}ms ease`;
+    el.style.zIndex = '2147483647';
+    document.documentElement.appendChild(el);
+    return el;
+  }
+
+  function fadeTo(opacity, ms) {
+    // Ensure transition matches current ms if changed
+    veil.style.transition = `opacity ${ms}ms ease`;
+    veil.style.opacity = String(opacity);
+    return sleep(ms);
   }
 })();
