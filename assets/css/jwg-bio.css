@@ -275,6 +275,25 @@ a:focus {
   }
 }
 
+.bio-citations-toggle > summary {
+  cursor: pointer;
+  list-style: none;
+}
+.bio-citations-toggle > summary::-webkit-details-marker {
+  display: none;
+}
+.bio-citations-toggle > summary h2 {
+  display: inline;
+  margin: 0;
+}
+.bio-citations-toggle > summary::after {
+  content: " ▾";
+}
+.bio-citations-toggle[open] > summary::after {
+  content: " ▴";
+}
+
+
 /* ------------------------------
    Print-friendly tweaks
 --------------------------------*/

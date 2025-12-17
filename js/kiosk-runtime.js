@@ -3,6 +3,14 @@
   const qs = new URLSearchParams(location.search);
   if (qs.get('kiosk') !== '1') return;
 
+// Ensure kiosk-collapsible sections start collapsed
+document.addEventListener('DOMContentLoaded', () => {
+  document
+    .querySelectorAll('details[data-kiosk-collapse="1"]')
+    .forEach(d => d.open = false);
+});
+
+
   const playlist = readJson('jwg_kiosk_playlist', []);
   const config   = readJson('jwg_kiosk_config', {});
   const idxSaved = parseInt(localStorage.getItem('jwg_kiosk_idx') || '0', 10);
