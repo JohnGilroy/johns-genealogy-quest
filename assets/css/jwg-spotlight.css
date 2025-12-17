@@ -24,15 +24,69 @@ body.spotlight {
   box-shadow: var(--jwg-shadow-soft);
 }
 
-.spotlight-hero-label {
-  display: inline-block;
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 4px 10px;
-  border-radius: 999px;
+/* --------------------------------
+   Spotlight hero: top row (label + WikiTree button)
+   Single authoritative block to avoid CSS clashes.
+--------------------------------- */
+
+.spotlight-hero-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-bottom: .75rem;
 }
+
+/* Label pill: readable on dark hero + nicer casing */
+.spotlight-hero-label{
+  display: inline-flex;
+  align-items: center;
+  padding: .45rem .7rem;
+  border-radius: 999px;
+
+  font-weight: 700;
+  letter-spacing: .01em;
+
+  /* Presentational casing so 'oldest known ancestor' looks finished */
+  text-transform: capitalize;
+
+  /* Light pill on dark blue hero */
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.22);
+  color: #fff;
+}
+
+/* Keep the action container simple */
+.spotlight-hero-action{
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* WikiTree button: force contrast on dark hero, do not inherit site button colours */
+.spotlight-hero-action .jwg-btn.jwg-btn-wikitree{
+  display: inline-flex;
+  align-items: center;
+  padding: .45rem .7rem;
+  border-radius: 999px;
+
+  font-weight: 700;
+  letter-spacing: .01em;
+  text-transform: none;
+
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.22);
+  color: #fff;
+  text-decoration: none;
+}
+
+.spotlight-hero-action .jwg-btn.jwg-btn-wikitree:hover,
+.spotlight-hero-action .jwg-btn.jwg-btn-wikitree:focus{
+  background: rgba(255,255,255,.22);
+  border-color: rgba(255,255,255,.30);
+  text-decoration: none;
+}
+
 
 .spotlight-hero h1 {
   margin: 6px 0 4px;
@@ -129,13 +183,6 @@ body.spotlight {
   margin: 6px 0;
 }
 
-/* Hide the sidebar completely if there are no rendered cards */
-.spotlight-main > aside:empty { display: none; }
-
-/* Oldest-ancestor layout: two equal columns for In Brief + Life & Times */
-.layout-oldest .spotlight-main {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-}
 
 /* Optional: allow a wider layout on big screens */
 .layout-oldest .spotlight-wrap {
@@ -156,5 +203,103 @@ body.spotlight {
   min-width: 0;
 }
 
-/* If aside is empty (as per your new conditional cards), hide it */
-.spotlight-main > aside:empty { display: none; }
+
+/* --------------------------------
+   Spotlight index catalogue (spotlights/index.html)
+   Consolidated + de-duplicated.
+--------------------------------- */
+
+/* Grid: icon gutter + main + badge */
+.spot-cat-grid{
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  column-gap: .75rem;
+  align-items: start;
+}
+
+.spot-cat-icon-col{
+  width: 48px;
+}
+
+/* Inline SVG icon sizing */
+.spot-cat-icon{
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin-top: .15rem;
+  opacity: .9;
+}
+
+/* Spacer for categories with no icon (keeps alignment consistent) */
+.spot-cat-icon-spacer{
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+/* Main text block */
+.spot-cat-title{ margin: 0; }
+
+.spot-cat-desc{ margin: .25rem 0 0; }
+
+.spot-cat-coming{ margin-top: .75rem; }
+
+.spot-cat-items{ margin-top: .75rem; }
+
+/* Badge column aligns to top-right */
+.spot-cat-badge{ justify-self: end; }
+
+/* Group rhythm + subtle panel feel */
+.spot-cat-group{
+  margin-top: 1rem;
+  padding: .75rem .75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.06);
+  opacity: .92;
+}
+
+.spot-cat-group[data-status="active"],
+.spot-cat-group[data-status="curated"]{
+  opacity: 1;
+}
+
+/* Interaction polish */
+.spot-cat-group:hover,
+.spot-cat-group:focus-within{
+  background: rgba(0,0,0,.02);
+  border-color: rgba(0,0,0,.14);
+}
+
+.spot-cat-group:hover .spot-cat-icon,
+.spot-cat-group:focus-within .spot-cat-icon{
+  opacity: .95;
+}
+
+/* Link list */
+.spotlight-link-list{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.spotlight-link-item{
+  padding: .55rem 0;
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+
+.spotlight-link-item:first-child{
+  border-top: 0;
+  padding-top: 0;
+}
+
+.spotlight-link{
+  display: inline-block;
+  padding: .1rem 0;
+  text-decoration: none;
+}
+
+.spotlight-link:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .15em;
+}

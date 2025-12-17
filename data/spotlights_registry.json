@@ -6,7 +6,7 @@
             "title": "In The News",
             "description": "A selection of the more salacious or entertaining press articles featuring our forefathers.",
             "status": "planned",
-            "icon": "",
+            "icon": "assets/img/icons/phosphor/newspaper.svg",
             "sort": 0
         },
         {
@@ -14,7 +14,7 @@
             "title": "Most Children",
             "description": "Our ancestor with the most children",
             "status": "planned",
-            "icon": "",
+            "icon": "assets/img/icons/phosphor/baby.svg",
             "sort": 0
         },
         {
@@ -22,15 +22,15 @@
             "title": "Most Relationships",
             "description": "Our ancestor with the most relationships.",
             "status": "planned",
-            "icon": "",
+            "icon": "assets/img/icons/phosphor/heart-straight.svg",
             "sort": 0
         },
         {
             "key": "places",
-            "title": "Notable place where our ancestors lived",
+            "title": "Notable Places",
             "description": "Some of the quirky, disreputable, or famous locations where one or more of our ancestors lived",
             "status": "planned",
-            "icon": "",
+            "icon": "assets/img/icons/phosphor/map-pin.svg",
             "sort": 0
         },
         {
@@ -38,7 +38,7 @@
             "title": "Star Signs",
             "description": "A light-hearted grouping of our ancestors by star sign.",
             "status": "planned",
-            "icon": "",
+            "icon": "assets/img/icons/phosphor/star.svg",
             "sort": 0
         },
         {
@@ -46,7 +46,7 @@
             "title": "Strange Deaths",
             "description": "Some of the most unusual causes of death or death locations.",
             "status": "planned",
-            "icon": "",
+            "icon": "assets/img/icons/phosphor/skull.svg",
             "sort": 0
         },
         {
@@ -54,7 +54,7 @@
             "title": "The Royal Connection",
             "description": "Our links to Edward Plantagenet.",
             "status": "planned",
-            "icon": "",
+            "icon": "assets/img/icons/phosphor/crown.svg",
             "sort": 0
         },
         {
@@ -62,7 +62,7 @@
             "title": "They Were There",
             "description": "Some of the historical events in which an ancestor was a verified participant.",
             "status": "planned",
-            "icon": "",
+            "icon": "assets/img/icons/phosphor/flag-banner.svg",
             "sort": 0
         },
         {
@@ -70,15 +70,15 @@
             "title": "Wrong Side of The Law",
             "description": "A collection of criminal acts committed by our forefathers.",
             "status": "planned",
-            "icon": "",
+            "icon": "assets/img/icons/phosphor/gavel.svg",
             "sort": 0
         },
         {
             "key": "longest_lived",
             "title": "Longest-lived ancestors",
             "description": "Blood relations only. Overall male and female, plus by-branch male and female.",
-            "status": "planned",
-            "icon": "assets/img/icons/clock.svg",
+            "status": "implemented",
+            "icon": "assets/img/icons/phosphor/hourglass.svg",
             "sort": 10
         }
     ],
