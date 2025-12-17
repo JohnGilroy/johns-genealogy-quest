@@ -25,6 +25,11 @@
 </div>
 
 <script>
+  if (location.search.includes('kiosk=1') === false &&
+      localStorage.getItem('jwg_kiosk_playlist')) {
+    location.replace('/kiosk.html');
+  }
+
 (async () => {
   const qs = new URLSearchParams(location.search);
 

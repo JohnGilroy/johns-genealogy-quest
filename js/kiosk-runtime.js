@@ -3,6 +3,32 @@
   const qs = new URLSearchParams(location.search);
   if (qs.get('kiosk') !== '1') return;
 
+// --- Fullscreen keep-alive (ChromeOS friendly) ---
+function ensureFullscreen() {
+  const el = document.documentElement;
+
+  if (!document.fullscreenElement &&
+      el.requestFullscreen) {
+    el.requestFullscreen().catch(() => {
+      /* ChromeOS may block occasionally; retry later */
+    });
+  }
+}
+
+// Try immediately and again shortly after load
+window.addEventListener('load', () => {
+  setTimeout(ensureFullscreen, 300);
+  setTimeout(ensureFullscreen, 600);
+});
+
+// Also re-assert after navigation-triggered scroll completes
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) {
+    setTimeout(ensureFullscreen, 100);
+  }
+});
+
+
   const playlist = readJson('jwg_kiosk_playlist', []);
   const config   = readJson('jwg_kiosk_config', {});
   const idxSaved = parseInt(localStorage.getItem('jwg_kiosk_idx') || '0', 10);
