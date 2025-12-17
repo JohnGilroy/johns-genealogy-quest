@@ -50,10 +50,15 @@ document.addEventListener('visibilitychange', () => {
   localStorage.setItem('jwg_kiosk_idx', String(idx));
 
   // Optional: pause toggle (space)
-  let paused = false;
-  document.addEventListener('keydown', (e) => {
-    if (e.code === 'Space') { e.preventDefault(); paused = !paused; }
-  }, { passive: false });
+let paused = false;
+
+// Toggle pause with "P" only (keeps Chromebook fullscreen key untouched)
+document.addEventListener('keydown', (e) => {
+  if (e.code === 'KeyP') {
+    paused = !paused;
+  }
+});
+
 
   // Wait for full load + a small settle
   window.addEventListener('load', () => {
