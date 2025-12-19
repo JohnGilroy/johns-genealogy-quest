@@ -44,16 +44,21 @@
     ],
     "spotlights": [
         {
-            "catalog_key": "longest_lived",
             "type": "oldest_ancestor",
-            "scope": "overall",
-            "scope_key": "",
-            "personID": "I00421",
-            "name": "Marion Gray Whitelaw",
+            "catalog_key": "longest_lived",
+            "division_key": "overall",
             "title": "oldest known ancestor",
+            "href": "spotlights/longevity/oldest_overall.html",
             "metric": "100 years, 6 months, 21 days",
-            "href": "spotlights/oldest/overall/I00421.html",
+            "name": "Marion Gray Whitelaw",
             "wikitree_url": "https://www.wikitree.com/wiki/Whitelaw-300"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "press_media",
+            "division_key": "press_media_all",
+            "title": "Press Media 2473",
+            "href": "spotlights/press/press_media_2473.html"
         }
     ],
     "updated_at": "2025-12-17T15:26:14+00:00"
