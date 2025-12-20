@@ -9,6 +9,7 @@
             "icon": "assets/img/icons/phosphor/newspaper.svg",
             "sort": 0,
             "layout_hint": "image-led",
+            "html_template": "web-templates/template_longevity.html",
             "divisions": [
                 {
                     "key": "press_media_all",
@@ -113,13 +114,14 @@
             "divisions": []
         },
         {
-            "key": "longest_lived",
+            "key": "longevity",
             "title": "Longest-lived ancestors",
             "description": "Blood relations only. Overall male and female, plus by-branch male and female.",
             "status": "implemented",
             "icon": "assets/img/icons/phosphor/hourglass.svg",
             "sort": 10,
             "layout_hint": "stat-led",
+            "html_template": "web-templates/template_longevity.html",
             "divisions": [
                 {
                     "key": "overall",
@@ -129,7 +131,7 @@
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 0,
                     "generator": {
-                        "script": "app/spotlights/longevity/OldestAncestors.php",
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": ""
@@ -149,7 +151,7 @@
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
                     "generator": {
-                        "script": "app/spotlights/longevity/OldestAncestors.php",
+                        "script": "app/spotlights/LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": "Gilroy"

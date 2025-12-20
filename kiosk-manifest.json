@@ -1,7 +1,8 @@
 {
     "home": "index.html",
     "pages": [
-        "spotlights/longevity/oldest_overall.html",
+        "spotlights/longevity/oldest_ancestor_I00421.html",
+        "spotlights/longevity/oldest_ancestor_I2.html",
         "spotlights/press/press_media_2473.html",
         "bios/I00009.html"
     ]

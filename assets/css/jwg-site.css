@@ -16,6 +16,7 @@
   --jwg-card-bg:    #ffffff;
   --jwg-text:       #222222;
   --jwg-text-muted: #555555;
+  --jwg-muted:      #555555; /* alias for --jwg-text-muted */
   --jwg-border-subtle: #e3dccb;
 
   --jwg-radius-sm: 8px;
@@ -30,6 +31,7 @@
                    sans-serif;
 
   --jwg-font-serif: Georgia, "Times New Roman", serif;
+
  
  /* Layout */
   --jwg-max-width:  72rem;
@@ -263,8 +265,32 @@ hr {
   text-decoration: none;
 }
 
-.jwg-btn-wikitree {
-  border: 1px solid rgba(255,255,255,.25);
+/* Optional variant used on dark backgrounds (hero areas) */
+.jwg-btn--on-dark {
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.16);
+  color: #fff;
+}
+
+.jwg-btn--on-dark:hover,
+.jwg-btn--on-dark:focus {
+  background: rgba(255,255,255,.22);
+  border-color: rgba(255,255,255,.30);
+  text-decoration: none;
+}
+
+/* Button variant for dark backgrounds (hero areas) */
+.jwg-btn--on-dark {
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.16);
+  color: #fff;
+}
+
+.jwg-btn--on-dark:hover,
+.jwg-btn--on-dark:focus {
+  background: rgba(255,255,255,.22);
+  border-color: rgba(255,255,255,.30);
+  text-decoration: none;
 }
 
 .wikitree-logo {
