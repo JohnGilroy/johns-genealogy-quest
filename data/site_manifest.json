@@ -46,16 +46,46 @@
         {
             "type": "spotlight",
             "catalog_key": "longevity",
+            "division_key": "gilroy",
+            "title": "Oldest Gilroy I00016",
+            "href": "spotlights/longevity/gilroy/oldest_gilroy_I00016.html"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "longevity",
+            "division_key": "gilroy",
+            "title": "Oldest Gilroy I00421",
+            "href": "spotlights/longevity/gilroy/oldest_gilroy_I00421.html"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "longevity",
             "division_key": "overall",
             "title": "Oldest Ancestor I00421",
-            "href": "spotlights/longevity/oldest_ancestor_I00421.html"
+            "href": "spotlights/longevity/tree/oldest_ancestor_I00421.html",
+            "link_title": "Marion Gray Whitelaw"
         },
         {
             "type": "spotlight",
             "catalog_key": "longevity",
             "division_key": "overall",
             "title": "Oldest Ancestor I2",
-            "href": "spotlights/longevity/oldest_ancestor_I2.html"
+            "href": "spotlights/longevity/tree/oldest_ancestor_I2.html",
+            "link_title": "Ernest William Anthony Reynolds"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "longevity",
+            "division_key": "wilson",
+            "title": "Oldest Wilson I00512",
+            "href": "spotlights/longevity/wilson/oldest_wilson_I00512.html"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "longevity",
+            "division_key": "wilson",
+            "title": "Oldest Wilson I00545",
+            "href": "spotlights/longevity/wilson/oldest_wilson_I00545.html"
         },
         {
             "type": "spotlight",

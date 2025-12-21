@@ -5,10 +5,11 @@
             "key": "press_media",
             "title": "In The News",
             "description": "A selection of the more salacious or entertaining press articles featuring our forefathers.",
-            "status": "planned",
+            "status": "implemented",
             "icon": "assets/img/icons/phosphor/newspaper.svg",
             "sort": 0,
             "layout_hint": "image-led",
+            "link_label": "",
             "html_template": "web-templates/template_longevity.html",
             "divisions": [
                 {
@@ -121,6 +122,7 @@
             "icon": "assets/img/icons/phosphor/hourglass.svg",
             "sort": 10,
             "layout_hint": "stat-led",
+            "link_label": "name",
             "html_template": "web-templates/template_longevity.html",
             "divisions": [
                 {
@@ -138,8 +140,8 @@
                         }
                     },
                     "output": {
-                        "dir": "spotlights/longevity",
-                        "filename_template": "oldest_{scope}.html",
+                        "dir": "spotlights/longevity/tree",
+                        "filename_template": "oldest_ancestor_{personID}.html",
                         "pattern": "oldest_*.html"
                     }
                 },
@@ -151,16 +153,36 @@
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
                     "generator": {
-                        "script": "app/spotlights/LongevityOldestSpotlight",
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": "Gilroy"
                         }
                     },
                     "output": {
-                        "dir": "spotlights/longevity",
-                        "filename_template": "oldest_gilroy.html",
+                        "dir": "spotlights/longevity/gilroy",
+                        "filename_template": "oldest_gilroy_{personID}.html",
                         "pattern": "oldest_gilroy*.html"
+                    }
+                },
+                {
+                    "key": "wilson",
+                    "title": "Longest Lived Wilson Branch Ancestors",
+                    "description": "The longest lived ancestor in the Wilson side of our tree.",
+                    "status": "planned",
+                    "icon": "assets/img/icons/phosphor/hourglass.svg",
+                    "sort": 10,
+                    "generator": {
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "branch": "Wilson"
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/longevity/wilson",
+                        "filename_template": "oldest_wilson_{personID}.html",
+                        "pattern": "oldest_wilson*.html"
                     }
                 }
             ]

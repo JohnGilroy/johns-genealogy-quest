@@ -34,7 +34,7 @@
 
  
  /* Layout */
-  --jwg-max-width:  72rem;
+  --jwg-max-width:  56rem;
 }
 
 /* --------------------------------
@@ -301,6 +301,22 @@ hr {
 }
 
 
+/* Small action row used by index cards */
+.card-actions{
+  margin-top: .65rem;
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+/* Some index renderers emit these */
+.jwg-card-title{
+  margin: 0 0 .35rem 0;
+  font-size: 1.1rem;
+  font-weight: 850;
+  color: var(--jwg-brown);
+}
+
 /* --------------------------------
    Site header + nav (shared chrome)
 --------------------------------- */
@@ -368,6 +384,12 @@ hr {
 .site-nav a:focus {
   background: rgba(255, 255, 255, 0.14);
   text-decoration: none;
+}
+
+/* Active nav pill */
+.site-nav a.is-active,
+.site-nav a.is-active:visited{
+  background: rgba(255,255,255,.22);
 }
 
 /* --------------------------------

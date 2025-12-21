@@ -1,8 +1,12 @@
 {
     "home": "index.html",
     "pages": [
-        "spotlights/longevity/oldest_ancestor_I00421.html",
-        "spotlights/longevity/oldest_ancestor_I2.html",
+        "spotlights/longevity/gilroy/oldest_gilroy_I00016.html",
+        "spotlights/longevity/gilroy/oldest_gilroy_I00421.html",
+        "spotlights/longevity/tree/oldest_ancestor_I00421.html",
+        "spotlights/longevity/tree/oldest_ancestor_I2.html",
+        "spotlights/longevity/wilson/oldest_wilson_I00512.html",
+        "spotlights/longevity/wilson/oldest_wilson_I00545.html",
         "spotlights/press/press_media_2473.html",
         "bios/I00009.html"
     ]
