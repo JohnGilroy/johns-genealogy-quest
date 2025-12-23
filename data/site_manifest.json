@@ -47,45 +47,81 @@
             "type": "spotlight",
             "catalog_key": "longevity",
             "division_key": "gilroy",
-            "title": "Oldest Gilroy I00016",
-            "href": "spotlights/longevity/gilroy/oldest_gilroy_I00016.html"
+            "title": "Longest Lived Gilroy I00016",
+            "href": "spotlights/longevity/gilroy/longest_lived_gilroy_I00016.html",
+            "link_title": "Leslie Widdowson"
         },
         {
             "type": "spotlight",
             "catalog_key": "longevity",
             "division_key": "gilroy",
-            "title": "Oldest Gilroy I00421",
-            "href": "spotlights/longevity/gilroy/oldest_gilroy_I00421.html"
+            "title": "Longest Lived Gilroy I00421",
+            "href": "spotlights/longevity/gilroy/longest_lived_gilroy_I00421.html",
+            "link_title": "Marion Gray Whitelaw"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "longevity",
+            "division_key": "law",
+            "title": "Longest Lived Law I344",
+            "href": "spotlights/longevity/law/longest_lived_law_I344.html",
+            "link_title": "Fanny Miles"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "longevity",
+            "division_key": "law",
+            "title": "Longest Lived Law I353",
+            "href": "spotlights/longevity/law/longest_lived_law_I353.html",
+            "link_title": "Percival Sidney Law"
         },
         {
             "type": "spotlight",
             "catalog_key": "longevity",
             "division_key": "overall",
-            "title": "Oldest Ancestor I00421",
-            "href": "spotlights/longevity/tree/oldest_ancestor_I00421.html",
+            "title": "Longest Lived Overall I00421",
+            "href": "spotlights/longevity/overall/longest_lived_overall_I00421.html",
             "link_title": "Marion Gray Whitelaw"
         },
         {
             "type": "spotlight",
             "catalog_key": "longevity",
             "division_key": "overall",
-            "title": "Oldest Ancestor I2",
-            "href": "spotlights/longevity/tree/oldest_ancestor_I2.html",
+            "title": "Longest Lived Overall I2",
+            "href": "spotlights/longevity/overall/longest_lived_overall_I2.html",
+            "link_title": "Ernest William Anthony Reynolds"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "longevity",
+            "division_key": "reynolds",
+            "title": "Longest Lived Reynolds I17",
+            "href": "spotlights/longevity/reynolds/longest_lived_reynolds_I17.html",
+            "link_title": "Marjorie Anne King"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "longevity",
+            "division_key": "reynolds",
+            "title": "Longest Lived Reynolds I2",
+            "href": "spotlights/longevity/reynolds/longest_lived_reynolds_I2.html",
             "link_title": "Ernest William Anthony Reynolds"
         },
         {
             "type": "spotlight",
             "catalog_key": "longevity",
             "division_key": "wilson",
-            "title": "Oldest Wilson I00512",
-            "href": "spotlights/longevity/wilson/oldest_wilson_I00512.html"
+            "title": "Longest Lived Wilson I00512",
+            "href": "spotlights/longevity/wilson/longest_lived_wilson_I00512.html",
+            "link_title": "Henry Hinshelwood"
         },
         {
             "type": "spotlight",
             "catalog_key": "longevity",
             "division_key": "wilson",
-            "title": "Oldest Wilson I00545",
-            "href": "spotlights/longevity/wilson/oldest_wilson_I00545.html"
+            "title": "Longest Lived Wilson I00545",
+            "href": "spotlights/longevity/wilson/longest_lived_wilson_I00545.html",
+            "link_title": "Jane Lamb"
         },
         {
             "type": "spotlight",

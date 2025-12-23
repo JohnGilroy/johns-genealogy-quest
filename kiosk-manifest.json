@@ -1,12 +1,16 @@
 {
     "home": "index.html",
     "pages": [
-        "spotlights/longevity/gilroy/oldest_gilroy_I00016.html",
-        "spotlights/longevity/gilroy/oldest_gilroy_I00421.html",
-        "spotlights/longevity/tree/oldest_ancestor_I00421.html",
-        "spotlights/longevity/tree/oldest_ancestor_I2.html",
-        "spotlights/longevity/wilson/oldest_wilson_I00512.html",
-        "spotlights/longevity/wilson/oldest_wilson_I00545.html",
+        "spotlights/longevity/gilroy/longest_lived_gilroy_I00016.html",
+        "spotlights/longevity/gilroy/longest_lived_gilroy_I00421.html",
+        "spotlights/longevity/law/longest_lived_law_I344.html",
+        "spotlights/longevity/law/longest_lived_law_I353.html",
+        "spotlights/longevity/overall/longest_lived_overall_I00421.html",
+        "spotlights/longevity/overall/longest_lived_overall_I2.html",
+        "spotlights/longevity/reynolds/longest_lived_reynolds_I17.html",
+        "spotlights/longevity/reynolds/longest_lived_reynolds_I2.html",
+        "spotlights/longevity/wilson/longest_lived_wilson_I00512.html",
+        "spotlights/longevity/wilson/longest_lived_wilson_I00545.html",
         "spotlights/press/press_media_2473.html",
         "bios/I00009.html"
     ]

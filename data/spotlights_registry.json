@@ -116,8 +116,8 @@
         },
         {
             "key": "longevity",
-            "title": "Longest-lived ancestors",
-            "description": "Blood relations only. Overall male and female, plus by-branch male and female.",
+            "title": "The Longest-lived",
+            "description": "Overall male and female, plus by-line male and female.",
             "status": "implemented",
             "icon": "assets/img/icons/phosphor/hourglass.svg",
             "sort": 10,
@@ -127,8 +127,8 @@
             "divisions": [
                 {
                     "key": "overall",
-                    "title": "Longest Lived Ancestors",
-                    "description": "The longest lived ancestor in our tree.",
+                    "title": "Overall",
+                    "description": "The longest lived person in our tree.",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 0,
@@ -136,53 +136,100 @@
                         "script": "app/spotlights/LongevityOldestSpotlight.php",
                         "parameters": {
                             "tree": "Gilroy1",
-                            "branch": ""
+                            "branch": "",
+                            "exclude_personIDs": []
                         }
                     },
                     "output": {
-                        "dir": "spotlights/longevity/tree",
-                        "filename_template": "oldest_ancestor_{personID}.html",
-                        "pattern": "oldest_*.html"
+                        "dir": "spotlights/longevity/overall",
+                        "filename_template": "longest_lived_overall_{personID}.html",
+                        "pattern": "longest_lived*.html"
                     }
                 },
                 {
                     "key": "gilroy",
-                    "title": "Longest Lived Gilroy Branch Ancestors",
-                    "description": "The longest lived ancestor in the Gilroy side of our tree.",
-                    "status": "planned",
+                    "title": "John's Paternal Line",
+                    "description": "The longest lived person from John's paternal line (Gilroy).",
+                    "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
                     "generator": {
                         "script": "app/spotlights/LongevityOldestSpotlight.php",
                         "parameters": {
                             "tree": "Gilroy1",
-                            "branch": "Gilroy"
+                            "branch": "Gilroy",
+                            "exclude_personIDs": []
                         }
                     },
                     "output": {
                         "dir": "spotlights/longevity/gilroy",
-                        "filename_template": "oldest_gilroy_{personID}.html",
-                        "pattern": "oldest_gilroy*.html"
+                        "filename_template": "longest_lived_gilroy_{personID}.html",
+                        "pattern": "longest_lived_gilroy*.html"
                     }
                 },
                 {
                     "key": "wilson",
-                    "title": "Longest Lived Wilson Branch Ancestors",
-                    "description": "The longest lived ancestor in the Wilson side of our tree.",
-                    "status": "planned",
+                    "title": "John's Maternal Line",
+                    "description": "The longest lived person from John's maternal line (Wilson).",
+                    "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
                     "generator": {
                         "script": "app/spotlights/LongevityOldestSpotlight.php",
                         "parameters": {
                             "tree": "Gilroy1",
-                            "branch": "Wilson"
+                            "branch": "Wilson",
+                            "exclude_personIDs": []
                         }
                     },
                     "output": {
                         "dir": "spotlights/longevity/wilson",
-                        "filename_template": "oldest_wilson_{personID}.html",
-                        "pattern": "oldest_wilson*.html"
+                        "filename_template": "longest_lived_wilson_{personID}.html",
+                        "pattern": "longest_lived_wilson*.html"
+                    }
+                },
+                {
+                    "key": "reynolds",
+                    "title": "Val's Paternal Line",
+                    "description": "The longest lived person from Val's paternal line (Reynolds).",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/hourglass.svg",
+                    "sort": 10,
+                    "generator": {
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "branch": "Reynolds",
+                            "exclude_personIDs": []
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/longevity/reynolds",
+                        "filename_template": "longest_lived_reynolds_{personID}.html",
+                        "pattern": "longest_lived_reynolds*.html"
+                    }
+                },
+                {
+                    "key": "law",
+                    "title": "Val's Maternal Line",
+                    "description": "The longest lived person from Val's maternal line (Law).",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/hourglass.svg",
+                    "sort": 10,
+                    "generator": {
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "branch": "Law",
+                            "exclude_personIDs": [
+                                "I14"
+                            ]
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/longevity/law",
+                        "filename_template": "longest_lived_law_{personID}.html",
+                        "pattern": "longest_lived_law*.html"
                     }
                 }
             ]
