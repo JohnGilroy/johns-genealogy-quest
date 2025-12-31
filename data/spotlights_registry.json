@@ -117,7 +117,7 @@
         {
             "key": "longevity",
             "title": "The Longest-lived",
-            "description": "Overall male and female, plus by-line male and female.",
+            "description": "Overall male and female, plus by-line male and female",
             "status": "implemented",
             "icon": "assets/img/icons/phosphor/hourglass.svg",
             "sort": 10,
@@ -134,6 +134,7 @@
                     "sort": 0,
                     "generator": {
                         "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": "",
@@ -144,17 +145,27 @@
                         "dir": "spotlights/longevity/overall",
                         "filename_template": "longest_lived_overall_{personID}.html",
                         "pattern": "longest_lived*.html"
+                    },
+                    "biography_requirement": {
+                        "required": true,
+                        "min_phase": 6,
+                        "required_models": [
+                            "residence_profile",
+                            "occupation_profile",
+                            "historical_context"
+                        ]
                     }
                 },
                 {
                     "key": "gilroy",
                     "title": "John's Paternal Line",
-                    "description": "The longest lived person from John's paternal line (Gilroy).",
+                    "description": "The longest lived person from John's paternal line (Gilroy)",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
                     "generator": {
                         "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": "Gilroy",
@@ -165,17 +176,27 @@
                         "dir": "spotlights/longevity/gilroy",
                         "filename_template": "longest_lived_gilroy_{personID}.html",
                         "pattern": "longest_lived_gilroy*.html"
+                    },
+                    "biography_requirement": {
+                        "required": true,
+                        "min_phase": 6,
+                        "required_models": [
+                            "residence_profile",
+                            "occupation_profile",
+                            "historical_context"
+                        ]
                     }
                 },
                 {
                     "key": "wilson",
                     "title": "John's Maternal Line",
-                    "description": "The longest lived person from John's maternal line (Wilson).",
+                    "description": "The longest lived person from John's maternal line (Wilson)",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
                     "generator": {
                         "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": "Wilson",
@@ -186,17 +207,27 @@
                         "dir": "spotlights/longevity/wilson",
                         "filename_template": "longest_lived_wilson_{personID}.html",
                         "pattern": "longest_lived_wilson*.html"
+                    },
+                    "biography_requirement": {
+                        "required": true,
+                        "min_phase": 6,
+                        "required_models": [
+                            "residence_profile",
+                            "occupation_profile",
+                            "historical_context"
+                        ]
                     }
                 },
                 {
                     "key": "reynolds",
                     "title": "Val's Paternal Line",
-                    "description": "The longest lived person from Val's paternal line (Reynolds).",
+                    "description": "The longest lived person from Val's paternal line (Reynolds)",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
                     "generator": {
                         "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": "Reynolds",
@@ -207,17 +238,27 @@
                         "dir": "spotlights/longevity/reynolds",
                         "filename_template": "longest_lived_reynolds_{personID}.html",
                         "pattern": "longest_lived_reynolds*.html"
+                    },
+                    "biography_requirement": {
+                        "required": true,
+                        "min_phase": 6,
+                        "required_models": [
+                            "residence_profile",
+                            "occupation_profile",
+                            "historical_context"
+                        ]
                     }
                 },
                 {
                     "key": "law",
                     "title": "Val's Maternal Line",
-                    "description": "The longest lived person from Val's maternal line (Law).",
+                    "description": "The longest lived person from Val's maternal line (Law)",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
                     "generator": {
                         "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": "Law",
@@ -230,6 +271,15 @@
                         "dir": "spotlights/longevity/law",
                         "filename_template": "longest_lived_law_{personID}.html",
                         "pattern": "longest_lived_law*.html"
+                    },
+                    "biography_requirement": {
+                        "required": true,
+                        "min_phase": 6,
+                        "required_models": [
+                            "residence_profile",
+                            "occupation_profile",
+                            "historical_context"
+                        ]
                     }
                 }
             ]

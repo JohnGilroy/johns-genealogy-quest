@@ -38,23 +38,22 @@ body.spotlight {
   margin-bottom: .75rem;
 }
 
-/* Label pill: readable on dark hero + nicer casing */
+/* Label: make it read like a descriptor tag, not an action button */
 .spotlight-hero-label{
   display: inline-flex;
   align-items: center;
-  padding: .45rem .7rem;
-  border-radius: 999px;
 
-  font-weight: 700;
-  letter-spacing: .01em;
+  padding: 0;                 /* no pill */
+  border: 0;
+  background: transparent;
 
-  /* Presentational casing so 'oldest known ancestor' looks finished */
-  text-transform: none;
+  font-weight: 750;
+  letter-spacing: .02em;
+  opacity: .95;
 
-  /* Light pill on dark blue hero */
-  background: rgba(255,255,255,.16);
-  border: 1px solid rgba(255,255,255,.22);
-  color: #fff;
+  /* optional: subtle divider line to separate it from content */
+  /* padding-bottom: .15rem;
+  border-bottom: 1px solid rgba(255,255,255,.22); */
 }
 
 /* Keep the action container simple */
@@ -68,24 +67,6 @@ body.spotlight {
   margin: 6px 0 4px;
   font-size: 1.8rem;
 }
-
-.spotlight-hero-metric {
-  margin-top: 10px;
-}
-
-.hero-metric-value {
-  font-size: 2.4rem;
-  font-weight: 900;
-  letter-spacing: 0.2px;
-  line-height: 1.1;
-}
-
-.hero-metric-caption {
-  margin: 2px 0 0;
-  opacity: 0.9;
-  font-size: 0.95rem;
-}
-
 
 .spotlight-hero-lifespan {
   margin: 0;
@@ -174,3 +155,47 @@ body.spotlight {
   min-width: 0;
 }
 
+/* Hero action button: intentionally subdued */
+.spotlight-hero-action .jwg-btn--on-dark{
+  padding: .4rem .75rem;
+  font-size: .85rem;
+  font-weight: 600;
+
+  background: rgba(255,255,255,.18);
+  color: #fff;
+
+  border: 1px solid rgba(255,255,255,.35);
+  box-shadow: none;
+  opacity: .85;
+}
+
+/* Minimal hover – no motion, no spotlight */
+.spotlight-hero-action .jwg-btn--on-dark:hover,
+.spotlight-hero-action .jwg-btn--on-dark:focus{
+  background: rgba(255,255,255,.28);
+  border-color: rgba(255,255,255,.5);
+  opacity: 1;
+  transform: none;
+}
+
+/* Metric: make it the star */
+.spotlight-hero-metric{
+  margin-top: 12px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.16);
+}
+
+.hero-metric-value{
+  font-size: 2.75rem;     /* up from 2.4rem */
+  font-weight: 900;
+  letter-spacing: .2px;
+  line-height: 1.05;
+}
+
+.hero-metric-caption{
+  margin-top: 4px;
+  font-size: .95rem;
+  opacity: .9;
+}

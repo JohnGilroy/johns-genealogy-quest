@@ -51,7 +51,10 @@
 }
 
 /* Main text block */
-.spot-cat-title{ margin: 0; }
+.spot-cat-title{
+    margin: 0;
+    color: var(--jwg-brown);
+    font-weight: 900; /* optional: closer to the page title feel */    }
 
 .spot-cat-desc{ margin: .25rem 0 0; }
 
@@ -106,7 +109,8 @@
 /* Division sub-cards */
 .spot-cat-divisions{
   margin-top: .85rem;
-  max-width: 48rem;       /* key change */
+  max-width: none;
+  width: 100%;
   margin-left: 0;         /* align with text */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -119,8 +123,10 @@
   border-radius: var(--jwg-radius-lg);
   box-shadow: var(--jwg-shadow-soft);
   padding: .9rem .95rem 1rem;
-  max-width: 22rem;
+  max-width: none;     /* remove 22rem cap */
+  width: 100%;
   min-width: 0;
+  color: var(--jwg-blue-dark); 
 }
 
 .spot-div-title{
@@ -163,6 +169,7 @@
   display: inline-block;
   padding: .1rem 0;
   text-decoration: none;
+  color: var(--jwg-blue-dark); 
 }
 
 .spotlight-link:hover{
@@ -189,3 +196,11 @@
     width: 44px;
     height: 44px;
   }
+ 
+/* Prefer a true 2-column layout on wider screens, and fill space evenly */
+@media (min-width: 720px){
+  .spot-cat-divisions{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+} 
