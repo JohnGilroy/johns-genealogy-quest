@@ -128,7 +128,7 @@
                 {
                     "key": "overall",
                     "title": "Overall",
-                    "description": "The longest lived person in our tree.",
+                    "description": "The longest lived {gender} in our tree",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 0,
