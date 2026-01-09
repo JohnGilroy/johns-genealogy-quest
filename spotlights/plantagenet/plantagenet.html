@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="{{BASE_HREF}}">
+  <link rel="stylesheet" href="assets/css/jwg-site.css">
+  <link rel="stylesheet" href="assets/css/jwg-spotlight.css">
+
+  <!-- Page-specific tweaks for this one-off -->
+  <style>
+    /* Left panel: make the chart scroll within the viewport */
+    .plantagenet-chart-panel{
+      overflow: auto;
+      max-height: calc(100vh - 280px); /* header + hero + margins allowance */
+      padding: 10px;
+      background: rgba(255,255,255,.55);
+      border-radius: 12px;
+      border: 1px solid var(--jwg-border-subtle);
+    }
+
+    /* Chart image: keep it crisp and never stretch oddly */
+    .plantagenet-chart-panel img{
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 520px; /* optional: keeps it from becoming too wide */
+      margin: 0 auto;
+    }
+
+    /* Small link row above chart */
+    .plantagenet-chart-actions{
+      display:flex;
+      gap:.5rem;
+      flex-wrap:wrap;
+      align-items:center;
+      margin: 0 0 .75rem 0;
+    }
+
+    /* On narrow screens, let the chart be “normal height” */
+    @media (max-width: 800px){
+      .plantagenet-chart-panel{ max-height: none; }
+      .plantagenet-chart-panel img{ max-width: none; }
+    }
+  </style>
+</head>
+
+<body class="spotlight">
+
+  <!-- Standard site header -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-title">John&#39;s Genealogy Quest</a>
+      <nav class="site-nav">{{SITE_NAV_HTML}}</nav>
+    </div>
+  </header>
+
+  <div class="spotlight-wrap">
+
+    <!-- Optional hero (keeps it consistent with other spotlights) -->
+    <div class="spotlight-hero">
+      <div class="spotlight-hero-top">
+        <div class="spotlight-hero-label">Plantagenet connection</div>
+        <div class="spotlight-hero-action">
+          <a class="jwg-btn jwg-btn--on-dark" href="{{TNG_RELATIONSHIP_URL}}" target="_blank" rel="noopener">
+            View in TNG
+          </a>
+        </div>
+      </div>
+
+      <div class="spotlight-hero-subject">
+        <div class="spotlight-hero-subject-text">
+          <h1>{{SUBJECT_NAME}} and Edward III</h1>
+          <p class="spotlight-hero-relationship">
+            {{RELATIONSHIP_SUMMARY}}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two-column main area -->
+    <main class="spotlight-main">
+
+      <!-- LEFT: Chart -->
+      <section class="spotlight-card">
+        <h2>Line of descent</h2>
+
+        <div class="plantagenet-chart-actions">
+          <a class="jwg-btn" href="{{TNG_RELATIONSHIP_URL}}" target="_blank" rel="noopener">Open relationship chart</a>
+          <a class="jwg-btn" href="{{PLANTAGENET_ROLL_NOTE_URL}}" target="_blank" rel="noopener">Plantagenet Roll note</a>
+        </div>
+
+        <div class="plantagenet-chart-panel">
+          <img src="assets/img/plantagenet-line.png"
+               alt="Relationship chart showing the line from Edward III to {{SUBJECT_NAME}}">
+        </div>
+
+        <p class="jwg-muted" style="margin-top:.75rem; font-size:.95rem;">
+          Tip: scroll inside the panel to follow the generations from Edward III down to {{SUBJECT_NAME}}.
+        </p>
+      </section>
+
+      <!-- RIGHT: Narrative -->
+      <aside class="spotlight-card">
+        <h2>Overview</h2>
+
+        <p>
+          {{INTRO_PARAGRAPH}}
+        </p>
+
+        <h2>The Plantagenets in brief</h2>
+        <p>
+          {{PLANTAGENET_PARAGRAPH_1}}
+        </p>
+        <p>
+          {{PLANTAGENET_PARAGRAPH_2}}
+        </p>
+
+        <hr>
+
+        <h2>Sources and caveats</h2>
+        <p class="jwg-muted">
+          {{SOURCES_NOTE}}
+        </p>
+      </aside>
+
+    </main>
+  </div>
+
+  <!-- Standard footer -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>
+        Created with the JWG Biography Production pipeline · Data from John’s research · Design JWG and ChatGPT
+        <span class="jwg-muted">· Updated: {{UPDATED_DATE}}</span>
+      </p>
+      <p>
+        <a href="index.html">Home</a> ·
+        <a href="bios/index.html">Biographies</a> ·
+        <a href="spotlights/index.html">Spotlights</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/kiosk-runtime.js"></script>
+</body>
+</html>
