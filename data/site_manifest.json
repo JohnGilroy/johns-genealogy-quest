@@ -125,6 +125,14 @@
         },
         {
             "type": "spotlight",
+            "catalog_key": "plantagenet",
+            "division_key": "royal_connection",
+            "title": "Royal Connection Edward Iii",
+            "href": "spotlights/plantagenet/royal_connection_edward_iii.html",
+            "link_title": "The Plantagenet Connection and Edward III"
+        },
+        {
+            "type": "spotlight",
             "catalog_key": "press_media",
             "division_key": "press_media_all",
             "title": "Press Media 2473",

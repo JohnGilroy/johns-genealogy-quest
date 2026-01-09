@@ -88,11 +88,64 @@
             "key": "plantagenet",
             "title": "The Royal Connection",
             "description": "Our links to Edward Plantagenet.",
-            "status": "planned",
+            "status": "implemented",
             "icon": "assets/img/icons/phosphor/crown.svg",
             "sort": 70,
             "layout_hint": "list-led",
-            "divisions": []
+            "divisions": [
+                {
+                    "key": "royal_connection",
+                    "title": "Edward III connection",
+                    "description": "Valerie Christine Gilroy's (nee Reynolds) line of descent from Edward III",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/crown.svg",
+                    "sort": 0,
+                    "generator": {
+                        "script": "app/spotlights/PlantagenetSpotlight.php",
+                        "class": "PlantagenetSpotlight",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "subject_personID": "The Plantagenet Connection",
+                            "royal_personID": "I10",
+                            "stat_label": "Plantagenet connection",
+                            "relationship": "21\u00d7 great-granddaughter of Edward III of England.",
+                            "chart_image": "assets/img/plantagenet-line.png",
+                            "tng_relationship_url": "http://localhost/familyhistory/jwg_get_relationship.php?baseID=I73&personID=I10&generations=25&tree=Gilroy1",
+                            "wikitree_url": "",
+                            "plantagenet_roll_url": "",
+                            "content": {
+                                "intro_sentences": [
+                                    "The 21\u00d7 great-grandfather of Chris is believed to be Edward Plantagenet, better known as King Edward III of England.",
+                                    "The trail for this connection comes from a published compilation, <em>The Plantagenet Roll of the Blood Royal</em> (1911), which lists descendants of Edward III who were living at the time of publication.",
+                                    "Chris\u2019s great-grandmother, Ada Orton, appears in the Mortimer\u2013Percy section (Part 1, p. 319), which is why this line is worth exploring further \u2014 even if it didn\u2019t lead to an invitation to King Charles\u2019 coronation."
+                                ],
+                                "plantagenet_paragraphs": [
+                                    "The Plantagenets were a royal dynasty who ruled England from the mid-12th century into the late 15th century. The name covers the direct royal line and, later, the Lancastrian and Yorkist branches that shaped much of late medieval English history.",
+                                    "Edward III (reigned 1327\u20131377) is associated with major developments in monarchy and warfare, including the early phases of the Hundred Years\u2019 War. Because he had a large family and many descendants, connections to Edward III appear across a wide range of later noble and gentry lines.",
+                                    "How to read the chart: each row shows a couple, with the line continuing down the left-hand side through the direct line of descent. Spouses are shown alongside to help place each person in their family context.",
+                                    "This particular line runs through well-known medieval noble families (including the Mortimers, Percys, Cliffords and others) before it reaches later generations recorded in parish registers, civil registration and census returns.",
+                                    "It is also worth remembering that \u2018descent from Edward III\u2019 is not rare in Britain: because many generations have passed and Edward III had many descendants, a great number of modern families can connect through one or more routes. What matters here is documenting this specific route carefully.",
+                                    "Next steps for strengthening the evidence are to (1) verify each parent\u2013child link with a primary record where possible, (2) ensure dates and places are consistent from generation to generation, and (3) cite modern scholarly compilations when medieval sources are involved."
+                                ],
+                                "sources_note": "The Plantagenet Roll is best treated as a guide rather than proof: it is indexed and often helpful for \u201cjoining the dots\u201d, but it generally does not provide the detailed source citations that modern genealogy expects. Where practical, each generation in the chart should be confirmed against primary records and reliable modern scholarship.",
+                                "images": {
+                                    "plantagenet_roll_cover": {
+                                        "src": "assets/img/plantagenet-roll-cover.jpg",
+                                        "alt": "Cover of The Plantagenet Roll of the Blood Royal (1911)",
+                                        "caption": "The Plantagenet Roll of the Blood Royal (1911) \u2014 a useful guide, but not a fully cited proof."
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/plantagenet",
+                        "filename_template": "royal_connection_edward_iii.html",
+                        "pattern": "royal_connection_*.html"
+                    },
+                    "html_template": "web-templates/template_plantagenet.html"
+                }
+            ]
         },
         {
             "key": "events",
