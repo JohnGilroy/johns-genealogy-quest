@@ -48,6 +48,7 @@
             "catalog_key": "longevity",
             "division_key": "gilroy",
             "title": "Longest Lived Gilroy I00016",
+            "description": "The longest lived person from John's paternal line (Gilroy)",
             "href": "spotlights/longevity/gilroy/longest_lived_gilroy_I00016.html",
             "link_title": "Leslie Widdowson (1921 - 2011)"
         },
@@ -56,6 +57,7 @@
             "catalog_key": "longevity",
             "division_key": "gilroy",
             "title": "Longest Lived Gilroy I00421",
+            "description": "The longest lived person from John's paternal line (Gilroy)",
             "href": "spotlights/longevity/gilroy/longest_lived_gilroy_I00421.html",
             "link_title": "Marion Gray Whitelaw (1866 - 1966)"
         },
@@ -64,6 +66,7 @@
             "catalog_key": "longevity",
             "division_key": "law",
             "title": "Longest Lived Law I344",
+            "description": "The longest lived person from Val's maternal line (Law)",
             "href": "spotlights/longevity/law/longest_lived_law_I344.html",
             "link_title": "Fanny Miles (1864 - 1956)"
         },
@@ -72,6 +75,7 @@
             "catalog_key": "longevity",
             "division_key": "law",
             "title": "Longest Lived Law I353",
+            "description": "The longest lived person from Val's maternal line (Law)",
             "href": "spotlights/longevity/law/longest_lived_law_I353.html",
             "link_title": "Percival Sidney Law (1903 - 1984)"
         },
@@ -80,6 +84,7 @@
             "catalog_key": "longevity",
             "division_key": "overall",
             "title": "Longest Lived Overall I00421",
+            "description": "The longest lived {gender} in our tree",
             "href": "spotlights/longevity/overall/longest_lived_overall_I00421.html",
             "link_title": "Marion Gray Whitelaw (1866 - 1966)"
         },
@@ -88,6 +93,7 @@
             "catalog_key": "longevity",
             "division_key": "overall",
             "title": "Longest Lived Overall I2",
+            "description": "The longest lived {gender} in our tree",
             "href": "spotlights/longevity/overall/longest_lived_overall_I2.html",
             "link_title": "Ernest William Anthony Reynolds (1921 - 2014)"
         },
@@ -96,6 +102,7 @@
             "catalog_key": "longevity",
             "division_key": "reynolds",
             "title": "Longest Lived Reynolds I17",
+            "description": "The longest lived person from Val's paternal line (Reynolds)",
             "href": "spotlights/longevity/reynolds/longest_lived_reynolds_I17.html",
             "link_title": "Marjorie Anne King (1891 - 1991)"
         },
@@ -104,6 +111,7 @@
             "catalog_key": "longevity",
             "division_key": "reynolds",
             "title": "Longest Lived Reynolds I2",
+            "description": "The longest lived person from Val's paternal line (Reynolds)",
             "href": "spotlights/longevity/reynolds/longest_lived_reynolds_I2.html",
             "link_title": "Ernest William Anthony Reynolds (1921 - 2014)"
         },
@@ -112,6 +120,7 @@
             "catalog_key": "longevity",
             "division_key": "wilson",
             "title": "Longest Lived Wilson I00512",
+            "description": "The longest lived person from John's maternal line (Wilson)",
             "href": "spotlights/longevity/wilson/longest_lived_wilson_I00512.html",
             "link_title": "Henry Hinshelwood (1831 - 1923)"
         },
@@ -120,6 +129,7 @@
             "catalog_key": "longevity",
             "division_key": "wilson",
             "title": "Longest Lived Wilson I00545",
+            "description": "The longest lived person from John's maternal line (Wilson)",
             "href": "spotlights/longevity/wilson/longest_lived_wilson_I00545.html",
             "link_title": "Jane Lamb (1852 - 1943)"
         },
@@ -128,6 +138,7 @@
             "catalog_key": "plantagenet",
             "division_key": "royal_connection",
             "title": "Royal Connection Edward Iii",
+            "description": "Valerie Christine Gilroy's (nee Reynolds) line of descent from Edward III",
             "href": "spotlights/plantagenet/royal_connection_edward_iii.html",
             "link_title": "The Plantagenet Connection and Edward III"
         },
@@ -136,6 +147,7 @@
             "catalog_key": "press_media",
             "division_key": "press_media_all",
             "title": "Press Media 2473",
+            "description": "Newspaper articles and reports in which family members are mentioned.",
             "href": "spotlights/press/press_media_2473.html"
         }
     ],

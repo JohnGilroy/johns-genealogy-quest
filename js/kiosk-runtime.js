@@ -147,13 +147,19 @@ if (!(transitionMs > 0)) transitionMs = 1200;
     const nextIdx = (idx + 1) % playlist.length;
     localStorage.setItem('jwg_kiosk_idx', String(nextIdx));
 
-    let nextPath = String(playlist[nextIdx] || '').trim();
-if (nextPath !== '' && !nextPath.startsWith('/')) nextPath = '/' + nextPath;
+let nextPath = String(playlist[nextIdx] || '').trim();
 
-    const nextTitle = (titles && typeof titles === 'object')
-      ? String(titles[nextPath] ?? '').trim()
-      : '';
+// Normalise for title lookup (manifest keys never start with '/')
+const titleKey = nextPath.replace(/^\/+/, '');
 
+// Build a site-relative URL that works locally AND on GitHub project pages
+const nextUrl = toSiteUrl(nextPath);
+
+const nextTitle = (titles && typeof titles === 'object')
+  ? String(titles[titleKey] ?? '').trim()
+  : '';
+
+    console.log(nextTitle);
     const veilText = nextTitle ? `Coming next… ${nextTitle}` : 'Loading next page…';
 
     // Show message during fade-out of current page
@@ -172,7 +178,8 @@ if (nextPath !== '' && !nextPath.startsWith('/')) nextPath = '/' + nextPath;
     u.searchParams.set('km', veilText); // URLSearchParams will encode it
     console.log('[kiosk-runtime] navigating to:', u.toString());
 
-    location.href = u.toString();
+    location.href = nextUrl;
+
   }
 
   function addKioskParam(url) {
@@ -277,4 +284,36 @@ if (nextPath !== '' && !nextPath.startsWith('/')) nextPath = '/' + nextPath;
 
     return sleep(ms);
   }
+  
+  function siteBasePath() {
+  // Prefer an explicit <base href="..."> if you ever add one
+  const baseEl = document.querySelector('base[href]');
+  if (baseEl) {
+    try { return new URL(baseEl.getAttribute('href'), location.origin).pathname; } catch {}
+  }
+
+  // GitHub Pages project sites: https://user.github.io/<repo>/
+  if (location.hostname.endsWith('github.io')) {
+    const seg = (location.pathname.split('/').filter(Boolean)[0] || '').trim();
+    if (seg) return `/${seg}/`;
+  }
+
+  // Local / normal sites
+  return '/';
+}
+
+const SITE_BASE = siteBasePath();
+
+function toSiteUrl(path) {
+  let p = String(path || '').trim();
+  if (!p) return location.href;
+
+  // absolute URL already?
+  if (/^https?:\/\//i.test(p)) return p;
+
+  // normalise to *relative to site base*
+  p = p.replace(/^\/+/, ''); // remove leading slashes
+  return new URL(SITE_BASE + p, location.origin).toString();
+}
+
 })();
