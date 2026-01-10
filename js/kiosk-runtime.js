@@ -64,12 +64,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Fade overlay ---
   const veil = ensureVeil();
-  // Start faded-in very briefly during load, then fade out after load settles
+  //Start faded-in very briefly during load, then fade out after load settles
   veil.style.opacity = '1';
   window.addEventListener('load', () => {
     setTimeout(() => fadeTo(0, fadeMs), 120);
     setTimeout(run, 250);
   });
+
+  // Do NOT start black on load (this is what creates the 1–2s black screen on heavier pages).
+  // Keep veil available for the pre-navigation fade only.
+  //veil.style.opacity = '0';
+
+  // Start the kiosk behaviour as soon as DOM is ready (don't wait for all images/fonts).
+  //const start = () => setTimeout(run, 0);
+  //if (document.readyState === 'loading') {
+  //  document.addEventListener('DOMContentLoaded', start, { once: true });
+  //} else {
+    //start();
+  //}
 
   async function run() {
     await pauseWait(topPauseMs);
@@ -162,26 +174,56 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function ensureVeil() {
-    let el = document.getElementById('jwg-kiosk-veil');
-    if (el) return el;
+  let el = document.getElementById('jwg-kiosk-veil');
+  if (el) return el;
 
-    el = document.createElement('div');
-    el.id = 'jwg-kiosk-veil';
-    el.style.position = 'fixed';
-    el.style.inset = '0';
-    el.style.background = '#000';
-    el.style.pointerEvents = 'none';
-    el.style.opacity = '0';
-    el.style.transition = `opacity ${fadeMs}ms ease`;
-    el.style.zIndex = '2147483647';
-    document.documentElement.appendChild(el);
-    return el;
-  }
+  el = document.createElement('div');
+  el.id = 'jwg-kiosk-veil';
+  el.style.position = 'fixed';
+  el.style.inset = '0';
 
-  function fadeTo(opacity, ms) {
-    // Ensure transition matches current ms if changed
-    veil.style.transition = `opacity ${ms}ms ease`;
-    veil.style.opacity = String(opacity);
-    return sleep(ms);
-  }
+  // Softer than pure black (tweak to match your site palette)
+  el.style.background = '#fdf8ea;';
+
+  el.style.pointerEvents = 'none';
+  el.style.opacity = '0';
+  el.style.transition = `opacity ${fadeMs}ms ease`;
+  el.style.zIndex = '2147483647';
+
+  // Centred loading message (hidden unless veil is up)
+  const msg = document.createElement('div');
+  msg.id = 'jwg-kiosk-veil-msg';
+  msg.textContent = 'Loading next page…';
+  msg.style.position = 'absolute';
+  msg.style.left = '50%';
+  msg.style.top = '50%';
+  msg.style.transform = 'translate(-50%, -50%)';
+  msg.style.fontFamily = 'system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif';
+  msg.style.fontSize = '20px';
+  msg.style.letterSpacing = '0.2px';
+  msg.style.color = 'rgba(255,255,255,0.88)';
+  msg.style.background = 'rgba(0,0,0,0.25)';
+  msg.style.padding = '10px 14px';
+  msg.style.borderRadius = '10px';
+  msg.style.userSelect = 'none';
+  msg.style.display = 'none';
+
+  el.appendChild(msg);
+
+  document.documentElement.appendChild(el);
+  return el;
+}
+
+function fadeTo(opacity, ms) {
+  // Ensure transition matches current ms if changed
+  veil.style.transition = `opacity ${ms}ms ease`;
+  veil.style.opacity = String(opacity);
+
+  // Toggle message visibility based on veil opacity
+  const msg = document.getElementById('jwg-kiosk-veil-msg');
+  if (msg) msg.style.display = (opacity > 0.05 ? 'block' : 'none');
+
+  return sleep(ms);
+}
+
 })();
