@@ -1,26 +1,30 @@
 // kiosk-runtime.js
+console.log('[kiosk-runtime v3] running', location.href);
+
 (() => {
   const qs = new URLSearchParams(location.search);
   if (qs.get('kiosk') !== '1') return;
 
-// Ensure kiosk-collapsible sections start collapsed
-document.addEventListener('DOMContentLoaded', () => {
-  document
-    .querySelectorAll('details[data-kiosk-collapse="1"]')
-    .forEach(d => d.open = false);
-});
+  // Prevent browser restoring scroll positions across navigations
+  try {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  } catch {}
 
+  // Ensure kiosk-collapsible sections start collapsed
+  document.addEventListener('DOMContentLoaded', () => {
+    document
+      .querySelectorAll('details[data-kiosk-collapse="1"]')
+      .forEach(d => d.open = false);
+  });
 
   const playlist = readJson('jwg_kiosk_playlist', []);
   const config   = readJson('jwg_kiosk_config', {});
-  const idxSaved = parseInt(localStorage.getItem('jwg_kiosk_idx') || '0', 10);
+  const titles   = readJson('jwg_kiosk_titles', {});
 
   if (!Array.isArray(playlist) || playlist.length === 0) return;
 
   // --- Behaviour knobs ---
-  // “Lock speed to viewport height”: seconds per screenful (not px/sec).
-  // You can override by setting in jwg_kiosk_config, or via kiosk.html query later if you like.
-  const secondsPerScreen = num(config.secondsPerScreen, 10); // e.g. 8–14 feels good
+  const secondsPerScreen = num(config.secondsPerScreen, 10);
 
   const dwellMs       = num(config.dwell, 10000);
   const topPauseMs    = num(config.toppause, 700);
@@ -28,8 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const minScrollPx   = num(config.minscroll, 80);
 
   // Fade timings (ms)
-  const fadeMs        = num(config.fadeMs, 350);     // duration of fade animation
-  const fadeHoldMs    = num(config.fadeHoldMs, 60);  // tiny hold at full black before navigation
+  const fadeMs        = num(config.fadeMs, 350);
+  const fadeHoldMs    = num(config.fadeHoldMs, 60);
+
+  // Fixed veil duration on the *next page* (ms)
+ let transitionMs = num(config.transition, 1200);
+if (!(transitionMs > 0)) transitionMs = 1200;
+
+  const idxSaved = parseInt(localStorage.getItem('jwg_kiosk_idx') || '0', 10);
 
   // Determine current page index based on pathname
   const current = normalisePath(location.pathname);
@@ -50,13 +60,13 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       localStorage.removeItem('jwg_kiosk_playlist');
       localStorage.removeItem('jwg_kiosk_config');
+      localStorage.removeItem('jwg_kiosk_titles');
       localStorage.removeItem('jwg_kiosk_idx');
     } catch {}
-    // Go back to normal home page
     location.href = '/index.html';
   }
 
-  // --- Pause toggle: P only (as per your stabilised setup) ---
+  // --- Pause toggle: P only ---
   let paused = false;
   document.addEventListener('keydown', (e) => {
     if (e.code === 'KeyP') paused = !paused;
@@ -64,24 +74,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Fade overlay ---
   const veil = ensureVeil();
-  //Start faded-in very briefly during load, then fade out after load settles
-  veil.style.opacity = '1';
-  window.addEventListener('load', () => {
-    setTimeout(() => fadeTo(0, fadeMs), 120);
-    setTimeout(run, 250);
-  });
 
-  // Do NOT start black on load (this is what creates the 1–2s black screen on heavier pages).
-  // Keep veil available for the pre-navigation fade only.
-  //veil.style.opacity = '0';
+  // Querystring-driven fixed veil on *this* page (set by previous page)
+  const kv = parseInt(qs.get('kv') || '0', 10);
+  const kmRaw = qs.get('km') || '';
+  const incomingText = kmRaw ? decodeURIComponent(kmRaw) : '';
+  if (incomingText) setVeilMessage(incomingText);
 
-  // Start the kiosk behaviour as soon as DOM is ready (don't wait for all images/fonts).
-  //const start = () => setTimeout(run, 0);
-  //if (document.readyState === 'loading') {
-  //  document.addEventListener('DOMContentLoaded', start, { once: true });
-  //} else {
-    //start();
-  //}
+  // If kv is present, start covered and hold for exactly kv ms (identical across pages)
+  if (Number.isFinite(kv) && kv > 0) {
+    veil.style.opacity = '1';
+
+    const start = () => {
+      // Ensure we start from top consistently
+      try { window.scrollTo(0, 0); } catch {}
+
+      setTimeout(async () => {
+        await fadeTo(0, fadeMs);
+        run();
+      }, kv);
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', start, { once: true });
+    } else {
+      start();
+    }
+    return; // IMPORTANT: don't run the normal startup path too
+  }
+
+  // Normal startup (no kv): start with veil hidden and run when DOM is ready
+  veil.style.opacity = '0';
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      try { window.scrollTo(0, 0); } catch {}
+      run();
+    }, { once: true });
+  } else {
+    try { window.scrollTo(0, 0); } catch {}
+    run();
+  }
 
   async function run() {
     await pauseWait(topPauseMs);
@@ -97,29 +129,50 @@ document.addEventListener('DOMContentLoaded', () => {
       return goNext();
     }
 
-    // Scroll at “seconds per screenful”
+    // Start at top for scrollable pages
     window.scrollTo(0, 0);
 
-    const viewportH = Math.max(1, window.innerHeight || 1);
-    const pxPerSec  = viewportH / Math.max(1, secondsPerScreen);
+    // Scroll at “seconds per screenful”
+    const viewportH  = Math.max(1, window.innerHeight || 1);
+    const pxPerSec   = viewportH / Math.max(1, secondsPerScreen);
     const durationMs = (maxScroll / Math.max(10, pxPerSec)) * 1000;
 
     await animateScroll(0, maxScroll, durationMs);
 
     await pauseWait(bottomPauseMs);
-    goNext();
+    return goNext();
   }
 
   async function goNext() {
     const nextIdx = (idx + 1) % playlist.length;
     localStorage.setItem('jwg_kiosk_idx', String(nextIdx));
 
-    // Fade in to mask navigation
-    await fadeTo(1, fadeMs);
-    await pauseWait(fadeHoldMs);
+    let nextPath = String(playlist[nextIdx] || '').trim();
+if (nextPath !== '' && !nextPath.startsWith('/')) nextPath = '/' + nextPath;
 
-    const nextUrl = addKioskParam(playlist[nextIdx]);
-    location.href = nextUrl;
+    const nextTitle = (titles && typeof titles === 'object')
+      ? String(titles[nextPath] ?? '').trim()
+      : '';
+
+    const veilText = nextTitle ? `Coming next… ${nextTitle}` : 'Loading next page…';
+
+    // Show message during fade-out of current page
+    setVeilMessage(veilText);
+
+    // Fade in veil to mask navigation
+    await fadeTo(1, fadeMs);
+
+    // Small readable hold (kept small to avoid Chrome throttling)
+    const hold = Math.min(fadeHoldMs, 250);
+    if (hold > 0) await pauseWait(hold);
+
+    // Navigate to next page, passing fixed veil duration + message for next page
+   const u = new URL(addKioskParam(nextPath), location.href);
+    u.searchParams.set('kv', String(transitionMs));
+    u.searchParams.set('km', veilText); // URLSearchParams will encode it
+    console.log('[kiosk-runtime] navigating to:', u.toString());
+
+    location.href = u.toString();
   }
 
   function addKioskParam(url) {
@@ -174,56 +227,54 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function ensureVeil() {
-  let el = document.getElementById('jwg-kiosk-veil');
-  if (el) return el;
+    let el = document.getElementById('jwg-kiosk-veil');
+    if (el) return el;
 
-  el = document.createElement('div');
-  el.id = 'jwg-kiosk-veil';
-  el.style.position = 'fixed';
-  el.style.inset = '0';
+    el = document.createElement('div');
+    el.id = 'jwg-kiosk-veil';
+    el.style.position = 'fixed';
+    el.style.inset = '0';
 
-  // Softer than pure black (tweak to match your site palette)
-  el.style.background = '#fdf8ea;';
+    // Pick a colour that looks deliberate during transitions.
+    // (Change to match your site palette.)
+    el.style.background = '#fdf8ea';
 
-  el.style.pointerEvents = 'none';
-  el.style.opacity = '0';
-  el.style.transition = `opacity ${fadeMs}ms ease`;
-  el.style.zIndex = '2147483647';
+    el.style.pointerEvents = 'none';
+    el.style.opacity = '0';
+    el.style.transition = `opacity ${fadeMs}ms ease`;
+    el.style.zIndex = '2147483647';
 
-  // Centred loading message (hidden unless veil is up)
-  const msg = document.createElement('div');
-  msg.id = 'jwg-kiosk-veil-msg';
-  msg.textContent = 'Loading next page…';
-  msg.style.position = 'absolute';
-  msg.style.left = '50%';
-  msg.style.top = '50%';
-  msg.style.transform = 'translate(-50%, -50%)';
-  msg.style.fontFamily = 'system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif';
-  msg.style.fontSize = '20px';
-  msg.style.letterSpacing = '0.2px';
-  msg.style.color = 'rgba(255,255,255,0.88)';
-  msg.style.background = 'rgba(0,0,0,0.25)';
-  msg.style.padding = '10px 14px';
-  msg.style.borderRadius = '10px';
-  msg.style.userSelect = 'none';
-  msg.style.display = 'none';
+    const msgEl = document.createElement('div');
+    msgEl.id = 'jwg-kiosk-veil-msg';
+    msgEl.textContent = 'Loading next page…';
+    msgEl.style.position = 'absolute';
+    msgEl.style.left = '50%';
+    msgEl.style.top = '50%';
+    msgEl.style.transform = 'translate(-50%, -50%)';
+    msgEl.style.fontFamily = 'system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif';
+    msgEl.style.fontSize = '20px';
+    msgEl.style.letterSpacing = '0.2px';
+    msgEl.style.color = 'rgba(255,255,255,0.88)';
+    msgEl.style.background = 'rgba(0,0,0,0.25)';
+    msgEl.style.padding = '10px 14px';
+    msgEl.style.borderRadius = '10px';
+    msgEl.style.userSelect = 'none';
+    msgEl.style.display = 'block';
 
-  el.appendChild(msg);
+    el.appendChild(msgEl);
+    document.documentElement.appendChild(el);
+    return el;
+  }
 
-  document.documentElement.appendChild(el);
-  return el;
-}
+  function setVeilMessage(text) {
+    const msgEl = document.getElementById('jwg-kiosk-veil-msg');
+    if (msgEl) msgEl.textContent = text || 'Loading next page…';
+  }
 
-function fadeTo(opacity, ms) {
-  // Ensure transition matches current ms if changed
-  veil.style.transition = `opacity ${ms}ms ease`;
-  veil.style.opacity = String(opacity);
+  function fadeTo(opacity, ms) {
+    veil.style.transition = `opacity ${ms}ms ease`;
+    veil.style.opacity = String(opacity);
 
-  // Toggle message visibility based on veil opacity
-  const msg = document.getElementById('jwg-kiosk-veil-msg');
-  if (msg) msg.style.display = (opacity > 0.05 ? 'block' : 'none');
-
-  return sleep(ms);
-}
-
+    return sleep(ms);
+  }
 })();
