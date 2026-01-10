@@ -1,5 +1,5 @@
 // kiosk-runtime.js
-console.log('[kiosk-runtime v3] running', location.href);
+console.log('[kiosk-runtime v5] running', location.href);
 
 (() => {
   const qs = new URLSearchParams(location.search);
@@ -20,6 +20,23 @@ console.log('[kiosk-runtime v3] running', location.href);
   const playlist = readJson('jwg_kiosk_playlist', []);
   const config   = readJson('jwg_kiosk_config', {});
   const titles   = readJson('jwg_kiosk_titles', {});
+  
+   function siteBasePath() {
+  // Prefer an explicit <base href="..."> if you ever add one
+  const baseEl = document.querySelector('base[href]');
+  if (baseEl) {
+    try { return new URL(baseEl.getAttribute('href'), location.origin).pathname; } catch {}
+  }
+
+  // GitHub Pages project sites: https://user.github.io/<repo>/
+  if (location.hostname.endsWith('github.io')) {
+    const seg = (location.pathname.split('/').filter(Boolean)[0] || '').trim();
+    if (seg) return `/${seg}/`;
+  }
+
+  // Local / normal sites
+  return '/';
+}
 
   if (!Array.isArray(playlist) || playlist.length === 0) return;
 
@@ -63,7 +80,8 @@ if (!(transitionMs > 0)) transitionMs = 1200;
       localStorage.removeItem('jwg_kiosk_titles');
       localStorage.removeItem('jwg_kiosk_idx');
     } catch {}
-    location.href = '/index.html';
+    location.href = toSiteUrl('index.html');
+
   }
 
   // --- Pause toggle: P only ---
@@ -75,11 +93,12 @@ if (!(transitionMs > 0)) transitionMs = 1200;
   // --- Fade overlay ---
   const veil = ensureVeil();
 
-  // Querystring-driven fixed veil on *this* page (set by previous page)
-  const kv = parseInt(qs.get('kv') || '0', 10);
-  const kmRaw = qs.get('km') || '';
-  const incomingText = kmRaw ? decodeURIComponent(kmRaw) : '';
-  if (incomingText) setVeilMessage(incomingText);
+const kv = parseInt(qs.get('kv') || '0', 10);
+
+// URLSearchParams already decodes. Do NOT decodeURIComponent again.
+const incomingText = String(qs.get('km') || '').trim();
+if (incomingText) setVeilMessage(incomingText);
+
 
   // If kv is present, start covered and hold for exactly kv ms (identical across pages)
   if (Number.isFinite(kv) && kv > 0) {
@@ -148,37 +167,35 @@ if (!(transitionMs > 0)) transitionMs = 1200;
     localStorage.setItem('jwg_kiosk_idx', String(nextIdx));
 
 let nextPath = String(playlist[nextIdx] || '').trim();
+if (!nextPath) nextPath = 'index.html';
 
-// Normalise for title lookup (manifest keys never start with '/')
+// Titles map keys are stored without leading '/'
 const titleKey = nextPath.replace(/^\/+/, '');
-
-// Build a site-relative URL that works locally AND on GitHub project pages
-const nextUrl = toSiteUrl(nextPath);
-
 const nextTitle = (titles && typeof titles === 'object')
   ? String(titles[titleKey] ?? '').trim()
   : '';
 
-    console.log(nextTitle);
-    const veilText = nextTitle ? `Coming next… ${nextTitle}` : 'Loading next page…';
+const veilText = nextTitle ? `Coming next… ${nextTitle}` : 'Loading next page…';
+setVeilMessage(veilText);
 
-    // Show message during fade-out of current page
-    setVeilMessage(veilText);
+// Fade in veil to mask navigation
+await fadeTo(1, fadeMs);
 
-    // Fade in veil to mask navigation
-    await fadeTo(1, fadeMs);
+// Small readable hold (keep small to avoid Chrome throttling)
+const hold = Math.min(fadeHoldMs, 250);
+if (hold > 0) await pauseWait(hold);
 
-    // Small readable hold (kept small to avoid Chrome throttling)
-    const hold = Math.min(fadeHoldMs, 250);
-    if (hold > 0) await pauseWait(hold);
+// Build next URL under correct site base (works locally + GitHub project pages)
+const u = new URL(toSiteUrl(nextPath));
 
-    // Navigate to next page, passing fixed veil duration + message for next page
-   const u = new URL(addKioskParam(nextPath), location.href);
-    u.searchParams.set('kv', String(transitionMs));
-    u.searchParams.set('km', veilText); // URLSearchParams will encode it
-    console.log('[kiosk-runtime] navigating to:', u.toString());
+// Required params so the next page stays in kiosk mode + shows fixed veil
+u.searchParams.set('kiosk', '1');
+if (config.cachebust !== false) u.searchParams.set('kiosk_ts', String(Date.now()));
+u.searchParams.set('kv', String(transitionMs));
+u.searchParams.set('km', veilText);
 
-    location.href = nextUrl;
+location.href = u.toString();
+
 
   }
 
@@ -285,26 +302,11 @@ const nextTitle = (titles && typeof titles === 'object')
     return sleep(ms);
   }
   
-  function siteBasePath() {
-  // Prefer an explicit <base href="..."> if you ever add one
-  const baseEl = document.querySelector('base[href]');
-  if (baseEl) {
-    try { return new URL(baseEl.getAttribute('href'), location.origin).pathname; } catch {}
-  }
-
-  // GitHub Pages project sites: https://user.github.io/<repo>/
-  if (location.hostname.endsWith('github.io')) {
-    const seg = (location.pathname.split('/').filter(Boolean)[0] || '').trim();
-    if (seg) return `/${seg}/`;
-  }
-
-  // Local / normal sites
-  return '/';
-}
-
-const SITE_BASE = siteBasePath();
 
 function toSiteUrl(path) {
+  // Compute base at call time (no TDZ, no init-order issues)
+  const base = siteBasePath();
+
   let p = String(path || '').trim();
   if (!p) return location.href;
 
@@ -312,8 +314,9 @@ function toSiteUrl(path) {
   if (/^https?:\/\//i.test(p)) return p;
 
   // normalise to *relative to site base*
-  p = p.replace(/^\/+/, ''); // remove leading slashes
-  return new URL(SITE_BASE + p, location.origin).toString();
+  p = p.replace(/^\/+/, '');
+  return new URL(base + p, location.origin).toString();
 }
+
 
 })();
