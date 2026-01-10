@@ -38,11 +38,41 @@
             "key": "children",
             "title": "Most Children",
             "description": "Our ancestor with the most children.",
-            "status": "planned",
+            "status": "implemented",
             "icon": "assets/img/icons/phosphor/baby.svg",
             "sort": 20,
             "layout_hint": "stat-led",
-            "divisions": []
+            "divisions": [
+                {
+                    "key": "most_children_top5",
+                    "title": "Top 5 families",
+                    "description": "Top 5 parents by recorded number of children in the database.",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/baby.svg",
+                    "sort": 0,
+                    "generator": {
+                        "script": "app/spotlights/MostChildrenSpotlight.php",
+                        "class": "MostChildrenSpotlight",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "limit": 5,
+                            "stat_label": "Most children",
+                            "description": "Top 5 parents by recorded number of children",
+                            "relationship": "Top parents by recorded number of children in the database.",
+                            "output_dir": "spotlights/children",
+                            "filename_template": "most_children_top5.html",
+                            "base_href": "/johns-genealogy-quest/",
+                            "template_path": "web-templates/template_children.html"
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/children",
+                        "filename_template": "most_children_top5.html",
+                        "pattern": "most_children_*.html"
+                    },
+                    "html_template": "web-templates/template_children.html"
+                }
+            ]
         },
         {
             "key": "unions",
@@ -212,7 +242,7 @@
                 {
                     "key": "gilroy",
                     "title": "John's Paternal Line",
-                    "description": "The longest lived person from John's paternal line (Gilroy)",
+                    "description": "The longest lived {gender} from John's paternal line (Gilroy)",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
@@ -243,7 +273,7 @@
                 {
                     "key": "wilson",
                     "title": "John's Maternal Line",
-                    "description": "The longest lived person from John's maternal line (Wilson)",
+                    "description": "The longest lived {gender} from John's maternal line (Wilson)",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
@@ -274,7 +304,7 @@
                 {
                     "key": "reynolds",
                     "title": "Val's Paternal Line",
-                    "description": "The longest lived person from Val's paternal line (Reynolds)",
+                    "description": "The longest lived {gender} from Val's paternal line (Reynolds)",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
@@ -305,7 +335,7 @@
                 {
                     "key": "law",
                     "title": "Val's Maternal Line",
-                    "description": "The longest lived person from Val's maternal line (Law)",
+                    "description": "The longest lived {gender} from Val's maternal line (Law)",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,

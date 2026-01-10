@@ -1,6 +1,7 @@
 {
     "home": "index.html",
     "pages": [
+        "spotlights/children/most_children_top5.html",
         "spotlights/longevity/gilroy/longest_lived_gilroy_I00016.html",
         "spotlights/longevity/gilroy/longest_lived_gilroy_I00421.html",
         "spotlights/longevity/law/longest_lived_law_I344.html",
@@ -12,10 +13,12 @@
         "spotlights/longevity/wilson/longest_lived_wilson_I00512.html",
         "spotlights/longevity/wilson/longest_lived_wilson_I00545.html",
         "spotlights/plantagenet/royal_connection_edward_iii.html",
+        "spotlights/press/press_media_2473.html",
         "bios/I00009.html"
     ],
     "schema_version": "kiosk-manifest-2",
     "titles": {
+        "spotlights/children/most_children_top5.html": "Top 5 parents by recorded number of children in the database.",
         "spotlights/longevity/gilroy/longest_lived_gilroy_I00016.html": "Leslie Widdowson (1921 - 2011)",
         "spotlights/longevity/gilroy/longest_lived_gilroy_I00421.html": "Marion Gray Whitelaw (1866 - 1966)",
         "spotlights/longevity/law/longest_lived_law_I344.html": "Fanny Miles (1864 - 1956)",
@@ -27,6 +30,7 @@
         "spotlights/longevity/wilson/longest_lived_wilson_I00512.html": "Henry Hinshelwood (1831 - 1923)",
         "spotlights/longevity/wilson/longest_lived_wilson_I00545.html": "Jane Lamb (1852 - 1943)",
         "spotlights/plantagenet/royal_connection_edward_iii.html": "The Plantagenet Connection and Edward III",
+        "spotlights/press/press_media_2473.html": "Press Media 2473",
         "bios/I00009.html": "George Blacklaw"
     }
 }

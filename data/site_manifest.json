@@ -45,10 +45,19 @@
     "spotlights": [
         {
             "type": "spotlight",
+            "catalog_key": "children",
+            "division_key": "most_children_top5",
+            "title": "Most Children Top5",
+            "description": "Top 5 parents by recorded number of children in the database.",
+            "href": "spotlights/children/most_children_top5.html",
+            "link_title": "Top 5 parents by recorded number of children in the database."
+        },
+        {
+            "type": "spotlight",
             "catalog_key": "longevity",
             "division_key": "gilroy",
             "title": "Longest Lived Gilroy I00016",
-            "description": "The longest lived person from John's paternal line (Gilroy)",
+            "description": "The longest lived {gender} from John's paternal line (Gilroy)",
             "href": "spotlights/longevity/gilroy/longest_lived_gilroy_I00016.html",
             "link_title": "Leslie Widdowson (1921 - 2011)"
         },
@@ -57,7 +66,7 @@
             "catalog_key": "longevity",
             "division_key": "gilroy",
             "title": "Longest Lived Gilroy I00421",
-            "description": "The longest lived person from John's paternal line (Gilroy)",
+            "description": "The longest lived {gender} from John's paternal line (Gilroy)",
             "href": "spotlights/longevity/gilroy/longest_lived_gilroy_I00421.html",
             "link_title": "Marion Gray Whitelaw (1866 - 1966)"
         },
@@ -66,7 +75,7 @@
             "catalog_key": "longevity",
             "division_key": "law",
             "title": "Longest Lived Law I344",
-            "description": "The longest lived person from Val's maternal line (Law)",
+            "description": "The longest lived {gender} from Val's maternal line (Law)",
             "href": "spotlights/longevity/law/longest_lived_law_I344.html",
             "link_title": "Fanny Miles (1864 - 1956)"
         },
@@ -75,7 +84,7 @@
             "catalog_key": "longevity",
             "division_key": "law",
             "title": "Longest Lived Law I353",
-            "description": "The longest lived person from Val's maternal line (Law)",
+            "description": "The longest lived {gender} from Val's maternal line (Law)",
             "href": "spotlights/longevity/law/longest_lived_law_I353.html",
             "link_title": "Percival Sidney Law (1903 - 1984)"
         },
@@ -102,7 +111,7 @@
             "catalog_key": "longevity",
             "division_key": "reynolds",
             "title": "Longest Lived Reynolds I17",
-            "description": "The longest lived person from Val's paternal line (Reynolds)",
+            "description": "The longest lived {gender} from Val's paternal line (Reynolds)",
             "href": "spotlights/longevity/reynolds/longest_lived_reynolds_I17.html",
             "link_title": "Marjorie Anne King (1891 - 1991)"
         },
@@ -111,7 +120,7 @@
             "catalog_key": "longevity",
             "division_key": "reynolds",
             "title": "Longest Lived Reynolds I2",
-            "description": "The longest lived person from Val's paternal line (Reynolds)",
+            "description": "The longest lived {gender} from Val's paternal line (Reynolds)",
             "href": "spotlights/longevity/reynolds/longest_lived_reynolds_I2.html",
             "link_title": "Ernest William Anthony Reynolds (1921 - 2014)"
         },
@@ -120,7 +129,7 @@
             "catalog_key": "longevity",
             "division_key": "wilson",
             "title": "Longest Lived Wilson I00512",
-            "description": "The longest lived person from John's maternal line (Wilson)",
+            "description": "The longest lived {gender} from John's maternal line (Wilson)",
             "href": "spotlights/longevity/wilson/longest_lived_wilson_I00512.html",
             "link_title": "Henry Hinshelwood (1831 - 1923)"
         },
@@ -129,7 +138,7 @@
             "catalog_key": "longevity",
             "division_key": "wilson",
             "title": "Longest Lived Wilson I00545",
-            "description": "The longest lived person from John's maternal line (Wilson)",
+            "description": "The longest lived {gender} from John's maternal line (Wilson)",
             "href": "spotlights/longevity/wilson/longest_lived_wilson_I00545.html",
             "link_title": "Jane Lamb (1852 - 1943)"
         },
