@@ -48,9 +48,9 @@
             "catalog_key": "children",
             "division_key": "most_children_top5",
             "title": "Most Children Top5",
-            "description": "Top 5 parents by recorded number of children in the database.",
+            "description": "Our most prolific ancestors",
             "href": "spotlights/children/most_children_top5.html",
-            "link_title": "Top 5 parents by recorded number of children in the database."
+            "link_title": "Our most prolific ancestors"
         },
         {
             "type": "spotlight",
@@ -155,9 +155,28 @@
             "type": "spotlight",
             "catalog_key": "press_media",
             "division_key": "press_media_all",
+            "title": "Press Media 1775",
+            "description": "Newspaper articles and reports in which family members are mentioned.",
+            "href": "spotlights/press/press_media_1775.html",
+            "link_title": "DOGS FOUND AMONG SHEEP"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "press_media",
+            "division_key": "press_media_all",
             "title": "Press Media 2473",
             "description": "Newspaper articles and reports in which family members are mentioned.",
-            "href": "spotlights/press/press_media_2473.html"
+            "href": "spotlights/press/press_media_2473.html",
+            "link_title": "Children will be children"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "press_media",
+            "division_key": "press_media_all",
+            "title": "Press Media 3023",
+            "description": "Newspaper articles and reports in which family members are mentioned.",
+            "href": "spotlights/press/press_media_3023.html",
+            "link_title": "Postmans Theft"
         }
     ],
     "updated_at": "2025-12-17T15:26:14+00:00"

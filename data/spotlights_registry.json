@@ -9,18 +9,18 @@
             "icon": "assets/img/icons/phosphor/newspaper.svg",
             "sort": 0,
             "layout_hint": "image-led",
-            "link_label": "",
-            "html_template": "web-templates/template_longevity.html",
+            "link_label": "title",
             "divisions": [
                 {
                     "key": "press_media_all",
                     "title": "Press clippings",
                     "description": "Newspaper articles and reports in which family members are mentioned.",
-                    "status": "planned",
+                    "status": "implemented",
                     "icon": "assets/img/icons/phosphor/newspaper.svg",
                     "sort": 0,
                     "generator": {
-                        "script": "app/spotlights/press/PressMediaSpotlight.php",
+                        "script": "app/spotlights/PressMediaSpotlight.php",
+                        "class": "PressMediaSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
                             "mediaID": ""
@@ -30,14 +30,40 @@
                         "dir": "spotlights/press",
                         "filename_template": "press_media_{mediaID}.html",
                         "pattern": "press_media_*.html"
-                    }
+                    },
+                    "pages": [
+                        {
+                            "key": "press_2473",
+                            "mediaID": 2473,
+                            "headline": "Children will be children",
+                            "standfirst": "Polmont Piano Tuner Who Took Out His Glass Eye",
+                            "status": "implemented",
+                            "sort": 0
+                        },
+                        {
+                            "key": "press_3023",
+                            "mediaID": 3023,
+                            "headline": "Postmans Theft",
+                            "standfirst": "Sheffield Ex-Soldier's Good Record Spoilt",
+                            "status": "implemented",
+                            "sort": 0
+                        },
+                        {
+                            "key": "press_1775",
+                            "mediaID": 1775,
+                            "headline": "DOGS FOUND AMONG SHEEP",
+                            "standfirst": "Fosse Bridge Owner To Keep Them Under Control",
+                            "status": "implemented",
+                            "sort": 0
+                        }
+                    ]
                 }
             ]
         },
         {
             "key": "children",
             "title": "Most Children",
-            "description": "Our ancestor with the most children.",
+            "description": "Our ancestors with the most children.",
             "status": "implemented",
             "icon": "assets/img/icons/phosphor/baby.svg",
             "sort": 20,
@@ -45,8 +71,8 @@
             "divisions": [
                 {
                     "key": "most_children_top5",
-                    "title": "Top 5 families",
-                    "description": "Top 5 parents by recorded number of children in the database.",
+                    "title": "Top 5 Most Children",
+                    "description": "Our most prolific ancestors",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/baby.svg",
                     "sort": 0,
@@ -56,9 +82,10 @@
                         "parameters": {
                             "tree": "Gilroy1",
                             "limit": 5,
-                            "stat_label": "Most children",
-                            "description": "Top 5 parents by recorded number of children",
-                            "relationship": "Top parents by recorded number of children in the database.",
+                            "stat_label": "The Most children",
+                            "description": "",
+                            "hero_image": "assets/img/stork.jpg",
+                            "relationship": "Top 5 parents by recorded number of children in our tree",
                             "output_dir": "spotlights/children",
                             "filename_template": "most_children_top5.html",
                             "base_href": "/johns-genealogy-quest/",

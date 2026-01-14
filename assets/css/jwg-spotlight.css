@@ -15,14 +15,44 @@ body.spotlight {
   padding: 24px 16px 40px;
 }
 
-
 .spotlight-hero {
-  background: var(--jwg-blue-dark);
+  position: relative; /* prepares for later background pattern */
   color: #fff;
+  overflow: hidden;
   border-radius: var(--jwg-radius-lg);
   padding: 20px 24px 24px;
   margin: 20px 0 20px; /* allow for the site header */
   box-shadow: var(--jwg-shadow-soft);
+
+  /* Subtle depth gradient – left (content) to right (breathing space) */
+  background: linear-gradient(
+    135deg,
+    var(--jwg-blue-dark) 0%,
+    #1c6fa6 55%,
+    #165e8f 100%
+  );
+}
+.spotlight-hero::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  /* tuned for dark blue gradients */
+  background-image: radial-gradient(
+    rgba(255,255,255,0.18) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+  opacity: 0.28;
+
+  z-index: 0;
+}
+
+.spotlight-hero > *{
+  position: relative;
+  z-index: 1;
 }
 
 /* --------------------------------
@@ -30,26 +60,26 @@ body.spotlight {
    Single authoritative block to avoid CSS clashes.
 --------------------------------- */
 
-.spotlight-hero-top{
+.spotlight-hero-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: .75rem;
-  margin-bottom: .75rem;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Label: make it read like a descriptor tag, not an action button */
-.spotlight-hero-label{
+.spotlight-hero-label {
   display: inline-flex;
   align-items: center;
 
-  padding: 0;                 /* no pill */
+  padding: 0; /* no pill */
   border: 0;
   background: transparent;
 
   font-weight: 750;
-  letter-spacing: .02em;
-  opacity: .95;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
 
   /* optional: subtle divider line to separate it from content */
   /* padding-bottom: .15rem;
@@ -57,51 +87,51 @@ body.spotlight {
 }
 
 /* Keep the action container simple */
-.spotlight-hero-action{
+.spotlight-hero-action {
   display: inline-flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-.spotlight-hero-portrait{
+.spotlight-hero-portrait {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
   width: auto;
   max-width: none;
-  margin: 10px 0 0 0;  /* baseline alignment tweak */
+  margin: 10px 0 0 0; /* baseline alignment tweak */
 }
 
-.spotlight-hero-subject{
+.spotlight-hero-subject {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: .75rem;
+  margin-top: 0.75rem;
 }
 
-.spotlight-hero-subject-text{
+.spotlight-hero-subject-text {
   flex: 1 1 auto;
   min-width: 0;
 }
 
-.spotlight-hero-portrait img{
+.spotlight-hero-portrait img {
   display: block;
   width: 128px;
   height: 128px;
   object-fit: cover;
   border-radius: 16px;
-  border: 2px solid rgba(255,255,255,.35);
-  background: rgba(255,255,255,.10);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 420px){
-  .spotlight-hero-subject{
+@media (max-width: 420px) {
+  .spotlight-hero-subject {
     flex-direction: column;
     align-items: flex-start;
   }
-  .spotlight-hero-portrait img{
+  .spotlight-hero-portrait img {
     width: 80px;
     height: 80px;
   }
@@ -134,9 +164,10 @@ body.spotlight {
   display: none;
 }
 
-
 @media (max-width: 800px) {
-  .spotlight-main { grid-template-columns: 1fr; }
+  .spotlight-main {
+    grid-template-columns: 1fr;
+  }
 }
 
 .spotlight-card {
@@ -151,11 +182,6 @@ body.spotlight {
   margin: 0 0 10px;
   font-size: 1.15rem;
   color: var(--jwg-brown);
-}
-
-.spotlight-card p {
-  margin: 0 0 8px;
-  line-height: 1.5;
 }
 
 .spotlight-facts-list {
@@ -184,7 +210,6 @@ body.spotlight {
   margin: 6px 0;
 }
 
-
 .spotlight-main > section {
   min-width: 0;
 }
@@ -200,54 +225,223 @@ body.spotlight {
 }
 
 /* Hero action button: intentionally subdued */
-.spotlight-hero-action .jwg-btn--on-dark{
-  padding: .4rem .75rem;
-  font-size: .85rem;
+.spotlight-hero-action .jwg-btn--on-dark {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
   font-weight: 600;
 
-  background: rgba(255,255,255,.18);
+  background: rgba(255, 255, 255, 0.18);
   color: #fff;
 
-  border: 1px solid rgba(255,255,255,.35);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   box-shadow: none;
-  opacity: .85;
+  opacity: 0.85;
 }
 
 /* Minimal hover – no motion, no spotlight */
 .spotlight-hero-action .jwg-btn--on-dark:hover,
-.spotlight-hero-action .jwg-btn--on-dark:focus{
-  background: rgba(255,255,255,.28);
-  border-color: rgba(255,255,255,.5);
+.spotlight-hero-action .jwg-btn--on-dark:focus {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.5);
   opacity: 1;
   transform: none;
 }
 
 /* Metric: make it the star */
-.spotlight-hero-metric{
+.spotlight-hero-metric {
   margin-top: 12px;
   padding: 14px 16px;
   border-radius: 14px;
-  background: rgba(255,255,255,.10);
-  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-.hero-metric-value{
-  font-size: 2.75rem;     /* up from 2.4rem */
+.hero-metric-value {
+  font-size: 2.75rem; /* up from 2.4rem */
   font-weight: 900;
-  letter-spacing: .2px;
+  letter-spacing: 0.2px;
   line-height: 1.05;
 }
 
-.hero-metric-caption{
+.hero-metric-caption {
   margin-top: 4px;
-  font-size: .95rem;
-  opacity: .9;
+  font-size: 0.95rem;
+  opacity: 0.9;
 }
 /* Guard: keep subject row as two columns when there is room */
-.spotlight-hero-subject{
+.spotlight-hero-subject {
   display: flex;
 }
 
-.spotlight-hero-subject > *{
+.spotlight-hero-subject > * {
   width: auto;
 }
+
+/* ------------------------------------------------------------
+   Spotlight layout (generic helpers)
+   ------------------------------------------------------------ */
+
+.spotlight-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.spotlight-grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 900px) {
+  .spotlight-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ------------------------------------------------------------
+   Press Media spotlight specifics
+   ------------------------------------------------------------ */
+
+.press-figure {
+  margin: 0;
+}
+
+.press-image-link {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.06);
+}
+
+.press-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Make the image panel feel more “framed” and consistent */
+.press-image-link .press-image {
+  max-height: 520px;
+}
+
+/* Press media: larger summary under hero */
+.press-people-summary {
+  max-width: 90ch;
+  margin: 14px 0 18px;
+}
+
+.press-people-summary p {
+  font-size: 1.12rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.press-provenance{
+  margin-top: 10px;
+  font-size: 0.92rem;
+  color: #666;
+  line-height: 1.35;
+}
+
+/* Transcript UX */
+.press-transcript {
+  margin-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  padding-top: 10px;
+}
+
+/* Press transcript header should feel like newsprint */
+.press-transcript-headline{
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  margin: 0 0 0.35em;
+  letter-spacing: 0.2px;
+}
+
+.press-transcript-standfirst{
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.25;
+  margin: 0 0 1.2em;
+  font-style: italic;
+}
+
+.press-transcript > summary {
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+}
+
+.press-transcript-body {
+  margin-top: 10px;
+}
+
+.press-transcript-body p {
+  margin: 0 0 0.6rem 0;
+}
+
+/* ------------------------------------------------------------
+   Press Media: hero emphasis (headline + standfirst)
+   ------------------------------------------------------------ */
+
+.press-hero-text {
+  max-width: 68ch;            /* prevents ultra-wide lines */
+}
+
+.press-hero-title {
+  margin-top: 8px;
+  letter-spacing: -0.02em;    /* subtle tightening */
+  line-height: 1.05;
+  font-size: clamp(1.9rem, 3.6vw, 3.0rem);
+}
+
+.press-hero-standfirst {
+  margin-top: 10px;
+  max-width: 72ch;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.45;
+  opacity: 0.95;
+}
+
+/* Reduce that “empty blue slab” feeling by adding a subtle texture */
+.spotlight-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  /* subtle dot/ink texture */
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.07) 1px, transparent 1.6px);
+  background-size: 14px 14px;
+  opacity: 0.35;
+}
+
+/* Keep hero content above the texture */
+.spotlight-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Make the label feel more “masthead” and less like a pill lost in space */
+.spotlight-hero-label {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* Optional: tighten synopsis paragraphs slightly */
+.spotlight-card p {
+  margin: 0 0 0.75rem 0;
+}
+

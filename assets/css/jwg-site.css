@@ -265,20 +265,6 @@ hr {
   text-decoration: none;
 }
 
-/* Optional variant used on dark backgrounds (hero areas) */
-.jwg-btn--on-dark {
-  border: 1px solid rgba(255,255,255,.22);
-  background: rgba(255,255,255,.16);
-  color: #fff;
-}
-
-.jwg-btn--on-dark:hover,
-.jwg-btn--on-dark:focus {
-  background: rgba(255,255,255,.22);
-  border-color: rgba(255,255,255,.30);
-  text-decoration: none;
-}
-
 /* Button variant for dark backgrounds (hero areas) */
 .jwg-btn--on-dark {
   border: 1px solid rgba(255,255,255,.22);

@@ -1,107 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Most children – Most children</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="jwg:link_title" content="Top 5 parents by recorded number of children in the database.">
-  <base href="/johns-genealogy-quest/">
+  <head>
+    <meta charset="utf-8" />
+    <title>The Most children – Most children</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="jwg:link_title" content="Our most prolific ancestors" />
+    <base href="/johns-genealogy-quest/" />
 
-  <link rel="stylesheet" href="assets/css/jwg-site.css">
-  <link rel="stylesheet" href="assets/css/jwg-spotlight.css">
+    <link rel="stylesheet" href="assets/css/jwg-site.css" />
+    <link rel="stylesheet" href="assets/css/jwg-spotlight.css" />
 
-  <!-- Page-specific tweaks for "Most Children" (minimal) -->
-  <style>
-    .spotlight-hero-subject{
-      align-items: stretch;
-    }
+    <!-- Page-specific tweaks for "Most Children" (minimal) -->
+    <style>
+      .spotlight-hero-subject {
+        align-items: stretch;
+      }
 
-    .children-hero-portrait{
-      flex: 0 0 96px;
-      width: 96px;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: var(--jwg-shadow-sm);
-      border: 1px solid rgba(255,255,255,.25);
-      background: rgba(255,255,255,.10);
-    }
+.children-hero-portrait{
+  flex: 0 0 96px;
+  width: 96px;
+  height: 96px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--jwg-shadow-sm);
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.10);
 
-    .children-hero-portrait img{
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
-</head>
+  /* NEW */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-<body class="spotlight layout-default">
+.children-hero-portrait img{
+  display: block;
+  width: 100%;
+  height: auto;          /* ← critical change */
+  object-fit: contain;
+}
 
-  <!-- Standard site header -->
-  <header class="site-header">
-    <div class="site-header-inner">
-      <a href="index.html" class="site-title">John&#39;s Genealogy Quest</a>
-      <nav class="site-nav"><a href="index.html">Home</a><a href="bios/index.html">Biographies</a><a href="spotlights/index.html">Spotlights</a></nav>
-    </div>
-  </header>
+    </style>
+  </head>
 
-  <div class="spotlight-wrap">
+  <body class="spotlight layout-default">
+    <!-- Standard site header -->
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="site-title">John&#39;s Genealogy Quest</a>
+        <nav class="site-nav"><a href="index.html">Home</a><a href="bios/index.html">Biographies</a><a href="spotlights/index.html">Spotlights</a></nav>
+      </div>
+    </header>
 
-    <!-- Spotlight hero -->
-    <div class="spotlight-hero">
-      <div class="spotlight-hero-top">
-        <div class="spotlight-hero-label">Top 5 parents by recorded number of children in the database.</div>
-        <div class="spotlight-hero-action">
-          
+    <div class="spotlight-wrap">
+      <!-- Spotlight hero -->
+      <div class="spotlight-hero">
+        <div class="spotlight-hero-top">
+          <div class="spotlight-hero-label">Our most prolific ancestors</div>
+          <div class="spotlight-hero-action"></div>
+        </div>
+
+        <div class="spotlight-hero-subject">
+          <!-- Portrait wrapper -->
+          <div class="children-hero-portrait"><img src="assets/img/stork.jpg" alt="Family tree spotlight" loading="lazy" decoding="async"></div>
+
+          <div class="spotlight-hero-subject-text">
+            <h1>Most children</h1>
+            <p class="spotlight-hero-relationship">Top 5 parents by recorded number of children in our tree</p>
+            
+          </div>
         </div>
       </div>
 
-      <div class="spotlight-hero-subject">
+      <!-- Main content (two-column via spotlight CSS) -->
+      <main class="spotlight-main">
+        <!-- LEFT -->
+        <section class="spotlight-card"><h2>Top 5: most children</h2><p class="jwg-muted">A quick look at the largest recorded families in our tree.</p><ol class="jwg-spotlight-toplist" style="margin:0;padding-left:1.25rem;"><li class="jwg-topitem" style="margin:0 0 .9rem 0;"><div style="padding:.75rem .8rem;border-radius:14px;background:rgba(255,255,255,.06);"><div class="jwg-topitem-title" style="margin:0;"><a href="https://www.wikitree.com/wiki/Alexander-15907" target="_blank" rel="noopener"><strong>John Alexander</strong></a> had 15 children from 2 families</div><ul class="jwg-topitem-sublist jwg-muted" style="margin:.45rem 0 0 0;padding-left:1.15rem;"><li>He married <a href="https://www.wikitree.com/wiki/Smith-202929" target="_blank" rel="noopener"><strong>Hannah  Smith</strong></a> on 22 Jan 1782 in Wiltshire, England and they had 10 children.</li><li>He married <a href="https://www.wikitree.com/wiki/Day-19862" target="_blank" rel="noopener"><strong>Mary Ann  Day</strong></a> on 26 Dec 1815 in Wiltshire, England and they had 5 children.</li></ul></div></li><li class="jwg-topitem" style="margin:0 0 .9rem 0;"><div class="jwg-topitem-title" style="margin:0;"><a href="https://www.wikitree.com/wiki/Blacklaw-6" target="_blank" rel="noopener"><strong>George Blacklaw</strong></a> had 14 children from 3 families</div><ul class="jwg-topitem-sublist jwg-muted" style="margin:.45rem 0 0 0;padding-left:1.15rem;"><li>He married <a href="https://www.wikitree.com/wiki/Strachan-1119" target="_blank" rel="noopener"><strong>Catherine  Strachan</strong></a> on 18 May 1839 in Kincardineshire, Scotland and they had 8 children.</li><li>He formed a family with <a href="https://www.wikitree.com/wiki/Mathieson-473" target="_blank" rel="noopener"><strong>Caroline  Mathieson</strong></a> on EST 1864 in Kincardineshire, Scotland and they had 5 children.</li><li>He married <a href="https://www.wikitree.com/wiki/Kerr-7122" target="_blank" rel="noopener"><strong>Marion  Kerr</strong></a> on 22 Mar 1878 in Midlothian, Scotland and they had 1 child.</li></ul></li><li class="jwg-topitem" style="margin:0 0 .9rem 0;"><div class="jwg-topitem-title" style="margin:0;"><a href="https://www.wikitree.com/wiki/Inman-2250" target="_blank" rel="noopener"><strong>Deborah Inman</strong></a> &amp; <a href="https://www.wikitree.com/wiki/Inman-2251" target="_blank" rel="noopener"><strong>Richard  Inman</strong></a> had 13 children</div><ul class="jwg-topitem-sublist jwg-muted" style="margin:.45rem 0 0 0;padding-left:1.15rem;"><li>They married on 21 Dec 1808 in Yorkshire, England.</li></ul></li><li class="jwg-topitem" style="margin:0 0 .9rem 0;"><div class="jwg-topitem-title" style="margin:0;"><a href="https://www.wikitree.com/wiki/Meredith-4424" target="_blank" rel="noopener"><strong>David Meredith</strong></a> &amp; <a href="https://www.wikitree.com/wiki/Owens-9921" target="_blank" rel="noopener"><strong>Sarah  Owens</strong></a> had 13 children</div><ul class="jwg-topitem-sublist jwg-muted" style="margin:.45rem 0 0 0;padding-left:1.15rem;"><li>They married on 30 Nov 1727 in Herefordshire, England.</li></ul></li><li class="jwg-topitem" style="margin:0 0 .9rem 0;"><div class="jwg-topitem-title" style="margin:0;"><a href="https://www.wikitree.com/wiki/Owens-9921" target="_blank" rel="noopener"><strong>Sarah Owens</strong></a> &amp; <a href="https://www.wikitree.com/wiki/Meredith-4424" target="_blank" rel="noopener"><strong>David  Meredith</strong></a> had 13 children</div><ul class="jwg-topitem-sublist jwg-muted" style="margin:.45rem 0 0 0;padding-left:1.15rem;"><li>They married on 30 Nov 1727 in Herefordshire, England.</li></ul></li></ol></section>
 
-        <!-- Portrait wrapper -->
-        <div class="children-hero-portrait">
-          <img src="assets/img/edward-iii-garter.jpg" alt="Family tree spotlight" loading="lazy" decoding="async">
-        </div>
+        <!-- RIGHT -->
+        <aside class="spotlight-card"><h2>In brief</h2><p><a href="https://www.wikitree.com/wiki/Alexander-15907" target="_blank" rel="noopener"><strong>John Alexander</strong></a>, the fifth great grandfather of Valerie Christine Reynolds, heads the list with <strong>15</strong> children across <strong>2</strong> families.</p><p>John Alexander was born on 30 November 1759. His parents have not yet been identified in the available records.</p><p>He married twice (married Hannah Smith on 22 Jan 1782 in Ramsbury, Wiltshire, England; married Mary Ann Day on 26 Dec 1815 in Ramsbury, Wiltshire, England). Together, these unions produced 15 children.</p><p>He died on 30 November 1841 at Ramsbury, Wiltshire, England.</p><h3>Children</h3><p style="margin:.5rem 0 .2rem 0;">With <strong>Hannah Smith</strong> — 10 children <span class="jwg-muted">(married, 22 Jan 1782, Wiltshire, England)</span></p><ul class="jwg-muted" style="margin:.2rem 0 .6rem 0;padding-left:1.15rem;"><li><strong>Anne Alexander</strong> <span class="jwg-muted">(1782, Wiltshire)</span></li><li><strong>Edward Alexander</strong> <span class="jwg-muted">(1785, Wiltshire)</span></li><li><strong>Maria Alexander</strong> <span class="jwg-muted">(1787, Wiltshire)</span></li><li><strong>Hannah Alexander</strong> <span class="jwg-muted">(1788, Wiltshire)</span></li><li><strong>John Alexander</strong> <span class="jwg-muted">(1789, Wiltshire)</span></li><li><strong>James Alexander</strong> <span class="jwg-muted">(1790, Wiltshire)</span></li><li><strong>John Alexander</strong> <span class="jwg-muted">(1792, Wiltshire)</span></li><li><strong>James Alexander</strong> <span class="jwg-muted">(1794, Wiltshire)</span></li><li><strong>Hannah Alexander</strong> <span class="jwg-muted">(1796, Wiltshire)</span></li><li><strong>William Alexander</strong> <span class="jwg-muted">(1800, Wiltshire)</span></li></ul><p style="margin:.5rem 0 .2rem 0;">With <strong>Mary Ann Day</strong> — 5 children <span class="jwg-muted">(married, 26 Dec 1815, Wiltshire, England)</span></p><ul class="jwg-muted" style="margin:.2rem 0 .6rem 0;padding-left:1.15rem;"><li><strong>Rachel Alexander</strong> <span class="jwg-muted">(1816, Wiltshire)</span></li><li><strong>Richard Alexander</strong> <span class="jwg-muted">(1817, Wiltshire)</span></li><li><strong>Elizabeth Alexander</strong> <span class="jwg-muted">(1819, Wiltshire)</span></li><li><strong>Tabitha Alexander</strong> <span class="jwg-muted">(1821, Wiltshire)</span></li><li><strong>Charles Alexander</strong> <span class="jwg-muted">(1824, Wiltshire)</span></li></ul> </aside>
+      </main>
+    </div>
 
-        <div class="spotlight-hero-subject-text">
-          <h1>Most children</h1>
-          <p class="spotlight-hero-relationship">Top parents by recorded number of children in the database.</p>
-          
-        </div>
+    <!-- Standard footer -->
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p>
+          Created with the JWG Biography Production pipeline · Data from John’s
+          research · Design JWG and ChatGPT
+        </p>
+        <p>
+          <a href="index.html">Home</a> ·
+          <a href="bios/index.html">Biographies</a> ·
+          <a href="spotlights/index.html">Spotlights</a>
+        </p>
       </div>
-    </div>
+    </footer>
 
-    <!-- Main content (two-column via spotlight CSS) -->
-    <main class="spotlight-main">
-
-      <!-- LEFT -->
-      <section class="spotlight-card">
-        <h2>Top 5: most children</h2><p class="jwg-muted">Counts are based on recorded children in TNG families.</p><ol class="jwg-spotlight-toplist" style="margin:0;padding-left:1.25rem;"><li class="jwg-topitem" style="margin:0 0 .9rem 0;"><div class="jwg-topitem-head" style="display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap;"><div class="jwg-topitem-title" style="flex:1 1 auto;"><a href="bios/I582.html"><strong>John Alexander</strong></a> <span class="jwg-muted">(I582)</span></div><div class="jwg-topitem-metrics" style="display:flex;gap:.5rem;white-space:nowrap;"><span class="jwg-badge">15 children</span><span class="jwg-badge jwg-muted">2 unions</span></div></div><ul class="jwg-topitem-sublist jwg-muted" style="margin:.35rem 0 0 0;padding-left:1.15rem;"><li><a href="bios/I583.html"><strong>Hannah  Smith</strong></a> — 10</li><li><a href="bios/I1507.html"><strong>Mary Ann  Day</strong></a> — 5</li></ul></li><li class="jwg-topitem" style="margin:0 0 .9rem 0;"><div class="jwg-topitem-head" style="display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap;"><div class="jwg-topitem-title" style="flex:1 1 auto;"><a href="bios/I00009.html"><strong>George Blacklaw</strong></a> <span class="jwg-muted">(I00009)</span></div><div class="jwg-topitem-metrics" style="display:flex;gap:.5rem;white-space:nowrap;"><span class="jwg-badge">14 children</span><span class="jwg-badge jwg-muted">3 unions</span></div></div><ul class="jwg-topitem-sublist jwg-muted" style="margin:.35rem 0 0 0;padding-left:1.15rem;"><li><a href="bios/I00424.html"><strong>Catherine  Strachan</strong></a> — 8</li><li><a href="bios/I00010.html"><strong>Caroline  Mathieson</strong></a> — 5</li><li><a href="bios/I00418.html"><strong>Marion  Kerr</strong></a> — 1</li></ul></li><li class="jwg-topitem" style="margin:0 0 .9rem 0;"><div class="jwg-topitem-head" style="display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap;"><div class="jwg-topitem-title" style="flex:1 1 auto;"><a href="bios/I178.html"><strong>Deborah Inman</strong></a> &amp; <a href="bios/I287.html"><strong>Richard  Inman</strong></a> <span class="jwg-muted">(I178)</span></div><div class="jwg-topitem-metrics" style="display:flex;gap:.5rem;white-space:nowrap;"><span class="jwg-badge">13 children</span><span class="jwg-badge jwg-muted">1 union</span></div></div></li><li class="jwg-topitem" style="margin:0 0 .9rem 0;"><div class="jwg-topitem-head" style="display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap;"><div class="jwg-topitem-title" style="flex:1 1 auto;"><a href="bios/I260.html"><strong>David Meredith</strong></a> &amp; <a href="bios/I261.html"><strong>Sarah  Owens</strong></a> <span class="jwg-muted">(I260)</span></div><div class="jwg-topitem-metrics" style="display:flex;gap:.5rem;white-space:nowrap;"><span class="jwg-badge">13 children</span><span class="jwg-badge jwg-muted">1 union</span></div></div></li><li class="jwg-topitem" style="margin:0 0 .9rem 0;"><div class="jwg-topitem-head" style="display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap;"><div class="jwg-topitem-title" style="flex:1 1 auto;"><a href="bios/I261.html"><strong>Sarah Owens</strong></a> &amp; <a href="bios/I260.html"><strong>David  Meredith</strong></a> <span class="jwg-muted">(I261)</span></div><div class="jwg-topitem-metrics" style="display:flex;gap:.5rem;white-space:nowrap;"><span class="jwg-badge">13 children</span><span class="jwg-badge jwg-muted">1 union</span></div></div></li></ol>
-      </section>
-
-      <!-- RIGHT -->
-      <aside class="spotlight-card">
-        <h2>In brief</h2><p class="jwg-muted">Phase 3 will add richer family resumes (places, occupations, timelines).</p><ol style="margin:0;padding-left:1.25rem;"><li><strong>John Alexander</strong> — 15 children across 2 unions (with Hannah  Smith, Mary Ann  Day).</li><li><strong>George Blacklaw</strong> — 14 children across 3 unions (with Catherine  Strachan, Caroline  Mathieson, Marion  Kerr).</li><li><strong>Deborah Inman</strong> — 13 children across 1 union.</li><li><strong>David Meredith</strong> — 13 children across 1 union.</li><li><strong>Sarah Owens</strong> — 13 children across 1 union.</li></ol>
-        
-      </aside>
-
-    </main>
-  </div>
-
-  <!-- Standard footer -->
-  <footer class="site-footer">
-    <div class="site-footer-inner">
-      <p>
-        Created with the JWG Biography Production pipeline · Data from John’s research · Design JWG and ChatGPT
-      </p>
-      <p>
-        <a href="index.html">Home</a> ·
-        <a href="bios/index.html">Biographies</a> ·
-        <a href="spotlights/index.html">Spotlights</a>
-      </p>
-    </div>
-  </footer>
-
-  <script src="js/kiosk-runtime.js"></script>
-</body>
+    <script src="js/kiosk-runtime.js"></script>
+  </body>
 </html>
