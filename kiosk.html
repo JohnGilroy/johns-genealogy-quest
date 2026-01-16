@@ -36,10 +36,10 @@
   // You can override these like: kiosk.html?speed=90&dwell=12000&toppause=900&bottompause=900
   const config = {
     manifest: qs.get('manifest') || 'kiosk-manifest.json',
-    speed: n(qs.get('speed'), 70),          // px/sec
+    speed: n(qs.get('speed'), 50),          // px/sec
     dwell: n(qs.get('dwell'), 11000),       // ms for short pages
-    toppause: n(qs.get('toppause'), 800),   // ms
-    bottompause: n(qs.get('bottompause'), 800), // ms
+    toppause: n(qs.get('toppause'), 1000),   // ms
+    bottompause: n(qs.get('bottompause'), 1000), // ms
     minscroll: n(qs.get('minscroll'), 80),  // px
     transition: n(qs.get('transition'), 8000),   // ms: fixed veil time for “Coming next…”
     cachebust: (qs.get('cachebust') ?? '1') !== '0'
