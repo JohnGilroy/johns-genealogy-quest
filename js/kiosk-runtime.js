@@ -2,6 +2,25 @@
 console.log('[kiosk-runtime v5] running', location.href);
 
 (() => {
+    
+// --- Paused badge (visual feedback) ---
+const pausedStyle = document.createElement('style');
+pausedStyle.textContent = `
+  body.kiosk-paused::after {
+    content: "Paused";
+    position: fixed;
+    bottom: 12px;
+    right: 16px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    z-index: 2147483647;
+  }
+`;
+document.head.appendChild(pausedStyle);
+
   const qs = new URLSearchParams(location.search);
   if (qs.get('kiosk') !== '1') return;
 
@@ -98,14 +117,24 @@ console.log('[kiosk-runtime v5] running', location.href);
 
   }
 
-  // --- Pause toggle: P only ---
-  let paused = false;
-  document.addEventListener('keydown', (e) => {
-    if (e.code === 'KeyP') paused = !paused;
-  });
+// --- Pause toggle: Space or P ---
+let paused = false;
+
+function togglePause() {
+  paused = !paused;
+  document.body.classList.toggle('kiosk-paused', paused);
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.code === 'Space' || e.code === 'KeyP') {
+    e.preventDefault();
+    togglePause();
+  }
+});
+
 
   // --- Fade overlay ---
-  const veil = ensureVeil();
+const veil = ensureVeil();
 
 const kv = parseInt(qs.get('kv') || '0', 10);
 
@@ -329,6 +358,44 @@ function toSiteUrl(path) {
   p = p.replace(/^\/+/, '');
   return new URL(base + p, location.origin).toString();
 }
+
+// --- Kiosk help overlay (H key) ---
+const help = document.createElement('div');
+help.id = 'jwg-kiosk-help';
+help.style.position = 'fixed';
+help.style.inset = '0';
+help.style.background = 'rgba(0,0,0,0.45)';
+help.style.alignItems = 'center';
+help.style.justifyContent = 'center';
+help.style.alignItems = 'center';
+help.style.justifyContent = 'center';
+help.style.zIndex = '2147483646';
+
+const card = document.createElement('div');
+card.style.background = '#fff';
+card.style.color = '#222';
+card.style.padding = '20px 28px';
+card.style.borderRadius = '12px';
+card.style.boxShadow = '0 8px 30px rgba(0,0,0,0.25)';
+card.style.fontFamily = 'system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif';
+card.style.textAlign = 'center';
+
+card.innerHTML = `
+  <h3 style="margin-top:0">Kiosk Controls</h3>
+  <p><strong>Space</strong> or <strong>P</strong> – Pause / Resume</p>
+  <p><strong>H</strong> – Show / hide help</p>
+  <p style="opacity:.7;font-size:.9em">Ctrl + Alt + Shift + X – Exit kiosk</p>
+`;
+
+help.appendChild(card);
+document.documentElement.appendChild(help);
+
+document.addEventListener('keydown', (e) => {
+  if (e.code === 'KeyH') {
+    e.preventDefault();
+    help.style.display = (help.style.display === 'flex') ? 'none' : 'flex';
+  }
+});
 
 
 })();
