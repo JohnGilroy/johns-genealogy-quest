@@ -125,11 +125,84 @@
             "key": "zodiac",
             "title": "Star Signs",
             "description": "A light-hearted grouping of our ancestors by star sign.",
-            "status": "planned",
+            "status": "implemented",
             "icon": "assets/img/icons/phosphor/star.svg",
             "sort": 50,
             "layout_hint": "list-led",
-            "divisions": []
+            "divisions": [
+                {
+                    "key": "zodiac_tree",
+                    "title": "All Lines",
+                    "description": "Star sign distribution across the entire family tree.",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/star.svg",
+                    "sort": 0,
+                    "hero_label": "Star Signs",
+                    "hero_title": "All branches",
+                    "hero_subtitle": "A light-hearted look at our ancestors by zodiac sign.",
+                    "generator": {
+                        "script": "app/spotlights/ZodiacSpotlight.php",
+                        "class": "ZodiacSpotlight",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "scope": "tree"
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/zodiac/tree",
+                        "filename": "zodiac_tree.html",
+                        "pattern": "zodiac_tree.html"
+                    }
+                },
+                {
+                    "key": "zodiac_gilroy_wilson",
+                    "title": "Gilroy & Wilson",
+                    "description": "Star signs within the Gilroy and Wilson branches.",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/star.svg",
+                    "sort": 10,
+                    "hero_label": "Star Signs",
+                    "hero_title": "Gilroy & Wilson",
+                    "hero_subtitle": "A light-hearted look at the Gilroy and Wilson branches by zodiac sign.",
+                    "generator": {
+                        "script": "app/spotlights/ZodiacSpotlight.php",
+                        "class": "ZodiacSpotlight",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "scope": "gilroy_wilson"
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/zodiac/gilroy_wilson",
+                        "filename": "zodiac_gilroy_wilson.html",
+                        "pattern": "zodiac_gilroy_wilson.html"
+                    }
+                },
+                {
+                    "key": "zodiac_reynolds_law",
+                    "title": "Reynolds & Law",
+                    "description": "Star signs within the Reynolds and Law branches.",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/star.svg",
+                    "sort": 20,
+                    "hero_label": "Star Signs",
+                    "hero_title": "Reynolds & Law",
+                    "hero_subtitle": "A light-hearted look at the Reynolds and Law branches by zodiac sign.",
+                    "generator": {
+                        "script": "app/spotlights/ZodiacSpotlight.php",
+                        "class": "ZodiacSpotlight",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "scope": "reynolds_law"
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/zodiac/reynolds_law",
+                        "filename": "zodiac_reynolds_law.html",
+                        "pattern": "zodiac_reynolds_law.html"
+                    }
+                }
+            ]
         },
         {
             "key": "deaths",

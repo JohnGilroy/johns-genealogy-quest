@@ -16,6 +16,9 @@
         "spotlights/press/press_media_1775.html",
         "spotlights/press/press_media_2473.html",
         "spotlights/press/press_media_3023.html",
+        "spotlights/zodiac/gilroy_wilson/zodiac_gilroy_wilson.html",
+        "spotlights/zodiac/reynolds_law/zodiac_reynolds_law.html",
+        "spotlights/zodiac/tree/zodiac_tree.html",
         "bios/I00009.html"
     ],
     "schema_version": "kiosk-manifest-2",
@@ -35,6 +38,9 @@
         "spotlights/press/press_media_1775.html": "DOGS FOUND AMONG SHEEP",
         "spotlights/press/press_media_2473.html": "Children will be children",
         "spotlights/press/press_media_3023.html": "Postmans Theft",
+        "spotlights/zodiac/gilroy_wilson/zodiac_gilroy_wilson.html": "Star Signs \u2014 Gilroy & Wilson",
+        "spotlights/zodiac/reynolds_law/zodiac_reynolds_law.html": "Star Signs \u2014 Reynolds & Law",
+        "spotlights/zodiac/tree/zodiac_tree.html": "Star Signs \u2014 All branches",
         "bios/I00009.html": "George Blacklaw"
     }
 }

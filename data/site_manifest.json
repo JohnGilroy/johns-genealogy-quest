@@ -177,6 +177,33 @@
             "description": "Newspaper articles and reports in which family members are mentioned.",
             "href": "spotlights/press/press_media_3023.html",
             "link_title": "Postmans Theft"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "zodiac",
+            "division_key": "zodiac_gilroy_wilson",
+            "title": "Zodiac Gilroy Wilson",
+            "description": "Star signs within the Gilroy and Wilson branches.",
+            "href": "spotlights/zodiac/gilroy_wilson/zodiac_gilroy_wilson.html",
+            "link_title": "Star Signs \u2014 Gilroy & Wilson"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "zodiac",
+            "division_key": "zodiac_reynolds_law",
+            "title": "Zodiac Reynolds Law",
+            "description": "Star signs within the Reynolds and Law branches.",
+            "href": "spotlights/zodiac/reynolds_law/zodiac_reynolds_law.html",
+            "link_title": "Star Signs \u2014 Reynolds & Law"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "zodiac",
+            "division_key": "zodiac_tree",
+            "title": "Zodiac Tree",
+            "description": "Star sign distribution across the entire family tree.",
+            "href": "spotlights/zodiac/tree/zodiac_tree.html",
+            "link_title": "Star Signs \u2014 All branches"
         }
     ],
     "updated_at": "2025-12-17T15:26:14+00:00"
