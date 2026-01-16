@@ -40,21 +40,35 @@ console.log('[kiosk-runtime v5] running', location.href);
 
   if (!Array.isArray(playlist) || playlist.length === 0) return;
 
-  // --- Behaviour knobs ---
-  const secondsPerScreen = num(config.secondsPerScreen, 10);
+  // --- Behaviour knobs (single source of truth = jwg_kiosk_config written by kiosk.html) ---
+  // IMPORTANT: Defaults here MUST match kiosk.html to avoid “why is it stuck?” confusion.
 
-  const dwellMs       = num(config.dwell, 10000);
-  const topPauseMs    = num(config.toppause, 700);
-  const bottomPauseMs = num(config.bottompause, 700);
-  const minScrollPx   = num(config.minscroll, 80);
+  // Scroll speed: px/sec (preferred + only speed knob)
+  const pxPerSec      = num(config.speed, 50);        // kiosk.html default: 50 :contentReference[oaicite:1]{index=1}
+
+  // Timings (ms)
+  const dwellMs       = num(config.dwell, 11000);      // kiosk.html default: 11000 
+  const topPauseMs    = num(config.toppause, 1000);    // kiosk.html default: 1000 
+  const bottomPauseMs = num(config.bottompause, 1000); // kiosk.html default: 1000 
+
+  // Treat pages as “not scrollable” if there’s less than this to scroll (px)
+  const minScrollPx   = num(config.minscroll, 80);     // kiosk.html default: 80 :contentReference[oaicite:5]{index=5}
 
   // Fade timings (ms)
   const fadeMs        = num(config.fadeMs, 350);
   const fadeHoldMs    = num(config.fadeHoldMs, 60);
 
   // Fixed veil duration on the *next page* (ms)
- let transitionMs = num(config.transition, 1200);
-if (!(transitionMs > 0)) transitionMs = 1200;
+  let transitionMs    = num(config.transition, 8000);  // kiosk.html default: 8000 :contentReference[oaicite:6]{index=6}
+  if (!(transitionMs > 0)) transitionMs = 8000;
+
+  // One-time resolved config log (helps catch stale localStorage vs expected URL overrides)
+  console.log('[kiosk] knobs', {
+    pxPerSec, dwellMs, topPauseMs, bottomPauseMs, minScrollPx,
+    fadeMs, fadeHoldMs, transitionMs,
+    cachebust: (config.cachebust !== false)
+  });
+
 
   const idxSaved = parseInt(localStorage.getItem('jwg_kiosk_idx') || '0', 10);
 
@@ -151,9 +165,7 @@ if (incomingText) setVeilMessage(incomingText);
     // Start at top for scrollable pages
     window.scrollTo(0, 0);
 
-    // Scroll at “seconds per screenful”
-    const viewportH  = Math.max(1, window.innerHeight || 1);
-    const pxPerSec   = viewportH / Math.max(1, secondsPerScreen);
+// Scroll at px/sec (configured)
     const durationMs = (maxScroll / Math.max(10, pxPerSec)) * 1000;
 
     await animateScroll(0, maxScroll, durationMs);
