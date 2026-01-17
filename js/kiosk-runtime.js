@@ -127,6 +127,7 @@ function togglePause() {
 
 document.addEventListener('keydown', (e) => {
   if (e.code === 'Space' || e.code === 'KeyP') {
+      if (e.repeat) return;
     e.preventDefault();
     togglePause();
   }
@@ -246,24 +247,40 @@ location.href = u.toString();
     return `${url}${sep}kiosk=1${cb}`;
   }
 
-  function animateScroll(from, to, durationMs) {
-    return new Promise((resolve) => {
-      const t0 = performance.now();
+function animateScroll(from, to, durationMs) {
+  return new Promise((resolve) => {
+    let t0 = performance.now();
 
-      function step(now) {
-        if (paused) return requestAnimationFrame(step);
+    // Track pause time so elapsed excludes it
+    let pauseStartedAt = 0;
+    let pausedAccumMs = 0;
 
-        const t = Math.min(1, (now - t0) / Math.max(1, durationMs));
-        const y = from + (to - from) * t;
-        window.scrollTo(0, y);
-
-        if (t >= 1 || Math.abs(window.scrollY - to) < 2) return resolve();
-        requestAnimationFrame(step);
+    function step(now) {
+      if (paused) {
+        // mark when we entered pause (once)
+        if (!pauseStartedAt) pauseStartedAt = now;
+        return requestAnimationFrame(step);
       }
 
+      // if we just resumed, add paused duration
+      if (pauseStartedAt) {
+        pausedAccumMs += (now - pauseStartedAt);
+        pauseStartedAt = 0;
+      }
+
+      const effectiveElapsed = now - t0 - pausedAccumMs;
+      const t = Math.min(1, effectiveElapsed / Math.max(1, durationMs));
+      const y = from + (to - from) * t;
+
+      window.scrollTo(0, y);
+
+      if (t >= 1 || Math.abs(window.scrollY - to) < 2) return resolve();
       requestAnimationFrame(step);
-    });
-  }
+    }
+
+    requestAnimationFrame(step);
+  });
+}
 
   async function pauseWait(ms) {
     const end = Date.now() + ms;
@@ -319,10 +336,10 @@ location.href = u.toString();
     msgEl.style.fontFamily = 'system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif';
     msgEl.style.fontSize = '20px';
     msgEl.style.letterSpacing = '0.2px';
-    msgEl.style.color = 'rgba(255,255,255,0.88)';
-    msgEl.style.background = 'rgba(0,0,0,0.25)';
+    msgEl.style.color = '#ffffff';
+    msgEl.style.background = 'var(--jwg-blue)';
     msgEl.style.padding = '10px 14px';
-    msgEl.style.borderRadius = '10px';
+    msgEl.style.borderRadius = '10px';  
     msgEl.style.userSelect = 'none';
     msgEl.style.display = 'block';
 
