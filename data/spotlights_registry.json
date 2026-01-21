@@ -102,6 +102,42 @@
             ]
         },
         {
+            "key": "origins",
+            "title": "Origins",
+            "description": "Where our forebears were born \u2014 a simple, family-friendly map-style overview.",
+            "status": "implemented",
+            "icon": "assets/img/icons/phosphor/map-pin.svg",
+            "sort": 55,
+            "layout_hint": "list-led",
+            "divisions": [
+                {
+                    "key": "origins_tree",
+                    "title": "All Lines",
+                    "description": "Birthplace distribution across the entire family tree.",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/map-pin.svg",
+                    "sort": 0,
+                    "hero_label": "Origins",
+                    "hero_title": "All branches",
+                    "hero_subtitle": "A light-hearted look at where our ancestors were born (by county).",
+                    "generator": {
+                        "script": "app/spotlights/OriginsSpotlight.php",
+                        "class": "OriginsSpotlight",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "scope": "tree",
+                            "areas_path": "app/spotlights/origins_areas.json"
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/origins/tree",
+                        "filename": "origins_tree.html",
+                        "pattern": "origins_tree.html"
+                    }
+                }
+            ]
+        },
+        {
             "key": "unions",
             "title": "Most Relationships",
             "description": "Our ancestor with the most relationships.",

@@ -640,3 +640,10 @@ body.spotlight {
 /* Pisces */
 .zodiac-pisces { border-left-color: #ad1457; }
 .zodiac-pisces .zodiac-count-pill { background: rgba(173,20,87,0.12); border-color: rgba(173,20,87,0.28); }
+
+.origins-mapwrap svg{
+  display:block;
+  width:100%;
+  height:auto;
+}
+

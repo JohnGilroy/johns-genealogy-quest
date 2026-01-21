@@ -120,6 +120,13 @@ hr {
   color: var(--jwg-brown);
 }
 
+.card h4 {
+  font-family: var(--jwg-font-sans);
+  font-size: 1.0rem;
+  margin: 1.25rem 0 0.4rem;
+  color: var(--jwg-brown);
+}
+
 .card-lede {
   font-style: italic;
   margin: 0 0 1rem;

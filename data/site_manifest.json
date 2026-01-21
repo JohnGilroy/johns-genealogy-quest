@@ -144,6 +144,15 @@
         },
         {
             "type": "spotlight",
+            "catalog_key": "origins",
+            "division_key": "origins_tree",
+            "title": "Origins Tree",
+            "description": "Birthplace distribution across the entire family tree.",
+            "href": "spotlights/origins/tree/origins_tree.html",
+            "link_title": "Origins \u2014 All branches"
+        },
+        {
+            "type": "spotlight",
             "catalog_key": "plantagenet",
             "division_key": "royal_connection",
             "title": "Royal Connection Edward Iii",
