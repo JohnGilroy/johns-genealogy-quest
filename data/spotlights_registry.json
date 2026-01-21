@@ -117,9 +117,9 @@
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/map-pin.svg",
                     "sort": 0,
-                    "hero_label": "Origins",
-                    "hero_title": "All branches",
-                    "hero_subtitle": "A light-hearted look at where our ancestors were born (by county).",
+                    "hero_label": "Where we hail from",
+                    "hero_title": "Origins of The Family",
+                    "hero_subtitle": "A light-hearted look at where our forebears were born (by county).",
                     "generator": {
                         "script": "app/spotlights/OriginsSpotlight.php",
                         "class": "OriginsSpotlight",
