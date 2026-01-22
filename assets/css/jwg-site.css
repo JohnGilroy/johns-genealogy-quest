@@ -186,11 +186,28 @@ hr {
   max-width: var(--jwg-max-width);
   margin: 0 auto;
   padding: 1rem 1.25rem;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem 1rem;
+  align-items: start;
+}
+
+/* footer text */
+.site-footer-line { margin: 0; font-size: 0.9rem; color: var(--jwg-text-muted); }
+.site-footer-text { min-width: 0; }
+
+/* footer actions as “buttons” */
+.site-footer-actions{
   display: flex;
+  gap: .5rem;
   flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  align-items: baseline;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.jwg-btn--footer{
+  padding: .45rem .8rem;
+  font-size: .9rem;
 }
 
 .site-footer p {
@@ -202,6 +219,26 @@ hr {
 .site-footer a {
   color: var(--jwg-blue-dark);
 }
+
+@media (max-width: 700px) {
+  .site-footer-inner{
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer-actions{
+    justify-content: flex-start; /* buttons sit under text */
+  }
+
+  /* swap verbose text for short text */
+  .site-footer-line { display: none; }
+  .site-footer-line--short { display: block; }
+}
+
+.site-footer-text {
+  margin-top: 10px;
+}
+
+.site-footer-line--short { display: none; }
 
 /* --------------------------------
    Shared layout helpers
