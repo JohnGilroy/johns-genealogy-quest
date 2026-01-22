@@ -133,6 +133,101 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// --- Touch controls (floating button) + long-press anywhere ---
+const touchCss = document.createElement('style');
+touchCss.textContent = `
+  #jwg-kiosk-touchbar {
+    position: fixed;
+    left: 12px;
+    bottom: 12px;
+    display: flex;
+    gap: 10px;
+    z-index: 2147483647;
+    pointer-events: auto;
+  }
+  .jwg-kiosk-btn {
+    appearance: none;
+    border: 0;
+    border-radius: 14px;
+    padding: 12px 14px;
+    font: 700 15px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    min-width: 120px;
+    min-height: 44px; /* good touch size */
+  }
+  .jwg-kiosk-btn:active { transform: translateY(1px); }
+  .jwg-kiosk-btn.secondary {
+    background: rgba(255,255,255,0.85);
+    color: #111;
+  }
+`;
+document.head.appendChild(touchCss);
+
+const touchBar = document.createElement('div');
+touchBar.id = 'jwg-kiosk-touchbar';
+
+const btnPause = document.createElement('button');
+btnPause.className = 'jwg-kiosk-btn';
+btnPause.type = 'button';
+
+const btnHelp = document.createElement('button');
+btnHelp.className = 'jwg-kiosk-btn secondary';
+btnHelp.type = 'button';
+btnHelp.textContent = 'Help';
+
+function syncPauseLabel() {
+  btnPause.textContent = paused ? 'Resume' : 'Pause';
+}
+syncPauseLabel();
+
+btnPause.addEventListener('click', (e) => {
+  e.preventDefault();
+  togglePause();
+  syncPauseLabel();
+}, { passive: false });
+
+btnHelp.addEventListener('click', (e) => {
+  e.preventDefault();
+  // toggleHelp() is defined in the Help overlay block above
+  if (typeof toggleHelp === 'function') toggleHelp();
+}, { passive: false });
+
+touchBar.appendChild(btnPause);
+touchBar.appendChild(btnHelp);
+document.documentElement.appendChild(touchBar);
+
+// Long-press anywhere (600ms) toggles pause (touch-friendly, avoids accidental taps)
+let lpTimer = 0;
+let lpFired = false;
+
+function clearLongPress() {
+  if (lpTimer) { clearTimeout(lpTimer); lpTimer = 0; }
+  lpFired = false;
+}
+
+document.addEventListener('pointerdown', (e) => {
+  // Ignore presses on actual controls/links/buttons/inputs
+  const t = e.target;
+  if (t && (t.closest?.('#jwg-kiosk-touchbar') || t.closest?.('a,button,input,select,textarea,label'))) return;
+
+  clearLongPress();
+  lpTimer = setTimeout(() => {
+    lpFired = true;
+    togglePause();
+    syncPauseLabel();
+    try { if (navigator.vibrate) navigator.vibrate(20); } catch {}
+  }, 600);
+}, { passive: true });
+
+document.addEventListener('pointerup', clearLongPress, { passive: true });
+document.addEventListener('pointercancel', clearLongPress, { passive: true });
+document.addEventListener('pointermove', () => {
+  // if finger/mouse moves, cancel long press
+  if (lpTimer) clearLongPress();
+}, { passive: true });
+
 
   // --- Fade overlay ---
 const veil = ensureVeil();
@@ -382,8 +477,7 @@ help.id = 'jwg-kiosk-help';
 help.style.position = 'fixed';
 help.style.inset = '0';
 help.style.background = 'rgba(0,0,0,0.45)';
-help.style.alignItems = 'center';
-help.style.justifyContent = 'center';
+help.style.display = 'none';          // start hidden
 help.style.alignItems = 'center';
 help.style.justifyContent = 'center';
 help.style.zIndex = '2147483646';
@@ -399,7 +493,8 @@ card.style.textAlign = 'center';
 
 card.innerHTML = `
   <h3 style="margin-top:0">Kiosk Controls</h3>
-  <p><strong>Space</strong> or <strong>P</strong> – Pause / Resume</p>
+  <p><strong>Tap Pause</strong> – Pause / Resume</p>
+  <p><strong>Long-press</strong> anywhere – Pause / Resume</p>
   <p><strong>H</strong> – Show / hide help</p>
   <p style="opacity:.7;font-size:.9em">Ctrl + Alt + Shift + X – Exit kiosk</p>
 `;
@@ -407,10 +502,15 @@ card.innerHTML = `
 help.appendChild(card);
 document.documentElement.appendChild(help);
 
+function toggleHelp() {
+  const showing = (help.style.display === 'flex');
+  help.style.display = showing ? 'none' : 'flex';
+}
+
 document.addEventListener('keydown', (e) => {
   if (e.code === 'KeyH') {
     e.preventDefault();
-    help.style.display = (help.style.display === 'flex') ? 'none' : 'flex';
+    toggleHelp();
   }
 });
 
