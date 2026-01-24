@@ -150,6 +150,120 @@ hr {
   font-family: var(--jwg-font-sans);
 }
 
+/* --- Home page: Ancestral lines with parent photos --- */
+
+.branch-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 12px 0 12px;
+}
+
+/* Card layout */
+.branch-card{
+  display: grid;
+  grid-template-columns: 1fr;  /* mobile: stacked */
+  gap: 8px;
+  padding: 12px;
+  border-radius: var(--jwg-radius-lg);
+  background: #fff;
+  box-shadow: var(--jwg-shadow-soft);
+  border: 1px solid var(--jwg-border-subtle);
+}
+
+/* Header row (title only) */
+.branch-head{
+  margin: 0;
+}
+
+.branch-title{
+  margin: 0;
+  color: var(--jwg-brown);
+}
+
+/* Media */
+.branch-media{
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.branch-media--pair{
+  flex-wrap: nowrap;
+}
+
+.branch-figure{
+  margin: 0;
+}
+
+.branch-photo{
+  width: 64px;          /* thumbnails */
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: var(--jwg-shadow-soft);
+}
+
+.branch-caption{
+  margin-top: 4px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  text-align: left;
+}
+
+/* Text */
+.branch-body{
+  margin: 0;
+  padding: 0;
+}
+
+.branch-subtitle{
+  margin: 0 0 6px;
+  opacity: 0.85;
+  color: var(--jwg-brown);
+}
+
+.branch-text{
+  margin: 0;
+}
+
+/* Desktop / wide tablets */
+@media (min-width: 720px){
+  .branch-card{
+    grid-template-columns: fit-content(170px) 1fr; /* <<< key: kills the whitespace */
+    column-gap: 18px;
+    row-gap: 8px;
+    align-items: start;
+  }
+
+  .branch-head{
+    grid-column: 1 / -1; /* title spans both columns */
+  }
+
+  .branch-media{
+    grid-column: 1;
+  }
+
+  .branch-body{
+    grid-column: 2;
+  }
+
+  .branch-photo{
+    width: 72px;
+    height: 72px;
+  }
+}
+
+/* Small phones: allow the pair to wrap if space is tight */
+@media (max-width: 360px){
+  .branch-media--pair{
+    flex-wrap: wrap;
+  }
+}
+
+
 .bio-list-heading {
   font-family: var(--jwg-font-sans);
   font-size: 1.05rem;
@@ -442,6 +556,7 @@ hr {
 .branch-group { margin: 1rem 0 1.25rem; }
 .branch-summary { cursor: pointer; display:flex; gap:.75rem; align-items: baseline; color: var(--jwg-brown); }
 .branch-title { font-weight: 700; }
+.branch-subtitle { font-weight: 500; }
 .branch-desc { opacity: .8; font-size: 0.95rem;}
 .branch-count { margin-left:auto; opacity:.7;}
 

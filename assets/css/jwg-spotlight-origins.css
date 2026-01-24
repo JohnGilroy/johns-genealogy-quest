@@ -1,0 +1,17 @@
+.origins-mapwrap svg{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+/* Origins spotlight: map + panels grid */
+.origins-map-grid{
+  grid-template-columns: minmax(360px, 1.4fr) minmax(260px, 0.9fr);
+}
+
+/* Collapse to 1 column on Pi portrait + mobiles */
+@media (max-width: 900px){
+  .origins-map-grid{
+    grid-template-columns: 1fr;
+  }
+}
