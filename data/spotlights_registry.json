@@ -1,5 +1,6 @@
 {
-    "schema_version": "2025-12-19-spotlights-registry-1",
+    "schema_version": "2026-01-23-spotlights-registry-1",
+    "base_href": "/johns-genealogy-quest/",
     "catalogue": [
         {
             "key": "press_media",
@@ -19,7 +20,7 @@
                     "icon": "assets/img/icons/phosphor/newspaper.svg",
                     "sort": 0,
                     "generator": {
-                        "script": "app/spotlights/PressMediaSpotlight.php",
+                        "script": "app/spotlights/PressMediaSpotlight_V0.php",
                         "class": "PressMediaSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
@@ -77,7 +78,7 @@
                     "icon": "assets/img/icons/phosphor/baby.svg",
                     "sort": 0,
                     "generator": {
-                        "script": "app/spotlights/MostChildrenSpotlight.php",
+                        "script": "app/spotlights/MostChildrenSpotlight_V0.php",
                         "class": "MostChildrenSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
@@ -88,7 +89,6 @@
                             "relationship": "Top 5 parents by recorded number of children in our tree",
                             "output_dir": "spotlights/children",
                             "filename_template": "most_children_top5.html",
-                            "base_href": "/johns-genealogy-quest/",
                             "template_path": "web-templates/template_children.html"
                         }
                     },
@@ -120,6 +120,12 @@
                     "hero_label": "Where we hail from",
                     "hero_title": "Origins of The Family",
                     "hero_subtitle": "A light-hearted look at where our forebears were born (by county).",
+                    "notes": [
+                        "Counts include anyone with a recorded birthplace or where they were baptised.",
+                        "Places are grouped by county for a simple overview (historic place names are mapped to modern ceremonial/preserved/lieutenancy areas).",
+                        "Records with only a country (e.g., England/Scotland) are listed separately as \u201ccounty unknown\u201d.",
+                        "Outliers (non-UK births) are shown as a separate list for interest and tidy-up."
+                    ],
                     "generator": {
                         "script": "app/spotlights/OriginsSpotlight.php",
                         "class": "OriginsSpotlight",
@@ -132,7 +138,11 @@
                     "output": {
                         "dir": "spotlights/origins/tree",
                         "filename": "origins_tree.html",
-                        "pattern": "origins_tree.html"
+                        "pattern": "origins_tree.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css",
+                            "assets/css/jwg-spotlight-origins.css"
+                        ]
                     }
                 }
             ]
@@ -174,8 +184,13 @@
                     "icon": "assets/img/icons/phosphor/star.svg",
                     "sort": 0,
                     "hero_label": "Star Signs",
-                    "hero_title": "All branches",
+                    "hero_title": "The Whole Tree by Zodiac",
                     "hero_subtitle": "A light-hearted look at our ancestors by zodiac sign.",
+                    "notes": [
+                        "Includes people with fully recorded birth or baptism dates (dd/mm/yyyy).",
+                        "Counts include anyone with a recorded birthplace or where they were baptised.",
+                        "Zodiac icons \u00a9 Twitter / Twemoji contributors, licensed under CC BY 4.0."
+                    ],
                     "generator": {
                         "script": "app/spotlights/ZodiacSpotlight.php",
                         "class": "ZodiacSpotlight",
@@ -187,7 +202,12 @@
                     "output": {
                         "dir": "spotlights/zodiac/tree",
                         "filename": "zodiac_tree.html",
-                        "pattern": "zodiac_tree.html"
+                        "pattern": "zodiac_tree.html",
+                        "icon_dir": "assets/img/icons/zodiac",
+                        "css": [
+                            "assets/css/jwg-spotlight.css",
+                            "assets/css/jwg-spotlight-zodiac.css"
+                        ]
                     }
                 },
                 {
@@ -200,6 +220,11 @@
                     "hero_label": "Star Signs",
                     "hero_title": "Gilroy & Wilson",
                     "hero_subtitle": "A light-hearted look at the Gilroy and Wilson branches by zodiac sign.",
+                    "notes": [
+                        "Includes people with fully recorded birth or baptism dates (dd/mm/yyyy).",
+                        "Counts include anyone with a recorded birthplace or where they were baptised.",
+                        "Zodiac icons \u00a9 Twitter / Twemoji contributors, licensed under CC BY 4.0."
+                    ],
                     "generator": {
                         "script": "app/spotlights/ZodiacSpotlight.php",
                         "class": "ZodiacSpotlight",
@@ -211,7 +236,12 @@
                     "output": {
                         "dir": "spotlights/zodiac/gilroy_wilson",
                         "filename": "zodiac_gilroy_wilson.html",
-                        "pattern": "zodiac_gilroy_wilson.html"
+                        "pattern": "zodiac_gilroy_wilson.html",
+                        "icon_dir": "assets/img/icons/zodiac",
+                        "css": [
+                            "assets/css/jwg-spotlight.css",
+                            "assets/css/jwg-spotlight-zodiac.css"
+                        ]
                     }
                 },
                 {
@@ -224,6 +254,11 @@
                     "hero_label": "Star Signs",
                     "hero_title": "Reynolds & Law",
                     "hero_subtitle": "A light-hearted look at the Reynolds and Law branches by zodiac sign.",
+                    "notes": [
+                        "Includes people with fully recorded birth or baptism dates (dd/mm/yyyy).",
+                        "Counts include anyone with a recorded birthplace or where they were baptised.",
+                        "Zodiac icons \u00a9 Twitter / Twemoji contributors, licensed under CC BY 4.0."
+                    ],
                     "generator": {
                         "script": "app/spotlights/ZodiacSpotlight.php",
                         "class": "ZodiacSpotlight",
@@ -235,7 +270,12 @@
                     "output": {
                         "dir": "spotlights/zodiac/reynolds_law",
                         "filename": "zodiac_reynolds_law.html",
-                        "pattern": "zodiac_reynolds_law.html"
+                        "pattern": "zodiac_reynolds_law.html",
+                        "icon_dir": "assets/img/icons/zodiac",
+                        "css": [
+                            "assets/css/jwg-spotlight.css",
+                            "assets/css/jwg-spotlight-zodiac.css"
+                        ]
                     }
                 }
             ]
@@ -267,7 +307,7 @@
                     "icon": "assets/img/icons/phosphor/crown.svg",
                     "sort": 0,
                     "generator": {
-                        "script": "app/spotlights/PlantagenetSpotlight.php",
+                        "script": "app/spotlights/PlantagenetSpotlight_V0.php",
                         "class": "PlantagenetSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
@@ -352,7 +392,7 @@
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 0,
                     "generator": {
-                        "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "script": "app/spotlights/LongevityOldestSpotlight_V0.php",
                         "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
@@ -383,7 +423,7 @@
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
                     "generator": {
-                        "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "script": "app/spotlights/LongevityOldestSpotlight_V0.php",
                         "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
@@ -414,7 +454,7 @@
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
                     "generator": {
-                        "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "script": "app/spotlights/LongevityOldestSpotlight_V0.php",
                         "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
@@ -445,7 +485,7 @@
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
                     "generator": {
-                        "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "script": "app/spotlights/LongevityOldestSpotlight_V0.php",
                         "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
@@ -476,7 +516,7 @@
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
                     "generator": {
-                        "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "script": "app/spotlights/LongevityOldestSpotlight_V0.php",
                         "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
