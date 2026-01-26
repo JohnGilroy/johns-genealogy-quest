@@ -1,21 +1,7 @@
-Spotlight Generator Skeleton 
-
-A base class to be inherited by all spotlight generators
-
-Methods:
-
-construct - stub in case a spotlight ever needs it
-run - entry point for the spotlight, input a params array.
-buildModel - gather the data from TNG or elsewhere need to create the spotlight and structure it as appropriate. 
-renderSiteHead - add the common site html head
-renderSiteHeader - add the common site header - title bar and navigation
-renderSiteFooter - add the common site footer - attribution and navigation
-renderView - generates the html page
-writeHtml - writes the page to the approprate folder
-returnStatus - common return mechanism with a meta parameter specific to the spotlight
-h - safe html
-resolvePath - ensure correct or absolute paths use depending what and where writing
-
-Decisions to be made:
-
-The current spotlights_manager UI reads the spotlight_config and creates the params array passed into the run method.  Depending on the spotlight the catalogue entry for the spotlight will have at least one division and might have none or 1 or more pages.  I am wondering whether the UI should just pass the config catalogue identifer and the generator base class should have a method to validate and resolve the catalogue entry structure ready for the rest of the process?
+git fetch --all --prune
+git checkout main
+git pull
+git tag main-snapshot-2025-09-08
+git push origin main-snapshot-2025-09-08
+git branch snapshot/main-before-switch
+git push origin snapshot/main-before-switch

@@ -1,0 +1,47 @@
+.spotlight-hero-subject {
+  align-items: stretch; /* ensure image column stretches to match text block height */
+}
+
+.plantagenet-hero-portrait {
+  flex: 0 0 96px; /* a slightly wider portrait column */
+  width: 96px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--jwg-shadow-sm);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.plantagenet-hero-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%; /* key: fill the container height */
+  object-fit: cover; /* crop neatly */
+}
+
+/* If you use an <svg> portrait later, keep it sane */
+.plantagenet-hero-portrait svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* --- MAIN: ensure both columns stretch to the same row height */
+.spotlight-main {
+  align-items: stretch; /* if this is flex in your CSS, this helps */
+}
+
+/* --- CHART: no nested scrolling; let the page scroll in kiosk mode */
+.plantagenet-chart-panel {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 12px;
+  border: 1px solid var(--jwg-border-subtle);
+}
+
+.plantagenet-chart-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
