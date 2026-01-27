@@ -675,3 +675,20 @@ hr {
   box-shadow: var(--jwg-shadow-soft);
   padding: .75rem .85rem;   /* was 1rem */
 }
+
+/* --- Mobile header/nav behaviour --- */
+@media (max-width: 620px){
+
+  .site-header-inner{
+    padding: 0.75rem 1rem;
+  }
+
+  /* Let the nav drop under the site title and align nicely */
+  .site-nav{
+    margin-left: 0;          /* stop "pushing right" on wrap */
+    width: 100%;             /* take a full row */
+    justify-content: flex-start;
+    flex-wrap: wrap;         /* allow links to wrap */
+    gap: 0.5rem 0.75rem;
+  }
+}

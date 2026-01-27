@@ -1,29 +1,20 @@
-.spotlight-hero-subject {
-  align-items: stretch; /* ensure image column stretches to match text block height */
-}
 
-.plantagenet-hero-portrait {
-  flex: 0 0 96px; /* a slightly wider portrait column */
-  width: 96px;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: var(--jwg-shadow-sm);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.plantagenet-hero-portrait img {
-  display: block;
-  width: 100%;
-  height: 100%; /* key: fill the container height */
-  object-fit: cover; /* crop neatly */
-}
-
-/* If you use an <svg> portrait later, keep it sane */
-.plantagenet-hero-portrait svg {
-  width: 100%;
-  height: 100%;
-  display: block;
+/* Mobile: stack neatly */
+@media (max-width: 520px){
+  .spotlight-hero{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "top"
+      "text"
+      "portrait";
+  }
+  .plantagenet-hero-portrait{
+    width: 96px;      /* keep as a “stamp” on mobile */
+    justify-self: start;
+    align-self: start;
+    height: 96px;     /* avoid it becoming huge when stacked */
+  }
 }
 
 /* --- MAIN: ensure both columns stretch to the same row height */
@@ -44,4 +35,100 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
+}
+
+/* --- Plantagenet Hero (portrait LEFT) --- */
+body.spotlight header.spotlight-hero{
+  display: grid;
+  grid-template-columns: 112px 1fr;  /* portrait | text */
+  grid-template-rows: auto auto;     /* label row | text row */
+  gap: 10px 16px;
+  padding: 16px 20px;
+  align-items: start;
+}
+
+/* Text sits right column, row 2 */
+body.spotlight header.spotlight-hero > .spotlight-hero-text{
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0; /* allow wrapping instead of overflow */
+}
+
+/* Portrait sits left column, spanning both rows */
+body.spotlight header.spotlight-hero > .plantagenet-hero-portrait{
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: stretch;
+
+  width: 112px;            /* controls column width */
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--jwg-shadow-sm);
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.10);
+}
+
+/* Make the image truly fill the portrait box */
+body.spotlight header.spotlight-hero > .plantagenet-hero-portrait > img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Label only over the text column (right column) */
+body.spotlight header.spotlight-hero > .spotlight-hero-top{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Kill default margins so spacing is controlled */
+body.spotlight header.spotlight-hero .spotlight-hero-title{ margin: 0; }
+body.spotlight header.spotlight-hero .spotlight-hero-subtitle{ margin: 0; }
+
+/* Optional: ensure long titles wrap nicely */
+body.spotlight header.spotlight-hero .spotlight-hero-title{
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 620px){
+
+  /* Switch off the grid entirely on mobile */
+  body.spotlight header.spotlight-hero{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding: 16px 16px !important;
+  }
+
+  /* Put label first, left aligned */
+  body.spotlight header.spotlight-hero > .spotlight-hero-top{
+    order: 1;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    text-align: left;
+  }
+
+  /* Portrait next, aligned left, fixed “stamp” size */
+  body.spotlight header.spotlight-hero > .plantagenet-hero-portrait{
+    order: 2;
+    width: 112px !important;
+    height: 112px !important;        /* force neat square */
+    align-self: flex-start !important;
+  }
+
+  /* Title/subtitle last */
+  body.spotlight header.spotlight-hero > .spotlight-hero-text{
+    order: 3;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    text-align: left;
+  }
+
+  /* Ensure no odd centring/spacing leaks in */
+  body.spotlight header.spotlight-hero .spotlight-hero-title,
+  body.spotlight header.spotlight-hero .spotlight-hero-subtitle{
+    margin: 0 !important;
+  }
 }
