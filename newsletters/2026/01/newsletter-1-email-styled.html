@@ -1,4 +1,14 @@
-/* jwg-site.css
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Family History Newsletter #1 — Welcome</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- If this lives inside your GitHub Pages site, keep your normal base href -->
+
+
+
+<style>/* jwg-site.css
  * John’s Genealogy Quest — shared site-wide styling
  * - Colours: from index.html palette
  * - Fonts: system-ui stack (as per spotlight pages)
@@ -704,3 +714,392 @@ hr {
     gap: 0.5rem 0.75rem;
   }
 }
+
+
+/* --------------------------------
+   Newsletter media helpers
+   (safe single-column patterns)
+--------------------------------- */
+/* --------------------------------
+   Newsletter layout + typography
+--------------------------------- */
+
+.nl-page {
+  max-width: var(--jwg-max-width, 980px);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.nl-article {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.nl-hero {
+  margin: 0 0 1.25rem;
+}
+
+.nl-kicker {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--jwg-text-muted, #5a5a5a);
+  margin: 0 0 0.4rem;
+}
+
+.nl-title {
+  margin: 0;
+}
+
+.nl-section {
+  margin: 1.25rem 0;
+}
+
+.nl-section h2 {
+  margin: 0 0 0.6rem;
+}
+
+.nl-section h3 {
+  margin: 1rem 0 0.4rem;
+}
+
+.nl-section h3 + .nl-media {
+  margin-top: 0.4rem;
+}
+
+
+/* Important callout note */
+.nl-note {
+  clear: both;
+  margin: 1.1rem 0 0;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: rgba(30, 150, 237, 0.08);
+  border: 1px solid rgba(30, 150, 237, 0.20);
+  color: var(--jwg-text-strong, #2b2b2b);
+}
+
+.nl-note strong {
+  font-weight: 700;
+}
+
+
+.nl-linkline {
+  margin: 0.75rem 0;
+}
+
+.nl-signoff {
+  margin-top: 0.75rem;
+}
+
+.nl-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.10);
+}
+
+.nl-small {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--jwg-text-muted, #5a5a5a);
+  margin: 0;
+}
+
+.nl-media {
+  margin: 0.75rem 0 1rem;
+}
+
+.nl-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;               /* never distort */
+  border-radius: 14px;
+  box-shadow: var(--jwg-shadow-sm, 0 2px 10px rgba(0,0,0,0.10));
+}
+
+.nl-caption {
+  margin: 0.45rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--jwg-text-muted, #5a5a5a);
+}
+
+/* Feature image (landscape) — full width, centred */
+.nl-media--feature img {
+  width: 100%;
+  max-width: 640px;           /* email-friendly ceiling */
+  margin: 0 auto;
+}
+
+/* Single portrait: even tighter footprint */
+.nl-media--portrait {
+  max-width: 160px;
+  margin-bottom: 0.6rem;
+}
+
+/* Portrait (single) — fixed display size but responsive */
+.nl-media--portrait img {
+  width: 140px;               /* ideal newsletter size */
+  max-width: 40vw;            /* protect on very small screens */
+  margin: 0;                  /* aligns to left edge of text column */
+}
+
+/* Two portraits side-by-side, stack on narrow screens */
+.nl-media--pair {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  flex-wrap: wrap;            /* allows stacking */
+  max-width: 300px;      /* limits empty space */
+  margin-bottom: 0.75rem;
+}
+
+.nl-media--pair figure {
+  margin: 0;
+}
+
+.nl-media--pair img {
+  width: 120px;
+  max-width: 42vw;
+}
+
+.nl-media--pair .nl-caption {
+  max-width: 120px;           /* keeps caption aligned with image */
+}
+
+/* Figure reset (so browser defaults don’t add odd margins) */
+.nl-figure {
+  margin: 0;
+}
+
+/* -----------------------------
+   Wrapped media (desktop), stacked (mobile)
+------------------------------ */
+
+/* Let portrait + pair behave like "inline illustrations" */
+.nl-media--portrait,
+.nl-media--pair {
+  float: left;
+  margin: 0.25rem 1rem 0.75rem 0; /* top, right, bottom, left */
+}
+
+/* Keep the wrapped blocks compact */
+.nl-media--portrait { max-width: 170px; }
+.nl-media--pair     { max-width: 310px; }
+
+.nl-media--portrait img { width: 140px; }
+.nl-media--pair img     { width: 120px; }
+
+/* Ensure captions don't sprawl */
+.nl-media--portrait .nl-caption,
+.nl-media--pair .nl-caption {
+  max-width: 140px;
+}
+
+/* Clear floats so each sub-section doesn't bleed into the next */
+.nl-clear {
+  clear: both;
+}
+
+/* Mobile: stop wrapping; stack images above text */
+@media (max-width: 560px) {
+  .nl-media--portrait,
+  .nl-media--pair {
+    float: none;
+    max-width: 100%;
+    margin: 0.6rem 0 0.9rem;
+  }
+
+  .nl-media--portrait img,
+  .nl-media--pair img {
+    width: 140px;         /* keeps portraits a sensible size */
+    margin: 0 auto;
+  }
+
+  .nl-media--pair {
+    justify-content: center;
+  }
+
+  .nl-media--pair .nl-caption {
+    max-width: 120px;
+    text-align: center;
+  }
+ /* Centre the whole figure, not just the image */
+  .nl-media--portrait figure {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Ensure caption stays visually tied to the image */
+  .nl-media--portrait .nl-caption {
+    max-width: 140px;
+    margin: 0.35rem auto 0;
+    text-align: center;
+  }
+
+  
+}
+</style></head>
+<body>
+<!-- Optional: reuse your shared site header/nav if you want it on newsletters -->
+<!--
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-title">John &amp; Chris Gilroy — Family History</a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="spotlights/index.html">Spotlights</a>
+        <a href="newsletters/index.html">Newsletters</a>
+      </nav>
+    </div>
+  </header>
+  -->
+<main class="nl-page">
+<article aria-labelledby="nl-title" class="nl-article">
+<header class="nl-hero">
+<p class="nl-kicker">Family History Newsletter · Issue 1</p>
+<h1 class="nl-title" id="nl-title">
+          Bankruptcy, bigamy, extramarital affairs, riots, forgery, imprisonment and deportation —
+        </h1>
+<p class="card-lede">
+          as well as achievement, prosperity and artistic talent
+        </p>
+</header>
+<section aria-label="Opening" class="nl-section">
+<p>Hello everyone,</p>
+<p>
+          Welcome to the first of what we hope will become an occasional family history newsletter.
+        </p>
+<p>
+          Over the past few years we’ve been quietly researching our family tree — following certificates, census records,
+          newspapers, photographs, and the stories passed down through the generations — and shaping them into something
+          readable and shareable. This newsletter is a new way of sharing that work with family and friends who are curious
+          about where we came from and the lives our forebears actually lived.
+        </p>
+<p>
+          Along the way we’ve discovered that our family story contains just about everything. Some lives unfolded quietly;
+          others were shaped by scandal, hardship, poor decisions, or sheer bad luck. But threaded through it all are resilience,
+          creativity, and moments of real achievement. Our aim is not gossip, but context — to understand people as they were,
+          through the evidence they left behind.
+        </p>
+</section>
+<section aria-labelledby="who-we-are" class="nl-section">
+<h2 id="who-we-are">Who we are</h2>
+<!-- Feature image (landscape) -->
+<div class="nl-media nl-media--feature">
+<figure class="nl-figure">
+<img alt="John and Chris" src="https://johngilroy.github.io/johns-genealogy-quest/assets/img/newsletters/2026/01/john-and-chris.jpg" style="display:block;max-width:100%;height:auto"/>
+<figcaption class="nl-caption">John and Chris — putting the family history together</figcaption>
+</figure>
+</div>
+<p>
+          We’ve always been interested in where we came from and how ordinary lives intersect with wider events. What began
+          as curiosity gradually turned into a long-running research project, pulling together records, newspaper reports,
+          and family memories into a structured family history.
+        </p>
+<p>
+          Together, we act as curators rather than storytellers for their own sake: following the records where they lead,
+          and presenting what we find as clearly and respectfully as possible.
+        </p>
+</section>
+<section aria-labelledby="main-lines" class="nl-section">
+<h2 id="main-lines">Our main family lines</h2>
+<p>
+          To help you find your bearings, most of our research falls into four connected lines — two Scottish lines on John’s side,
+          and two English/Welsh-border lines on Chris’s side.
+        </p>
+<h3>Gilroy &amp; Wilson (John’s Scottish lines)</h3>
+<!-- Paired portraits -->
+<div class="nl-media nl-media--pair">
+<figure class="nl-figure">
+<img alt="John’s father" src="https://johngilroy.github.io/johns-genealogy-quest/assets/img/newsletters/2026/01/john-father.jpg" style="display:block;max-width:100%;height:auto"/>
+<figcaption class="nl-caption">John’s dad</figcaption>
+</figure>
+<figure class="nl-figure">
+<img alt="John’s mother" src="https://johngilroy.github.io/johns-genealogy-quest/assets/img/newsletters/2026/01/john-mother.jpg" style="display:block;max-width:100%;height:auto"/>
+<figcaption class="nl-caption">John’s mum</figcaption>
+</figure>
+</div>
+<p>
+          John’s paternal and maternal Scottish lines largely begin with agricultural workers and domestic servants in
+          Haddingtonshire, Kincardineshire and South Lanarkshire. Over time, many families moved into Scotland’s central belt
+          as farming changed and industry mechanised — a familiar story of rural roots giving way to industrial towns and cities.
+        </p>
+<div class="nl-clear"></div>
+<h3>Reynolds (Chris’s paternal line)</h3>
+<!-- Single portrait -->
+<div class="nl-media nl-media--portrait">
+<figure class="nl-figure">
+<img alt="Chris’s father" src="https://johngilroy.github.io/johns-genealogy-quest/assets/img/newsletters/2026/01/val-father.jpg" style="display:block;max-width:100%;height:auto"/>
+<figcaption class="nl-caption">Chris’s dad</figcaption>
+</figure>
+</div>
+<p>
+          This line includes merchants, clergy and farmers from Yorkshire, Northumberland and Herefordshire, with many later based
+          in London. It also contains our much-mentioned “royal connection” — traced through published pedigrees back to
+          King Edward III — which is fascinating to explore, even as we treat it with a careful, evidence-first eye.
+        </p>
+<div class="nl-clear"></div>
+<h3>Law (Chris’s maternal line)</h3>
+<!-- Single portrait -->
+<div class="nl-media nl-media--portrait">
+<figure class="nl-figure">
+<img alt="Chris’s mother" src="https://johngilroy.github.io/johns-genealogy-quest/assets/img/newsletters/2026/01/val-mother.jpg" style="display:block;max-width:100%;height:auto"/>
+<figcaption class="nl-caption">Chris’s mum</figcaption>
+</figure>
+</div>
+<p>
+          Rooted in Gloucestershire and Wiltshire, this line includes generations of agricultural labourers. It also contains a
+          dramatic chapter from the early nineteenth century, when family members were transported to Australia following protests
+          connected to agricultural mechanisation — a stark reminder of how quickly social and economic change could upend
+          ordinary lives.
+        </p>
+<div class="nl-clear"></div>
+<p class="nl-note">
+<strong>Note:</strong> Living individuals are redacted on the public site. For our collaborative family tree (and to explore
+          connections), we also maintain profiles on WikiTree.
+        </p>
+</section>
+<section aria-labelledby="early-sight" class="nl-section">
+<h2 id="early-sight">Early sight of our work</h2>
+<p>
+          If you’d like an early look at what we’ve been working on, the family-friendly website linked below shows our progress so far.
+          Our research is very much a work in progress, so content changes as new records, corrections, and discoveries are added.
+        </p>
+<p class="nl-linkline">
+          👉 <a href="https://johngilroy.github.io/johns-genealogy-quest/index.html">Visit the family history website</a>
+</p>
+<p>
+          The site includes readable biographies, themed spotlights, and visual summaries drawn directly from original records.
+        </p>
+</section>
+<section aria-labelledby="coming-next" class="nl-section">
+<h2 id="coming-next">What’s coming next</h2>
+<p>
+          Future newsletters will be shorter and more focused, often drawing on a single story or theme — a newspaper discovery,
+          an unusual life, or a wider historical moment that shaped several generations. Some content will appear on the website
+          first; some will be written especially for the newsletter.
+        </p>
+</section>
+<section aria-labelledby="closing" class="nl-section">
+<h2 id="closing">Finally…</h2>
+<p>
+          If you have corrections, family stories, photographs, or memories you’d like to share, we’d genuinely love to hear from you.
+          Family history works best when it’s collaborative.
+        </p>
+<p>
+          Thank you for reading — and welcome.
+        </p>
+<p class="nl-signoff">
+<strong>John &amp; Chris</strong>
+</p>
+</section>
+<footer class="nl-footer">
+<p class="nl-small">
+          © John &amp; Chris Gilroy · Family history research in progress · Last updated: <time datetime="2026-01-28">28 January 2026</time>
+</p>
+</footer>
+</article>
+</main>
+</body>
+</html>

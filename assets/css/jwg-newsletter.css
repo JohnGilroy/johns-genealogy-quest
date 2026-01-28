@@ -1,0 +1,223 @@
+/* --------------------------------
+   Newsletter media helpers
+   (safe single-column patterns)
+--------------------------------- */
+/* --------------------------------
+   Newsletter layout + typography
+--------------------------------- */
+
+.nl-page {
+  max-width: var(--jwg-max-width, 980px);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.nl-article {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.nl-hero {
+  margin: 0 0 1.25rem;
+}
+
+.nl-kicker {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--jwg-text-muted, #5a5a5a);
+  margin: 0 0 0.4rem;
+}
+
+.nl-title {
+  margin: 0;
+}
+
+.nl-section {
+  margin: 1.25rem 0;
+}
+
+.nl-section h2 {
+  margin: 0 0 0.6rem;
+}
+
+.nl-section h3 {
+  margin: 1rem 0 0.4rem;
+}
+
+.nl-section h3 + .nl-media {
+  margin-top: 0.4rem;
+}
+
+
+/* Important callout note */
+.nl-note {
+  clear: both;
+  margin: 1.1rem 0 0;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: rgba(30, 150, 237, 0.08);
+  border: 1px solid rgba(30, 150, 237, 0.20);
+  color: var(--jwg-text-strong, #2b2b2b);
+}
+
+.nl-note strong {
+  font-weight: 700;
+}
+
+
+.nl-linkline {
+  margin: 0.75rem 0;
+}
+
+.nl-signoff {
+  margin-top: 0.75rem;
+}
+
+.nl-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.10);
+}
+
+.nl-small {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--jwg-text-muted, #5a5a5a);
+  margin: 0;
+}
+
+.nl-media {
+  margin: 0.75rem 0 1rem;
+}
+
+.nl-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;               /* never distort */
+  border-radius: 14px;
+  box-shadow: var(--jwg-shadow-sm, 0 2px 10px rgba(0,0,0,0.10));
+}
+
+.nl-caption {
+  margin: 0.45rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--jwg-text-muted, #5a5a5a);
+}
+
+/* Feature image (landscape) — full width, centred */
+.nl-media--feature img {
+  width: 100%;
+  max-width: 640px;           /* email-friendly ceiling */
+  margin: 0 auto;
+}
+
+/* Single portrait: even tighter footprint */
+.nl-media--portrait {
+  max-width: 160px;
+  margin-bottom: 0.6rem;
+}
+
+/* Portrait (single) — fixed display size but responsive */
+.nl-media--portrait img {
+  width: 140px;               /* ideal newsletter size */
+  max-width: 40vw;            /* protect on very small screens */
+  margin: 0;                  /* aligns to left edge of text column */
+}
+
+/* Two portraits side-by-side, stack on narrow screens */
+.nl-media--pair {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  flex-wrap: wrap;            /* allows stacking */
+  max-width: 300px;      /* limits empty space */
+  margin-bottom: 0.75rem;
+}
+
+.nl-media--pair figure {
+  margin: 0;
+}
+
+.nl-media--pair img {
+  width: 120px;
+  max-width: 42vw;
+}
+
+.nl-media--pair .nl-caption {
+  max-width: 120px;           /* keeps caption aligned with image */
+}
+
+/* Figure reset (so browser defaults don’t add odd margins) */
+.nl-figure {
+  margin: 0;
+}
+
+/* -----------------------------
+   Wrapped media (desktop), stacked (mobile)
+------------------------------ */
+
+/* Let portrait + pair behave like "inline illustrations" */
+.nl-media--portrait,
+.nl-media--pair {
+  float: left;
+  margin: 0.25rem 1rem 0.75rem 0; /* top, right, bottom, left */
+}
+
+/* Keep the wrapped blocks compact */
+.nl-media--portrait { max-width: 170px; }
+.nl-media--pair     { max-width: 310px; }
+
+.nl-media--portrait img { width: 140px; }
+.nl-media--pair img     { width: 120px; }
+
+/* Ensure captions don't sprawl */
+.nl-media--portrait .nl-caption,
+.nl-media--pair .nl-caption {
+  max-width: 140px;
+}
+
+/* Clear floats so each sub-section doesn't bleed into the next */
+.nl-clear {
+  clear: both;
+}
+
+/* Mobile: stop wrapping; stack images above text */
+@media (max-width: 560px) {
+  .nl-media--portrait,
+  .nl-media--pair {
+    float: none;
+    max-width: 100%;
+    margin: 0.6rem 0 0.9rem;
+  }
+
+  .nl-media--portrait img,
+  .nl-media--pair img {
+    width: 140px;         /* keeps portraits a sensible size */
+    margin: 0 auto;
+  }
+
+  .nl-media--pair {
+    justify-content: center;
+  }
+
+  .nl-media--pair .nl-caption {
+    max-width: 120px;
+    text-align: center;
+  }
+ /* Centre the whole figure, not just the image */
+  .nl-media--portrait figure {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Ensure caption stays visually tied to the image */
+  .nl-media--portrait .nl-caption {
+    max-width: 140px;
+    margin: 0.35rem auto 0;
+    text-align: center;
+  }
+
+  
+}
