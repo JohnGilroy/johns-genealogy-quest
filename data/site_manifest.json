@@ -145,6 +145,24 @@
         {
             "type": "spotlight",
             "catalog_key": "origins",
+            "division_key": "origins_gilroy_wilson",
+            "title": "Origins Gilroy Wilson",
+            "description": "Birthplace distribution across John's paternal and maternal lines.",
+            "href": "spotlights/origins/gilroy_wilson/origins_gilroy_wilson.html",
+            "link_title": "Origins \u2014 John's Family"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "origins",
+            "division_key": "origins_reynolds_law",
+            "title": "Origins Reynolds Law",
+            "description": "Birthplace distribution across Chris's paternal and maternal lines.",
+            "href": "spotlights/origins/reynolds_law/origins_reynolds_law.html",
+            "link_title": "Origins \u2014 Chris's Family"
+        },
+        {
+            "type": "spotlight",
+            "catalog_key": "origins",
             "division_key": "origins_tree",
             "title": "Origins Tree",
             "description": "Birthplace distribution across the entire family tree.",
@@ -158,7 +176,7 @@
             "title": "Royal Connection Edward Iii",
             "description": "Valerie Christine Gilroy's (nee Reynolds) line of descent from Edward III",
             "href": "spotlights/plantagenet/royal_connection_edward_iii.html",
-            "link_title": "The Plantagenet Connection and Edward III"
+            "link_title": "The Royal Connection \u2014 Edward III connection"
         },
         {
             "type": "spotlight",

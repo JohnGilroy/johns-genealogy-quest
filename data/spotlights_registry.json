@@ -120,6 +120,8 @@
                     "hero_label": "Where we hail from",
                     "hero_title": "Origins of The Family",
                     "hero_subtitle": "A light-hearted look at where our forebears were born (by county).",
+                    "hero_image": "",
+                    "hero_alt": "",
                     "notes": [
                         "Counts include anyone with a recorded birthplace or where they were baptised.",
                         "Places are grouped by county for a simple overview (historic place names are mapped to modern ceremonial/preserved/lieutenancy areas).",
@@ -131,7 +133,6 @@
                         "class": "OriginsSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
-                            "scope": "tree",
                             "areas_path": "app/spotlights/origins_areas.json"
                         }
                     },
@@ -142,7 +143,92 @@
                         "css": [
                             "assets/css/jwg-spotlight.css",
                             "assets/css/jwg-spotlight-origins.css"
-                        ]
+                        ],
+                        "map": "assets/maps/uk_lieutenancy.svg"
+                    }
+                },
+                {
+                    "key": "origins_gilroy_wilson",
+                    "title": "John's Family",
+                    "description": "Birthplace distribution across John's paternal and maternal lines.",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/map-pin.svg",
+                    "sort": 0,
+                    "hero_label": "Where John's family hail from",
+                    "hero_title": "Origins of The Gilroy's and Wilson's",
+                    "hero_subtitle": "A light-hearted look at where my forebears were born (by county).",
+                    "hero_image": "",
+                    "hero_alt": "",
+                    "notes": [
+                        "Counts include anyone with a recorded birthplace or where they were baptised.",
+                        "Places are grouped by county for a simple overview (historic place names are mapped to modern ceremonial/preserved/lieutenancy areas).",
+                        "Records with only a country (e.g., England/Scotland) are listed separately as \u201ccounty unknown\u201d.",
+                        "Outliers (non-UK births) are shown as a separate list for interest and tidy-up."
+                    ],
+                    "generator": {
+                        "script": "app/spotlights/OriginsSpotlight.php",
+                        "class": "OriginsSpotlight",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "scope": "gilroy_wilson",
+                            "areas_path": "app/spotlights/origins_areas.json",
+                            "branches": [
+                                "GILROY",
+                                "WILSON"
+                            ]
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/origins/gilroy_wilson",
+                        "filename": "origins_gilroy_wilson.html",
+                        "pattern": "origins_gilroy_wilson.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css",
+                            "assets/css/jwg-spotlight-origins.css"
+                        ],
+                        "map": "assets/maps/uk_lieutenancy.svg"
+                    }
+                },
+                {
+                    "key": "origins_reynolds_law",
+                    "title": "Chris's Family",
+                    "description": "Birthplace distribution across Chris's paternal and maternal lines.",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/map-pin.svg",
+                    "sort": 0,
+                    "hero_label": "Where Chris's family hail from",
+                    "hero_title": "Origins of The Reynold's and Law's",
+                    "hero_subtitle": "A light-hearted look at where Chris's forebears were born (by county).",
+                    "hero_image": "",
+                    "hero_alt": "",
+                    "notes": [
+                        "Counts include anyone with a recorded birthplace or where they were baptised.",
+                        "Places are grouped by county for a simple overview (historic place names are mapped to modern ceremonial/preserved/lieutenancy areas).",
+                        "Records with only a country (e.g., England/Scotland) are listed separately as \u201ccounty unknown\u201d.",
+                        "Outliers (non-UK births) are shown as a separate list for interest and tidy-up."
+                    ],
+                    "generator": {
+                        "script": "app/spotlights/OriginsSpotlight.php",
+                        "class": "OriginsSpotlight",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "scope": "reynolds_law",
+                            "areas_path": "app/spotlights/origins_areas.json",
+                            "branches": [
+                                "REYNOLDS",
+                                "LAW"
+                            ]
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/origins/reynolds_law",
+                        "filename": "origins_reynolds_law.html",
+                        "pattern": "origins_reynolds_law.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css",
+                            "assets/css/jwg-spotlight-origins.css"
+                        ],
+                        "map": "assets/maps/uk_ew_lieutenancy.svg"
                     }
                 }
             ]
@@ -186,6 +272,8 @@
                     "hero_label": "Star Signs",
                     "hero_title": "The Whole Tree by Zodiac",
                     "hero_subtitle": "A light-hearted look at our ancestors by zodiac sign.",
+                    "hero_image": "",
+                    "hero_alt": "",
                     "notes": [
                         "Includes people with fully recorded birth or baptism dates (dd/mm/yyyy).",
                         "Counts include anyone with a recorded birthplace or where they were baptised.",
@@ -220,6 +308,8 @@
                     "hero_label": "Star Signs",
                     "hero_title": "Gilroy & Wilson",
                     "hero_subtitle": "A light-hearted look at the Gilroy and Wilson branches by zodiac sign.",
+                    "hero_image": "",
+                    "hero_alt": "",
                     "notes": [
                         "Includes people with fully recorded birth or baptism dates (dd/mm/yyyy).",
                         "Counts include anyone with a recorded birthplace or where they were baptised.",
@@ -254,6 +344,8 @@
                     "hero_label": "Star Signs",
                     "hero_title": "Reynolds & Law",
                     "hero_subtitle": "A light-hearted look at the Reynolds and Law branches by zodiac sign.",
+                    "hero_image": "",
+                    "hero_alt": "",
                     "notes": [
                         "Includes people with fully recorded birth or baptism dates (dd/mm/yyyy).",
                         "Counts include anyone with a recorded birthplace or where they were baptised.",
@@ -288,6 +380,9 @@
             "icon": "assets/img/icons/phosphor/skull.svg",
             "sort": 60,
             "layout_hint": "stat-led",
+            "hero_label": "Star Signs",
+            "hero_title": "Reynolds & Law",
+            "hero_subtitle": "A light-hearted look at the Reynolds and Law branches by zodiac sign.",
             "divisions": []
         },
         {
@@ -306,50 +401,52 @@
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/crown.svg",
                     "sort": 0,
+                    "hero_label": "Valerie Christine Gilroy's (nee Reynolds) line of descent from Edward III",
+                    "hero_title": "The Plantagenet Connection",
+                    "hero_subtitle": "21\u00d7 great-granddaughter of Edward III of England.",
+                    "hero_image": "assets/img/edward-iii-garter.jpg",
+                    "hero_alt": "Edward III of England (Order of the Garter)",
                     "generator": {
-                        "script": "app/spotlights/PlantagenetSpotlight_V0.php",
+                        "script": "app/spotlights/PlantagenetSpotlight.php",
                         "class": "PlantagenetSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
-                            "subject_personID": "The Plantagenet Connection",
-                            "royal_personID": "I10",
-                            "stat_label": "Plantagenet connection",
-                            "relationship": "21\u00d7 great-granddaughter of Edward III of England.",
-                            "chart_image": "assets/img/plantagenet-line.png",
-                            "tng_relationship_url": "http://localhost/familyhistory/jwg_get_relationship.php?baseID=I73&personID=I10&generations=25&tree=Gilroy1",
-                            "wikitree_url": "",
-                            "plantagenet_roll_url": "",
-                            "content": {
-                                "intro_sentences": [
-                                    "The 21\u00d7 great-grandfather of Chris is believed to be Edward Plantagenet, better known as King Edward III of England.",
-                                    "The trail for this connection comes from a published compilation, <em>The Plantagenet Roll of the Blood Royal</em> (1911), which lists descendants of Edward III who were living at the time of publication.",
-                                    "Chris\u2019s great-grandmother, Ada Orton, appears in the Mortimer\u2013Percy section (Part 1, p. 319), which is why this line is worth exploring further \u2014 even if it didn\u2019t lead to an invitation to King Charles\u2019 coronation."
-                                ],
-                                "plantagenet_paragraphs": [
-                                    "The Plantagenets were a royal dynasty who ruled England from the mid-12th century into the late 15th century. The name covers the direct royal line and, later, the Lancastrian and Yorkist branches that shaped much of late medieval English history.",
-                                    "Edward III (reigned 1327\u20131377) is associated with major developments in monarchy and warfare, including the early phases of the Hundred Years\u2019 War. Because he had a large family and many descendants, connections to Edward III appear across a wide range of later noble and gentry lines.",
-                                    "How to read the chart: each row shows a couple, with the line continuing down the left-hand side through the direct line of descent. Spouses are shown alongside to help place each person in their family context.",
-                                    "This particular line runs through well-known medieval noble families (including the Mortimers, Percys, Cliffords and others) before it reaches later generations recorded in parish registers, civil registration and census returns.",
-                                    "It is also worth remembering that \u2018descent from Edward III\u2019 is not rare in Britain: because many generations have passed and Edward III had many descendants, a great number of modern families can connect through one or more routes. What matters here is documenting this specific route carefully.",
-                                    "Next steps for strengthening the evidence are to (1) verify each parent\u2013child link with a primary record where possible, (2) ensure dates and places are consistent from generation to generation, and (3) cite modern scholarly compilations when medieval sources are involved."
-                                ],
-                                "sources_note": "The Plantagenet Roll is best treated as a guide rather than proof: it is indexed and often helpful for \u201cjoining the dots\u201d, but it generally does not provide the detailed source citations that modern genealogy expects. Where practical, each generation in the chart should be confirmed against primary records and reliable modern scholarship. This page is a fun and motivating thread to pull \u2014 and a reminder that good genealogy is built one carefully sourced generation at a time.",
-                                "images": {
-                                    "plantagenet_roll_cover": {
-                                        "src": "assets/img/plantagenet-roll-cover.jpg",
-                                        "alt": "Cover of The Plantagenet Roll of the Blood Royal (1911)",
-                                        "caption": "The Plantagenet Roll of the Blood Royal (1911) \u2014 a useful guide, but not a fully cited proof."
-                                    }
-                                }
-                            }
+                            "scope": ""
                         }
                     },
                     "output": {
                         "dir": "spotlights/plantagenet",
-                        "filename_template": "royal_connection_edward_iii.html",
-                        "pattern": "royal_connection_*.html"
-                    },
-                    "html_template": "web-templates/template_plantagenet.html"
+                        "filename": "royal_connection_edward_iii.html",
+                        "pattern": "royal_connection_*.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css",
+                            "assets/css/jwg-spotlight-plantagenet.css"
+                        ],
+                        "chart_image": "assets/img/plantagenet-line.png",
+                        "content": {
+                            "intro_sentences": [
+                                "The 21\u00d7 great-grandfather of Chris is believed to be Edward Plantagenet, better known as King Edward III of England.",
+                                "The trail for this connection comes from a published compilation, <em>The Plantagenet Roll of the Blood Royal</em> (1911), which lists descendants of Edward III who were living at the time of publication.",
+                                "Chris\u2019s great-grandmother, Ada Orton, appears in the Mortimer\u2013Percy section (Part 1, p. 319), which is why this line is worth exploring further \u2014 even if it didn\u2019t lead to an invitation to King Charles\u2019 coronation."
+                            ],
+                            "plantagenet_paragraphs": [
+                                "The Plantagenets were a royal dynasty who ruled England from the mid-12th century into the late 15th century. The name covers the direct royal line and, later, the Lancastrian and Yorkist branches that shaped much of late medieval English history.",
+                                "Edward III (reigned 1327\u20131377) is associated with major developments in monarchy and warfare, including the early phases of the Hundred Years\u2019 War. Because he had a large family and many descendants, connections to Edward III appear across a wide range of later noble and gentry lines.",
+                                "How to read the chart: each row shows a couple, with the line continuing down the left-hand side through the direct line of descent. Spouses are shown alongside to help place each person in their family context.",
+                                "This particular line runs through well-known medieval noble families (including the Mortimers, Percys, Cliffords and others) before it reaches later generations recorded in parish registers, civil registration and census returns.",
+                                "It is also worth remembering that \u2018descent from Edward III\u2019 is not rare in Britain: because many generations have passed and Edward III had many descendants, a great number of modern families can connect through one or more routes. What matters here is documenting this specific route carefully.",
+                                "Next steps for strengthening the evidence are to (1) verify each parent\u2013child link with a primary record where possible, (2) ensure dates and places are consistent from generation to generation, and (3) cite modern scholarly compilations when medieval sources are involved."
+                            ],
+                            "sources_note": "The Plantagenet Roll is best treated as a guide rather than proof: it is indexed and often helpful for \u201cjoining the dots\u201d, but it generally does not provide the detailed source citations that modern genealogy expects. Where practical, each generation in the chart should be confirmed against primary records and reliable modern scholarship. This page is a fun and motivating thread to pull \u2014 and a reminder that good genealogy is built one carefully sourced generation at a time.",
+                            "images": {
+                                "plantagenet_roll_cover": {
+                                    "src": "assets/img/plantagenet-roll-cover.jpg",
+                                    "alt": "Cover of The Plantagenet Roll of the Blood Royal (1911)",
+                                    "caption": "The Plantagenet Roll of the Blood Royal (1911) \u2014 a useful guide, but not a fully cited proof."
+                                }
+                            }
+                        }
+                    }
                 }
             ]
         },
