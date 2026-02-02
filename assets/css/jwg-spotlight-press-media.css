@@ -1,0 +1,161 @@
+/* ------------------------------------------------------------
+   Press Media spotlight specifics
+   ------------------------------------------------------------ */
+
+.press-figure {
+  margin: 0;
+}
+
+.press-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Make the image panel feel more “framed” and consistent */
+.press-image-link .press-image {
+  max-height: 520px;
+}
+
+.press-provenance {
+  margin-top: 10px;
+  font-size: 0.92rem;
+  color: #666;
+  line-height: 1.35;
+}
+
+/* Transcript UX */
+.press-transcript {
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 10px;
+}
+
+/* Press transcript header should feel like newsprint */
+.press-transcript-headline {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  margin: 0 0 0.35em;
+  letter-spacing: 0.2px;
+}
+
+.press-transcript-standfirst {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.25;
+  margin: 0 0 1.2em;
+  font-style: italic;
+}
+
+.press-transcript > summary {
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+}
+
+.press-transcript-body {
+  margin-top: 10px;
+}
+
+.press-transcript-body p {
+  margin: 0 0 0.6rem 0;
+}
+
+/* ------------------------------------------------------------
+   Press Media: hero emphasis (headline + standfirst)
+   ------------------------------------------------------------ */
+
+.press-hero-text {
+  max-width: 68ch; /* prevents ultra-wide lines */
+}
+
+.press-hero-title {
+  margin-top: 8px;
+  letter-spacing: -0.02em; /* subtle tightening */
+  line-height: 1.05;
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+}
+
+.press-hero-standfirst {
+  margin-top: 10px;
+  max-width: 72ch;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.45;
+  opacity: 0.95;
+}
+
+/* --------------------------------
+   Press Media spotlight additions
+--------------------------------- */
+
+/* Make intro blocks full-width and readable */
+.press-intro {
+  /* Ensure it spans the content width (same as rest of spotlight sections) */
+  width: 100%;
+  margin: 14px 0 8px;
+}
+
+.press-summary,
+.press-context {
+  width: 100%;
+  max-width: none; /* <-- key: don’t allow card/grid constraints */
+  margin: 0;
+}
+
+/* If summary_html/context contains <p> tags, make them breathe */
+.press-summary p,
+.press-context p {
+  margin: 0 0 10px;
+}
+
+.press-summary p:last-child,
+.press-context p:last-child {
+  margin-bottom: 0;
+}
+
+/* Optional: subtle separation between the two paragraphs/blocks */
+.press-context {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Masthead: separate styling from press cutting image */
+.press-masthead-wrap {
+  width: 100%;
+  margin: 14px 0 18px;
+  padding: 0 0;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.03);   /* makes padding visible */
+  border-radius: 16px;
+}
+
+.press-masthead {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  /* Keep it from becoming absurdly tall on huge screens */
+  max-width: 980px;
+
+  /* Looks “printed” without needing heavy effects */
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Press cutting image should NOT inherit masthead sizing */
+.press-figure {
+  margin: 0;
+}
+
+.press-image-link {
+  display: block;
+}
+
