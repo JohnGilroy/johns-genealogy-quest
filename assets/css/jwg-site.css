@@ -549,6 +549,107 @@ hr {
 }
 
 /* --------------------------------
+   Responsive header nav (CSS-only)
+   Uses <details> inside .site-nav
+--------------------------------- */
+
+/* Desktop: keep your existing inline nav links */
+.site-nav-collapse { display: contents; }
+.site-nav-toggle { display: none; }
+.site-nav-links { display: contents; }   /* links inherit .site-nav flex layout */
+
+/* Remove default marker triangle */
+.site-nav-toggle::-webkit-details-marker { display: none; }
+.site-nav-toggle { list-style: none; }
+
+/* Mobile: collapse to hamburger */
+@media (max-width: 720px) {
+
+  /* Stop the old inline layout fighting us */
+  .site-nav {
+    margin-left: auto;
+    display: block;            /* instead of flex */
+    width: auto;               /* don't force a full row */
+  }
+
+  /* details becomes a positioned dropdown anchor */
+  .site-nav-collapse {
+    display: block;
+    position: relative;
+  }
+
+  .site-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+
+    padding: 0.35rem 0.55rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+  }
+
+  .site-nav-toggle-text { font-size: 0.95rem; }
+
+  /* Hamburger icon (3 bars) */
+  .site-nav-icon {
+    width: 18px;
+    height: 12px;
+    position: relative;
+    display: inline-block;
+  }
+  .site-nav-icon::before,
+  .site-nav-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+  }
+  .site-nav-icon::before { top: 0; box-shadow: 0 5px 0 #fff; }
+  .site-nav-icon::after  { top: 10px; }
+
+  /* Dropdown panel */
+  .site-nav-links {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+
+    min-width: 220px;
+    padding: 0.5rem;
+    border-radius: 14px;
+
+    background: rgba(20, 40, 60, 0.98);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.12);
+    z-index: 999;
+  }
+
+  .site-nav-links a,
+  .site-nav-links a:visited {
+    display: block;
+    padding: 0.55rem 0.65rem;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .site-nav-links a:hover,
+  .site-nav-links a:focus {
+    background: rgba(255,255,255,0.08);
+    text-decoration: none;
+  }
+
+  /* Open state */
+  .site-nav-collapse[open] .site-nav-links { display: block; }
+}
+
+/* --------------------------------
    Page heading helpers (optional)
 --------------------------------- */
 
@@ -695,12 +796,4 @@ hr {
     padding: 0.75rem 1rem;
   }
 
-  /* Let the nav drop under the site title and align nicely */
-  .site-nav{
-    margin-left: 0;          /* stop "pushing right" on wrap */
-    width: 100%;             /* take a full row */
-    justify-content: flex-start;
-    flex-wrap: wrap;         /* allow links to wrap */
-    gap: 0.5rem 0.75rem;
-  }
 }

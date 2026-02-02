@@ -21,10 +21,20 @@
                 <header class="site-header">
   <div class="site-header-inner">
     <a href="index.html" class="site-title">John&#39;s Genealogy Quest</a>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="bios/index.html">Biographies</a>
-      <a href="spotlights/index.html">Spotlights</a>
+
+    <nav class="site-nav" aria-label="Site">
+      <details class="site-nav-collapse">
+        <summary class="site-nav-toggle" aria-label="Menu">
+          <span class="site-nav-icon" aria-hidden="true"></span>
+          <span class="site-nav-toggle-text">Menu</span>
+        </summary>
+
+        <div class="site-nav-links">
+          <a href="index.html">Home</a>
+          <a href="bios/index.html">Biographies</a>
+          <a href="spotlights/index.html">Spotlights</a>
+        </div>
+      </details>
     </nav>
   </div>
 </header>
