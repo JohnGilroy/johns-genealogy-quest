@@ -18,24 +18,28 @@
         <body class="spotlight">
             <div class="spotlight-wrap">
 
-                <header class="site-header">
-  <div class="site-header-inner">
+                
+<header class="site-header spotlight-header">
+  <div class="site-header-inner spotlight-header-inner">
+
+    <!-- Hamburger (left of title) -->
+    <button class="spotlight-nav-toggle"
+            type="button"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="spotlightNav">
+      <span class="spotlight-nav-icon" aria-hidden="true"></span>
+    </button>
+
     <a href="index.html" class="site-title">John&#39;s Genealogy Quest</a>
 
-    <nav class="site-nav" aria-label="Site">
-      <details class="site-nav-collapse">
-        <summary class="site-nav-toggle" aria-label="Menu">
-          <span class="site-nav-icon" aria-hidden="true"></span>
-          <span class="site-nav-toggle-text">Menu</span>
-        </summary>
-
-        <div class="site-nav-links">
-          <a href="index.html">Home</a>
-          <a href="bios/index.html">Biographies</a>
-          <a href="spotlights/index.html">Spotlights</a>
-        </div>
-      </details>
+    <!-- Dropdown menu -->
+    <nav id="spotlightNav" class="spotlight-nav" aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="bios/index.html">Biographies</a>
+      <a href="spotlights/index.html">Spotlights</a>
     </nav>
+
   </div>
 </header>
 
@@ -50,6 +54,14 @@
 
                                                     <p class="spotlight-hero-subtitle press-hero-standfirst">Polmont Piano Tuner Who Took Out His Glass Eye</p>
                                             </div>
+
+                                            <div class="press-featuring">
+                            <div class="press-featuring-label">Featuring</div>
+                            <div class="press-featuring-list">
+                                <div class="press-featuring-item">John’s grandfather <b>William James Gilroy</b> <em>(“Gilroy”)</em></div>
+<div class="press-featuring-item">John’s uncle <b>William James Gilroy</b> <em>(“William James Gilroy”)</em></div>                            </div>
+                        </div>
+                    
                 </header>
 
                 <!-- INTRO -->
@@ -58,7 +70,7 @@
                             <p>This article, published in The Falkirk Herald on 20 June 1931, reported on a case heard at Falkirk Sheriff Court concerning an alleged breach of the peace at Bean Cross Farm, Polmont. The incident arose after children playing with a ball on the roadway caused it to enter neighbouring farmland, leading to a dispute between the farmer James Walker and members of the Gilroy family. Evidence described a heated confrontation between the adults involved, which the court heard stemmed from the children’s play. In his remarks, Sheriff Robertson commented on the need for adults to exercise restraint in such situations, observing that “children will be children.” The court concluded that a breach of the peace had occurred and imposed a fine of ten shillings, which was paid at the Bar.</p>                        </div>
                     
                                             <div class="press-context">
-                            This article illustrates how the character of newspaper reporting has changed little over time. While the underlying court case was routine, it was the quirky and attention-grabbing details — particularly those highlighted in the headline — that made the story newsworthy. In researching family history, such reports offer a reminder that media coverage has long favoured colourful asides and human interest over plain facts.                        </div>
+                            The article illustrates how the character of newspaper reporting has changed little over time. While the underlying court case was routine, it was the quirky and attention-grabbing details — particularly those highlighted in the headline — that made the story newsworthy. In researching family history, such reports offer a reminder that media coverage has long favoured colourful asides and human interest over plain facts.                        </div>
                                     </section>
 
 
@@ -104,6 +116,46 @@
     </div>
   </div>
 </footer>
+
+<script>
+/* Simple spotlight dropdown toggle (no dependencies) */
+(function () {
+  function closeMenu(btn, nav) {
+    nav.classList.remove('is-open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.spotlight-nav-toggle');
+    const nav = document.getElementById('spotlightNav');
+
+    if (!nav) return;
+
+    // Click on toggle button
+    if (btn) {
+      const open = !nav.classList.contains('is-open');
+      nav.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      return;
+    }
+
+    // Click outside nav: close if open
+    if (nav.classList.contains('is-open') && !e.target.closest('#spotlightNav')) {
+      const b = document.querySelector('.spotlight-nav-toggle');
+      if (b) closeMenu(b, nav);
+    }
+  });
+
+  // Close on ESC
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    const nav = document.getElementById('spotlightNav');
+    const btn = document.querySelector('.spotlight-nav-toggle');
+    if (nav && btn && nav.classList.contains('is-open')) closeMenu(btn, nav);
+  });
+})();
+</script>
+
 <script src="js/kiosk-runtime.js"></script>
 
             </div>

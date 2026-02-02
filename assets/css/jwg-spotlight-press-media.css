@@ -72,7 +72,9 @@
    ------------------------------------------------------------ */
 
 .press-hero-text {
-  max-width: 68ch; /* prevents ultra-wide lines */
+  max-width: 72ch;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .press-hero-title {
@@ -130,10 +132,8 @@
 .press-masthead-wrap {
   width: 100%;
   margin: 14px 0 18px;
-  padding: 0 0;
   text-align: center;
-
-  background: rgba(0, 0, 0, 0.03);   /* makes padding visible */
+  background: rgba(0, 0, 0, 0.03); /* makes padding visible */
   border-radius: 16px;
 }
 
@@ -150,12 +150,59 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Press cutting image should NOT inherit masthead sizing */
-.press-figure {
-  margin: 0;
-}
-
 .press-image-link {
   display: block;
 }
 
+.press-whoswho {
+  margin: 0 0 10px;
+}
+
+.press-whoswho-label {
+  font-weight: 800;
+  margin-right: 6px;
+}
+
+/* --------------------------------
+   Press Media – Featuring block
+--------------------------------- */
+
+.press-featuring {
+  margin-top: 18px;
+  padding: 14px 16px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  backdrop-filter: blur(2px);
+}
+
+.press-featuring-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.press-featuring-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.press-featuring-item {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.press-featuring-item b {
+  font-weight: 800;
+}
+
+.press-featuring-item em {
+  font-style: italic;
+  opacity: 0.85;
+}

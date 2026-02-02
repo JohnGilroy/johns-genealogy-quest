@@ -1,33 +1,6 @@
 /* jwg-spotlight.css
  * Spotlight page layout (inherits palette + fonts from jwg-site.css)
  */
-/* --------------------------------
-   Spotlight pages: de-emphasise site header
---------------------------------- */
-
-body.spotlight .site-header {
-  padding: 0.2rem 0;        /* reduce vertical bulk */
-}
-
-body.spotlight .site-header-inner {
-  padding: 0.2rem 0.2rem;
-  min-height: unset;
-}
-
-body.spotlight .site-logo {
-  width: 40px;               /* down from 56px */
-  height: 40px;
-}
-
-body.spotlight .site-title {
-  font-size: 1.05rem;        /* quieter branding */
-  line-height: 1.1;
-}
-
-body.spotlight .site-nav a {
-  font-size: 0.9rem;
-  padding: 0.2rem 0.2rem;
-}
 
 body.spotlight {
   margin: 0;
@@ -76,11 +49,6 @@ body.spotlight {
   opacity: 0.28;
 
   z-index: 0;
-}
-
-.spotlight-hero > *{
-  position: relative;
-  z-index: 1;
 }
 
 /* --------------------------------
@@ -359,3 +327,112 @@ body.spotlight {
   }
 }
 
+/* ============================================================
+   Spotlights: compact header + simple dropdown nav (button)
+   - Hamburger on the LEFT of title
+   - Minimal header height
+   - No <details> state/breakpoint issues
+   ============================================================ */
+
+.spotlight-header-inner{
+  max-width: var(--jwg-max-width);
+  margin: 0 auto;
+  padding: 0.45rem 0.9rem;   /* compact */
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: nowrap;
+  position: relative;        /* anchor dropdown */
+}
+
+/* Slightly smaller title on spotlights */
+.spotlight-header .site-title,
+.spotlight-header .site-title:visited{
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.1px;
+  white-space: nowrap;
+}
+
+/* Hamburger button */
+.spotlight-nav-toggle{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.28rem 0.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(255,255,255,0.10);
+  color: #fff;
+  cursor: pointer;
+}
+
+.spotlight-nav-toggle:hover,
+.spotlight-nav-toggle:focus{
+  background: rgba(255,255,255,0.16);
+}
+
+/* Hamburger icon (3 bars) */
+.spotlight-nav-icon{
+  width: 18px;
+  height: 12px;
+  position: relative;
+  display: inline-block;
+}
+.spotlight-nav-icon::before,
+.spotlight-nav-icon::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+.spotlight-nav-icon::before { top: 0; box-shadow: 0 5px 0 #fff; }
+.spotlight-nav-icon::after  { top: 10px; }
+
+/* Dropdown panel */
+.spotlight-nav{
+  display: none;               /* toggled open */
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+
+  min-width: 220px;
+  padding: 0.55rem;
+  border-radius: 14px;
+
+  background: rgba(20, 40, 60, 0.98);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.12);
+  z-index: 999;
+}
+
+/* Open state */
+.spotlight-nav.is-open{ display: block; }
+
+/* Links in dropdown */
+.spotlight-nav a,
+.spotlight-nav a:visited{
+  display: block;
+  padding: 0.55rem 0.7rem;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.spotlight-nav a:hover,
+.spotlight-nav a:focus{
+  background: rgba(255,255,255,0.10);
+  text-decoration: none;
+}
+
+/* Optional: make header even tighter on very small screens */
+@media (max-width: 420px){
+  .spotlight-header-inner{ padding: 0.4rem 0.75rem; }
+  .spotlight-header .site-title{ font-size: 1rem; }
+}
