@@ -3,11 +3,6 @@
    Consolidated + de-duplicated.
 --------------------------------- */
 
-/* --------------------------------
-   Spotlight index catalogue (spotlights/index.html)
-   Consolidated + de-duplicated.
---------------------------------- */
-
 /* icon + main only */
 .spot-cat-grid{
   display: grid;
@@ -196,6 +191,7 @@
     width: 44px;
     height: 44px;
   }
+}
  
 /* Prefer a true 2-column layout on wider screens, and fill space evenly */
 @media (min-width: 720px){

@@ -19,8 +19,14 @@
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/newspaper.svg",
                     "sort": 0,
+                    "hero_label": "In The News",
+                    "hero_title": "",
+                    "hero_subtitle": "",
+                    "hero_image": "",
+                    "hero_alt": "",
+                    "notes": [],
                     "generator": {
-                        "script": "app/spotlights/PressMediaSpotlight_V0.php",
+                        "script": "app/spotlights/PressMediaSpotlight.php",
                         "class": "PressMediaSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
@@ -29,8 +35,12 @@
                     },
                     "output": {
                         "dir": "spotlights/press",
-                        "filename_template": "press_media_{mediaID}.html",
-                        "pattern": "press_media_*.html"
+                        "filename": "press_media_{mediaID}.html",
+                        "pattern": "press_media_*.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css",
+                            "assets/css/jwg-spotlight-press-media.css"
+                        ]
                     },
                     "pages": [
                         {
@@ -39,7 +49,30 @@
                             "headline": "Children will be children",
                             "standfirst": "Polmont Piano Tuner Who Took Out His Glass Eye",
                             "status": "implemented",
-                            "sort": 0
+                            "sort": 0,
+                            "masthead": "assets/img/newspapers/falkirk_herald/1931-06-20_banners.png",
+                            "protagonists": [
+                                {
+                                    "personID": "I00003",
+                                    "labels": {
+                                        "john": "John\u2019s grandfather",
+                                        "chris": null
+                                    },
+                                    "also_known_as": [
+                                        "Gilroy"
+                                    ]
+                                },
+                                {
+                                    "personID": "I00025",
+                                    "labels": {
+                                        "john": "John\u2019s uncle",
+                                        "chris": null
+                                    },
+                                    "also_known_as": [
+                                        "William James Gilroy"
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "key": "press_3023",
@@ -47,7 +80,20 @@
                             "headline": "Postmans Theft",
                             "standfirst": "Sheffield Ex-Soldier's Good Record Spoilt",
                             "status": "implemented",
-                            "sort": 0
+                            "sort": 0,
+                            "masthead": "assets/img/newspapers/yorkshire-telegraph-&-star/1919-01-31_banner.png",
+                            "protagonists": [
+                                {
+                                    "personID": "I00003",
+                                    "labels": {
+                                        "john": "John\u2019s grandfather",
+                                        "chris": null
+                                    },
+                                    "also_known_as": [
+                                        "William James Gilroy"
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "key": "press_1775",
@@ -55,7 +101,20 @@
                             "headline": "DOGS FOUND AMONG SHEEP",
                             "standfirst": "Fosse Bridge Owner To Keep Them Under Control",
                             "status": "implemented",
-                            "sort": 0
+                            "sort": 0,
+                            "masthead": "assets/img/newspapers/cheltenham_chronicle/1934-02-17_masthead.png",
+                            "protagonists": [
+                                {
+                                    "personID": "I310",
+                                    "labels": {
+                                        "john": null,
+                                        "chris": "Chris's grandfather"
+                                    },
+                                    "also_known_as": [
+                                        "Albert Ernest Law"
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }
@@ -112,7 +171,7 @@
             "divisions": [
                 {
                     "key": "origins_tree",
-                    "title": "All Lines",
+                    "title": "Joint Families",
                     "description": "Birthplace distribution across the entire family tree.",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/map-pin.svg",
@@ -228,7 +287,7 @@
                             "assets/css/jwg-spotlight.css",
                             "assets/css/jwg-spotlight-origins.css"
                         ],
-                        "map": "assets/maps/uk_ew_lieutenancy.svg"
+                        "map": "assets/maps/uk_lieutenancy.svg"
                     }
                 }
             ]
@@ -264,7 +323,7 @@
             "divisions": [
                 {
                     "key": "zodiac_tree",
-                    "title": "All Lines",
+                    "title": "Joint Families",
                     "description": "Star sign distribution across the entire family tree.",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/star.svg",
@@ -272,11 +331,10 @@
                     "hero_label": "Star Signs",
                     "hero_title": "The Whole Tree by Zodiac",
                     "hero_subtitle": "A light-hearted look at our ancestors by zodiac sign.",
-                    "hero_image": "",
-                    "hero_alt": "",
-                    "notes": [
-                        "Includes people with fully recorded birth or baptism dates (dd/mm/yyyy).",
-                        "Counts include anyone with a recorded birthplace or where they were baptised.",
+                    "hero_image": "assets/img/Zodiac_Wheel.png",
+                    "hero_alt": "Zodiac Wheel",
+                    "summary": "This spotlight takes a playful look at our family tree by star sign. It includes all those with fully recorded birth or baptism date. Each Zodiac card shows the percentage for that star sign, along with a few example names, offering a light-hearted bit of trivia rather than any deep astrological meaning.",
+                    "credits": [
                         "Zodiac icons \u00a9 Twitter / Twemoji contributors, licensed under CC BY 4.0."
                     ],
                     "generator": {
@@ -300,19 +358,18 @@
                 },
                 {
                     "key": "zodiac_gilroy_wilson",
-                    "title": "Gilroy & Wilson",
-                    "description": "Star signs within the Gilroy and Wilson branches.",
+                    "title": "John's Family",
+                    "description": "Star signs within the Gilroy and Wilson lines.",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/star.svg",
                     "sort": 10,
                     "hero_label": "Star Signs",
-                    "hero_title": "Gilroy & Wilson",
+                    "hero_title": "John's Family",
                     "hero_subtitle": "A light-hearted look at the Gilroy and Wilson branches by zodiac sign.",
-                    "hero_image": "",
-                    "hero_alt": "",
-                    "notes": [
-                        "Includes people with fully recorded birth or baptism dates (dd/mm/yyyy).",
-                        "Counts include anyone with a recorded birthplace or where they were baptised.",
+                    "hero_image": "assets/img/Zodiac_Wheel.png",
+                    "hero_alt": "Zodiac Wheel",
+                    "summary": "This spotlight takes a playful look at the Gilroy and Wilson lines by star sign. It includes all those with fully recorded birth or baptism date. Each Zodiac card shows the percentage for that star sign, along with a few example names, offering a light-hearted bit of trivia rather than any deep astrological meaning.",
+                    "credits": [
                         "Zodiac icons \u00a9 Twitter / Twemoji contributors, licensed under CC BY 4.0."
                     ],
                     "generator": {
@@ -336,19 +393,18 @@
                 },
                 {
                     "key": "zodiac_reynolds_law",
-                    "title": "Reynolds & Law",
-                    "description": "Star signs within the Reynolds and Law branches.",
+                    "title": "Chris's Family",
+                    "description": "Star signs within the Reynolds and Law lines.",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/star.svg",
                     "sort": 20,
                     "hero_label": "Star Signs",
                     "hero_title": "Reynolds & Law",
                     "hero_subtitle": "A light-hearted look at the Reynolds and Law branches by zodiac sign.",
-                    "hero_image": "",
-                    "hero_alt": "",
-                    "notes": [
-                        "Includes people with fully recorded birth or baptism dates (dd/mm/yyyy).",
-                        "Counts include anyone with a recorded birthplace or where they were baptised.",
+                    "hero_image": "assets/img/Zodiac_Wheel.png",
+                    "hero_alt": "Zodiac Wheel",
+                    "summary": "This spotlight takes a playful look at the Reynolds and Law lines by star sign. It includes all those with fully recorded birth or baptism date. Each Zodiac card shows the percentage for that star sign, along with a few example names, offering a light-hearted bit of trivia rather than any deep astrological meaning.",
+                    "credits": [
                         "Zodiac icons \u00a9 Twitter / Twemoji contributors, licensed under CC BY 4.0."
                     ],
                     "generator": {
