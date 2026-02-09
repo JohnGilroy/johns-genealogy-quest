@@ -10,11 +10,12 @@
             "icon": "assets/img/icons/phosphor/newspaper.svg",
             "sort": 0,
             "layout_hint": "image-led",
+            "index_renderer": "render_index_card_press_media",
             "link_label": "title",
             "divisions": [
                 {
                     "key": "press_media_all",
-                    "title": "Press clippings",
+                    "title": "Press Articles",
                     "description": "Newspaper articles and reports in which family members are mentioned.",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/newspaper.svg",
@@ -136,27 +137,30 @@
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/baby.svg",
                     "sort": 0,
+                    "hero_label": "Our Most Prolific Ancestors",
+                    "hero_title": "Most Children",
+                    "hero_subtitle": "Top 5 parents by recorded number of children in our tree",
+                    "hero_image": "assets/img/stork.jpg",
+                    "hero_alt": "Stork",
+                    "summary": "",
                     "generator": {
-                        "script": "app/spotlights/MostChildrenSpotlight_V0.php",
+                        "script": "app/spotlights/MostChildrenSpotlight.php",
                         "class": "MostChildrenSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
-                            "limit": 5,
-                            "stat_label": "The Most children",
-                            "description": "",
-                            "hero_image": "assets/img/stork.jpg",
-                            "relationship": "Top 5 parents by recorded number of children in our tree",
-                            "output_dir": "spotlights/children",
-                            "filename_template": "most_children_top5.html",
-                            "template_path": "web-templates/template_children.html"
+                            "limit": 5
                         }
                     },
                     "output": {
                         "dir": "spotlights/children",
-                        "filename_template": "most_children_top5.html",
-                        "pattern": "most_children_*.html"
-                    },
-                    "html_template": "web-templates/template_children.html"
+                        "filename": "most_children_top5.html",
+                        "pattern": "most_children_top5.html",
+                        "context_file": "assets/content/spotlights/children/most-children-context.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css",
+                            "assets/css/jwg-spotlight-most-children.css"
+                        ]
+                    }
                 }
             ]
         },
@@ -168,6 +172,7 @@
             "icon": "assets/img/icons/phosphor/map-pin.svg",
             "sort": 55,
             "layout_hint": "list-led",
+            "index_renderer": "render_index_card_origins",
             "divisions": [
                 {
                     "key": "origins_tree",
@@ -320,6 +325,7 @@
             "icon": "assets/img/icons/phosphor/star.svg",
             "sort": 50,
             "layout_hint": "list-led",
+            "index_renderer": "render_index_card_zodiac",
             "divisions": [
                 {
                     "key": "zodiac_tree",
@@ -444,15 +450,16 @@
         {
             "key": "plantagenet",
             "title": "The Royal Connection",
-            "description": "Our links to Edward Plantagenet.",
+            "description": "Chris's descent from Edward Plantagenet.",
             "status": "implemented",
             "icon": "assets/img/icons/phosphor/crown.svg",
             "sort": 70,
             "layout_hint": "list-led",
+            "index_renderer": "render_index_card_plantagenet",
             "divisions": [
                 {
                     "key": "royal_connection",
-                    "title": "Edward III connection",
+                    "title": "Descendency Chart",
                     "description": "Valerie Christine Gilroy's (nee Reynolds) line of descent from Edward III",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/crown.svg",
@@ -528,35 +535,46 @@
         },
         {
             "key": "longevity",
-            "title": "The Longest-lived",
-            "description": "Overall male and female, plus by-line male and female",
+            "title": "Longevity",
+            "description": "The longest-lived people in by ancestral line, with a flavour of their life and times",
             "status": "implemented",
             "icon": "assets/img/icons/phosphor/hourglass.svg",
             "sort": 10,
             "layout_hint": "stat-led",
-            "link_label": "name",
-            "html_template": "web-templates/template_longevity.html",
+            "index_renderer": "render_index_card_longevity",
             "divisions": [
                 {
                     "key": "overall",
                     "title": "Overall",
-                    "description": "The longest lived {gender} in our tree",
+                    "description": "The longest-lived person overall",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 0,
+                    "hero_label": "The longest-lived person overall",
+                    "hero_title": "",
+                    "hero_subtitle": "",
+                    "hero_image": "",
+                    "hero_alt": "",
+                    "hero_portrait": "",
+                    "hero_portrait_alt": "",
+                    "summary": "",
                     "generator": {
-                        "script": "app/spotlights/LongevityOldestSpotlight_V0.php",
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
                         "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": "",
+                            "sex": "",
                             "exclude_personIDs": []
                         }
                     },
                     "output": {
                         "dir": "spotlights/longevity/overall",
-                        "filename_template": "longest_lived_overall_{personID}.html",
-                        "pattern": "longest_lived*.html"
+                        "filename": "longest_lived_overall.html",
+                        "pattern": "longest_lived_overall.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css"
+                        ]
                     },
                     "biography_requirement": {
                         "required": true,
@@ -569,25 +587,37 @@
                     }
                 },
                 {
-                    "key": "gilroy",
-                    "title": "John's Paternal Line",
-                    "description": "The longest lived {gender} from John's paternal line (Gilroy)",
+                    "key": "gilroy_m",
+                    "title": "John's paternal line (Gilroy) - male",
+                    "description": "The longest lived male from John's paternal line (Gilroy)",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
+                    "hero_label": "The longest lived male from John's paternal line (Gilroy)",
+                    "hero_title": "",
+                    "hero_subtitle": "",
+                    "hero_image": "",
+                    "hero_alt": "",
+                    "hero_portrait": "assets/img/portrait_I00016_4679.jpg",
+                    "hero_portrait_alt": "Les Widdowson",
+                    "summary": "",
                     "generator": {
-                        "script": "app/spotlights/LongevityOldestSpotlight_V0.php",
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
                         "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": "Gilroy",
+                            "sex": "M",
                             "exclude_personIDs": []
                         }
                     },
                     "output": {
                         "dir": "spotlights/longevity/gilroy",
-                        "filename_template": "longest_lived_gilroy_{personID}.html",
-                        "pattern": "longest_lived_gilroy*.html"
+                        "filename": "longest_lived_male_gilroy.html",
+                        "pattern": "longest_lived_male_gilroy.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css"
+                        ]
                     },
                     "biography_requirement": {
                         "required": true,
@@ -600,25 +630,79 @@
                     }
                 },
                 {
-                    "key": "wilson",
-                    "title": "John's Maternal Line",
-                    "description": "The longest lived {gender} from John's maternal line (Wilson)",
+                    "key": "gilroy_f",
+                    "title": "John's paternal line (Gilroy) - female",
+                    "description": "The longest lived female from John's paternal line (Gilroy)",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
+                    "hero_label": "The longest lived female from John's paternal line (Gilroy)",
+                    "hero_title": "",
+                    "hero_subtitle": "",
+                    "hero_image": "",
+                    "hero_alt": "",
+                    "hero_portrait": "",
+                    "hero_portrait_alt": "",
+                    "summary": "",
                     "generator": {
-                        "script": "app/spotlights/LongevityOldestSpotlight_V0.php",
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "class": "LongevityOldestSpotlight",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "branch": "Gilroy",
+                            "sex": "F",
+                            "exclude_personIDs": []
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/longevity/gilroy",
+                        "filename": "longest_lived_female_gilroy.html",
+                        "pattern": "longest_lived_female_gilroy.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css"
+                        ]
+                    },
+                    "biography_requirement": {
+                        "required": true,
+                        "min_phase": 6,
+                        "required_models": [
+                            "residence_profile",
+                            "occupation_profile",
+                            "historical_context"
+                        ]
+                    }
+                },
+                {
+                    "key": "wilson_m",
+                    "title": "John's maternal line (Wilson) - male",
+                    "description": "The longest lived male from John's maternal line (Wilson)",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/hourglass.svg",
+                    "sort": 10,
+                    "hero_label": "The longest lived male from John's maternal line (Wilson)",
+                    "hero_title": "",
+                    "hero_subtitle": "",
+                    "hero_image": "",
+                    "hero_alt": "",
+                    "hero_portrait": "",
+                    "hero_portrait_alt": "",
+                    "generator": {
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
                         "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": "Wilson",
+                            "sex": "M",
                             "exclude_personIDs": []
                         }
                     },
                     "output": {
                         "dir": "spotlights/longevity/wilson",
-                        "filename_template": "longest_lived_wilson_{personID}.html",
-                        "pattern": "longest_lived_wilson*.html"
+                        "filename": "longest_lived_male_wilson.html",
+                        "pattern": "longest_lived_male_wilson.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css"
+                        ]
                     },
                     "biography_requirement": {
                         "required": true,
@@ -631,25 +715,79 @@
                     }
                 },
                 {
-                    "key": "reynolds",
-                    "title": "Val's Paternal Line",
-                    "description": "The longest lived {gender} from Val's paternal line (Reynolds)",
+                    "key": "wilson_f",
+                    "title": "John's maternal line (Wilson) - female",
+                    "description": "The longest lived female from John's maternal line (Wilson)",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
+                    "hero_label": "The longest lived female from John's maternal line (Wilson)",
+                    "hero_title": "",
+                    "hero_subtitle": "",
+                    "hero_image": "",
+                    "hero_alt": "",
+                    "hero_portrait": "",
+                    "hero_portrait_alt": "",
                     "generator": {
-                        "script": "app/spotlights/LongevityOldestSpotlight_V0.php",
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "class": "LongevityOldestSpotlight",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "branch": "Wilson",
+                            "sex": "F",
+                            "exclude_personIDs": []
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/longevity/wilson",
+                        "filename": "longest_lived_female_wilson.html",
+                        "pattern": "longest_lived_female_wilson.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css"
+                        ]
+                    },
+                    "biography_requirement": {
+                        "required": true,
+                        "min_phase": 6,
+                        "required_models": [
+                            "residence_profile",
+                            "occupation_profile",
+                            "historical_context"
+                        ]
+                    }
+                },
+                {
+                    "key": "reynolds_m",
+                    "title": "Chris's paternal line (Reynolds) - Male",
+                    "description": "The longest lived male from Chris's paternal line (Reynolds)",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/hourglass.svg",
+                    "sort": 10,
+                    "hero_label": "The longest lived male from Chris's paternal line (Reynolds)",
+                    "hero_title": "",
+                    "hero_subtitle": "",
+                    "hero_image": "",
+                    "hero_alt": "",
+                    "hero_portrait": "assets/img/portrait_I2_4676.jpg",
+                    "hero_portrait_alt": "Antony Hopkins",
+                    "summary": "",
+                    "generator": {
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
                         "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": "Reynolds",
+                            "sex": "M",
                             "exclude_personIDs": []
                         }
                     },
                     "output": {
                         "dir": "spotlights/longevity/reynolds",
-                        "filename_template": "longest_lived_reynolds_{personID}.html",
-                        "pattern": "longest_lived_reynolds*.html"
+                        "filename": "longest_lived_male_reynolds.html",
+                        "pattern": "longest_lived_male_reynolds.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css"
+                        ]
                     },
                     "biography_requirement": {
                         "required": true,
@@ -662,27 +800,123 @@
                     }
                 },
                 {
-                    "key": "law",
-                    "title": "Val's Maternal Line",
-                    "description": "The longest lived {gender} from Val's maternal line (Law)",
+                    "key": "reynolds_f",
+                    "title": "Chris's paternal line (Reynolds) - Female",
+                    "description": "The longest lived female from Chris's paternal line (Reynolds)",
                     "status": "implemented",
                     "icon": "assets/img/icons/phosphor/hourglass.svg",
                     "sort": 10,
+                    "hero_label": "The longest lived female from Chris's paternal line (Reynolds)",
+                    "hero_title": "",
+                    "hero_subtitle": "",
+                    "hero_image": "",
+                    "hero_alt": "",
+                    "hero_portrait": "assets/img/portrait_I17_4678.jpg",
+                    "hero_portrait_alt": "Marjorie Ann King",
+                    "summary": "",
                     "generator": {
-                        "script": "app/spotlights/LongevityOldestSpotlight_V0.php",
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "class": "LongevityOldestSpotlight",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "branch": "Reynolds",
+                            "sex": "F",
+                            "exclude_personIDs": []
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/longevity/reynolds",
+                        "filename": "longest_lived_female_reynolds.html",
+                        "pattern": "longest_lived_female_reynolds.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css"
+                        ]
+                    },
+                    "biography_requirement": {
+                        "required": true,
+                        "min_phase": 6,
+                        "required_models": [
+                            "residence_profile",
+                            "occupation_profile",
+                            "historical_context"
+                        ]
+                    }
+                },
+                {
+                    "key": "law_m",
+                    "title": "Chris's maternal line (Law) - Male",
+                    "description": "The longest lived male from Chris's maternal line (Law)",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/hourglass.svg",
+                    "sort": 10,
+                    "hero_label": "The longest lived male from Chris's maternal line (Law)",
+                    "hero_title": "",
+                    "hero_subtitle": "",
+                    "hero_image": "",
+                    "hero_alt": "",
+                    "hero_portrait": "",
+                    "hero_portrait_alt": "",
+                    "summary": "",
+                    "generator": {
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
                         "class": "LongevityOldestSpotlight",
                         "parameters": {
                             "tree": "Gilroy1",
                             "branch": "Law",
-                            "exclude_personIDs": [
-                                "I14"
-                            ]
+                            "sex": "M",
+                            "exclude_personIDs": []
                         }
                     },
                     "output": {
                         "dir": "spotlights/longevity/law",
-                        "filename_template": "longest_lived_law_{personID}.html",
-                        "pattern": "longest_lived_law*.html"
+                        "filename": "longest_lived_male_law.html",
+                        "pattern": "longest_lived_male_law.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css"
+                        ]
+                    },
+                    "biography_requirement": {
+                        "required": true,
+                        "min_phase": 6,
+                        "required_models": [
+                            "residence_profile",
+                            "occupation_profile",
+                            "historical_context"
+                        ]
+                    }
+                },
+                {
+                    "key": "law_f",
+                    "title": "Chris's maternal line (Law) - Female",
+                    "description": "Female from Chris's maternal line (Law)",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/hourglass.svg",
+                    "sort": 10,
+                    "hero_label": "The longest lived male from Chris's maternal line (Law)",
+                    "hero_title": "",
+                    "hero_subtitle": "",
+                    "hero_image": "",
+                    "hero_alt": "",
+                    "hero_portrait": "",
+                    "hero_portrait_alt": "",
+                    "summary": "",
+                    "generator": {
+                        "script": "app/spotlights/LongevityOldestSpotlight.php",
+                        "class": "LongevityOldestSpotlight",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "branch": "Law",
+                            "sex": "F",
+                            "exclude_personIDs": []
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/longevity/law",
+                        "filename": "longest_lived_female_law.html",
+                        "pattern": "longest_lived_female_law.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css"
+                        ]
                     },
                     "biography_requirement": {
                         "required": true,

@@ -17,14 +17,28 @@
         <body class="spotlight">
             <div class="spotlight-wrap">
 
-                <header class="site-header">
-  <div class="site-header-inner">
+                
+<header class="site-header spotlight-header">
+  <div class="site-header-inner spotlight-header-inner">
+
+    <!-- Hamburger (left of title) -->
+    <button class="spotlight-nav-toggle"
+            type="button"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="spotlightNav">
+      <span class="spotlight-nav-icon" aria-hidden="true"></span>
+    </button>
+
     <a href="index.html" class="site-title">John&#39;s Genealogy Quest</a>
-    <nav class="site-nav">
+
+    <!-- Dropdown menu -->
+    <nav id="spotlightNav" class="spotlight-nav" aria-label="Site">
       <a href="index.html">Home</a>
       <a href="bios/index.html">Biographies</a>
       <a href="spotlights/index.html">Spotlights</a>
     </nav>
+
   </div>
 </header>
 
@@ -101,6 +115,46 @@
     </div>
   </div>
 </footer>
+
+<script>
+/* Simple spotlight dropdown toggle (no dependencies) */
+(function () {
+  function closeMenu(btn, nav) {
+    nav.classList.remove('is-open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.spotlight-nav-toggle');
+    const nav = document.getElementById('spotlightNav');
+
+    if (!nav) return;
+
+    // Click on toggle button
+    if (btn) {
+      const open = !nav.classList.contains('is-open');
+      nav.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      return;
+    }
+
+    // Click outside nav: close if open
+    if (nav.classList.contains('is-open') && !e.target.closest('#spotlightNav')) {
+      const b = document.querySelector('.spotlight-nav-toggle');
+      if (b) closeMenu(b, nav);
+    }
+  });
+
+  // Close on ESC
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    const nav = document.getElementById('spotlightNav');
+    const btn = document.querySelector('.spotlight-nav-toggle');
+    if (nav && btn && nav.classList.contains('is-open')) closeMenu(btn, nav);
+  });
+})();
+</script>
+
 <script src="js/kiosk-runtime.js"></script>
 
 

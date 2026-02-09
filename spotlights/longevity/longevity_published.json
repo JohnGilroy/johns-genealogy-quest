@@ -1,0 +1,83 @@
+[
+    {
+        "catalog_key": "longevity",
+        "division_key": "gilroy_f",
+        "line_key": "gilroy",
+        "sex": "F",
+        "winner_name": "Marion G Whitelaw",
+        "winner_lifespan": "1866\u20131966",
+        "winner_link_title": "Marion G Whitelaw (1866\u20131966)"
+    },
+    {
+        "catalog_key": "longevity",
+        "division_key": "gilroy_m",
+        "line_key": "gilroy",
+        "sex": "M",
+        "winner_name": "Leslie Widdowson",
+        "winner_lifespan": "1921\u20132011",
+        "winner_link_title": "Leslie Widdowson (1921\u20132011)"
+    },
+    {
+        "catalog_key": "longevity",
+        "division_key": "law_f",
+        "line_key": "law",
+        "sex": "F",
+        "winner_name": "Fanny Miles",
+        "winner_lifespan": "1864\u20131956",
+        "winner_link_title": "Fanny Miles (1864\u20131956)"
+    },
+    {
+        "catalog_key": "longevity",
+        "division_key": "law_m",
+        "line_key": "law",
+        "sex": "M",
+        "winner_name": "Percival S Law",
+        "winner_lifespan": "1903\u20131984",
+        "winner_link_title": "Percival S Law (1903\u20131984)"
+    },
+    {
+        "catalog_key": "longevity",
+        "division_key": "overall",
+        "line_key": "overall",
+        "sex": "F",
+        "winner_name": "Marion G Whitelaw",
+        "winner_lifespan": "1866\u20131966",
+        "winner_link_title": "Marion G Whitelaw (1866\u20131966)"
+    },
+    {
+        "catalog_key": "longevity",
+        "division_key": "reynolds_f",
+        "line_key": "reynolds",
+        "sex": "F",
+        "winner_name": "Marjorie A King",
+        "winner_lifespan": "1891\u20131991",
+        "winner_link_title": "Marjorie A King (1891\u20131991)"
+    },
+    {
+        "catalog_key": "longevity",
+        "division_key": "reynolds_m",
+        "line_key": "reynolds",
+        "sex": "M",
+        "winner_name": "Ernest WA Reynolds",
+        "winner_lifespan": "1921\u20132014",
+        "winner_link_title": "Ernest WA Reynolds (1921\u20132014)"
+    },
+    {
+        "catalog_key": "longevity",
+        "division_key": "wilson_f",
+        "line_key": "wilson",
+        "sex": "F",
+        "winner_name": "Jane Lamb",
+        "winner_lifespan": "1852\u20131943",
+        "winner_link_title": "Jane Lamb (1852\u20131943)"
+    },
+    {
+        "catalog_key": "longevity",
+        "division_key": "wilson_m",
+        "line_key": "wilson",
+        "sex": "M",
+        "winner_name": "Henry Hinshelwood",
+        "winner_lifespan": "1831\u20131923",
+        "winner_link_title": "Henry Hinshelwood (1831\u20131923)"
+    }
+]

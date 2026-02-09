@@ -123,7 +123,7 @@ body.spotlight {
   background: rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 420px) {
+@media (max-width: 720px) {
   .spotlight-hero-subject {
     flex-direction: column;
     align-items: flex-start;
@@ -163,6 +163,21 @@ body.spotlight {
 
 @media (max-width: 800px) {
   .spotlight-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards layout: 2 columns on desktop, stack on tablet+ */
+.spotlight-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* Stack on tablets and smaller */
+@media (max-width: 900px) {
+  .spotlight-cards {
     grid-template-columns: 1fr;
   }
 }
@@ -303,12 +318,6 @@ body.spotlight {
   grid-template-columns: 1fr 1fr;
 }
 
-@media (max-width: 900px) {
-  .spotlight-grid-2 {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Keep hero content above the texture */
 .spotlight-hero > * {
   position: relative;
@@ -322,7 +331,7 @@ body.spotlight {
 
 /* Oldest layout: keep 2 columns on desktop, but collapse on Pi/mobile */
 @media (max-width: 900px) {
-  .layout-oldest .spotlight-main {
+  .layout-oldest .spotlight-main .spotlight-grid-2 {
     grid-template-columns: 1fr;
   }
 }
