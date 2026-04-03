@@ -180,6 +180,15 @@
         },
         {
             "type": "spotlight",
+            "catalog_key": "marriages",
+            "division_key": "marriages_scotland",
+            "title": "Marriages",
+            "description": "Our most prolific ancestors",
+            "href": "spotlights/marriages/marriages.html",
+            "link_title": "Marriage in Scotland"
+        },
+        {
+            "type": "spotlight",
             "catalog_key": "origins",
             "division_key": "origins_gilroy_wilson",
             "title": "Origins Gilroy Wilson",

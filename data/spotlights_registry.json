@@ -165,6 +165,48 @@
             ]
         },
         {
+            "key": "marriages",
+            "title": "Marriage",
+            "description": "Regular and irregular marriage in Scottish records.",
+            "status": "implemented",
+            "icon": "assets/img/icons/phosphor/baby.svg",
+            "sort": 20,
+            "layout_hint": "stat-led",
+            "divisions": [
+                {
+                    "key": "marriages_scotland",
+                    "title": "Marriage In Scotland",
+                    "description": "Our most prolific ancestors",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/baby.svg",
+                    "sort": 0,
+                    "hero_label": "Our Most Prolific Ancestors",
+                    "hero_title": "Most Children",
+                    "hero_subtitle": "Top 5 parents by recorded number of children in our tree",
+                    "hero_image": "assets/img/wedding.jpg",
+                    "hero_alt": "Wedding",
+                    "summary": "",
+                    "generator": {
+                        "script": "",
+                        "class": "",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "limit": 5
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/marriages",
+                        "filename": "marriages.html",
+                        "pattern": "marriages.html",
+                        "context_file": "assets/content/spotlights/marriages/marriages-context.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
             "key": "origins",
             "title": "Origins",
             "description": "Where our forebears were born \u2014 a simple, family-friendly map-style overview.",
