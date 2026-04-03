@@ -1,0 +1,265 @@
+Folder PATH listing for volume Windows
+Volume serial number is 98A4-B397
+C:.
+|   .gitignore
+|   .nojekyll
+|   folders.txt
+|   index.html
+|   kiosk-manifest.json
+|   kiosk.html
+|   
++---assets
+|   +---content
+|   |   \---spotlights
+|   |       \---children
+|   |               most-children-context.html
+|   |               
+|   +---css
+|   |       jwg-bio.css
+|   |       jwg-newsletter.css
+|   |       jwg-site.css
+|   |       jwg-spotlight-most-children.css
+|   |       jwg-spotlight-origins.css
+|   |       jwg-spotlight-plantagenet.css
+|   |       jwg-spotlight-press-media.css
+|   |       jwg-spotlight-zodiac.css
+|   |       jwg-spotlight.css
+|   |       jwg-spotlights-index.css
+|   |       
+|   +---img
+|   |   |   edward-iii-garter.jpg
+|   |   |   john-and-chris.jpg
+|   |   |   john-father-270.jpg
+|   |   |   john-mother-270.jpg
+|   |   |   plantagenet-line.png
+|   |   |   plantagenet-roll-cover.jpg
+|   |   |   portrait_I00016_4679.jpg
+|   |   |   portrait_I17_4678.jpg
+|   |   |   portrait_I2_4676.jpg
+|   |   |   portrait_thumb_I00016_4679.jpg
+|   |   |   portrait_thumb_I17_4678.jpg
+|   |   |   portrait_thumb_I2_4676.jpg
+|   |   |   Smiley Sleuth.jpg
+|   |   |   stork.jpg
+|   |   |   val-father-270.jpg
+|   |   |   val-mother-270.jpg
+|   |   |   wikitree-logo.png
+|   |   |   Zodiac_Wheel.png
+|   |   |   
+|   |   +---flags
+|   |   |       england.svg
+|   |   |       nireland.svg
+|   |   |       scotland.svg
+|   |   |       wales.svg
+|   |   |       
+|   |   +---icons
+|   |   |   |   icon-bio.svg
+|   |   |   |   icon-spotlight.svg
+|   |   |   |   zodiac-twemoji-pack.zip
+|   |   |   |   
+|   |   |   +---phosphor
+|   |   |   |       baby.svg
+|   |   |   |       crown.svg
+|   |   |   |       flag-banner.svg
+|   |   |   |       gavel.svg
+|   |   |   |       heart-straight.svg
+|   |   |   |       hourglass.svg
+|   |   |   |       map-pin.svg
+|   |   |   |       newspaper.svg
+|   |   |   |       skull.svg
+|   |   |   |       star.svg
+|   |   |   |       
+|   |   |   \---zodiac
+|   |   |           aquarius.svg
+|   |   |           aries.svg
+|   |   |           cancer.svg
+|   |   |           capricorn.svg
+|   |   |           gemini.svg
+|   |   |           leo.svg
+|   |   |           libra.svg
+|   |   |           pisces.svg
+|   |   |           sagittarius.svg
+|   |   |           scorpio.svg
+|   |   |           taurus.svg
+|   |   |           virgo.svg
+|   |   |           
+|   |   +---media
+|   |   |       Albert Ernest Law Cheltenham Chronicle 17 February 1934.jpg
+|   |   |       Falkirk Herald Extract William James Gilroy 1931.jpg
+|   |   |       Sheffield Evening Telegraph 31 Jan 1919 William James Gilroy Theft Extract.jpg
+|   |   |       
+|   |   +---newsletters
+|   |   |   \---2026
+|   |   |       +---01
+|   |   |       |       john-and-chris.jpg
+|   |   |       |       john-father.jpg
+|   |   |       |       john-mother.jpg
+|   |   |       |       val-father.jpg
+|   |   |       |       val-mother.jpg
+|   |   |       |       
+|   |   |       +---02
+|   |   |       |       1919-01-31_banner.png
+|   |   |       |       1931-06-20_banners.png
+|   |   |       |       1934-02-17_masthead.png
+|   |   |       |       
+|   |   |       \---03
+|   |   |               128px-East_Lothian_UK_blank_map.svg.png
+|   |   |               128px-Wiltshire_UK_district_map_(blank).svg.png
+|   |   |               
+|   |   \---newspapers
+|   |       +---cheltenham_chronicle
+|   |       |       1934-02-17_masthead.png
+|   |       |       
+|   |       +---falkirk_herald
+|   |       |       1931-06-20_banners.png
+|   |       |       
+|   |       \---yorkshire-telegraph-&-star
+|   |               1919-01-31_banner.png
+|   |               
+|   \---maps
+|           uk_ew_lieutenancy.svg
+|           uk_lieutenancy.svg
+|           uk_sni_lieutenancy.svg
+|           
++---bios
+|   |   I00009.html
+|   |   index.html
+|   |   
+|   \---nppBackup
+|           I00009.html.2025-12-13_151453.bak
+|           I00009.html.2025-12-17_184652.bak
+|           I00009.html.2025-12-17_185014.bak
+|           index.html.2025-12-13_184604.bak
+|           index.html.2025-12-13_194610.bak
+|           index.html.2025-12-13_194720.bak
+|           index.html.2025-12-13_194855.bak
+|           index.html.2025-12-13_194934.bak
+|           index.html.2025-12-14_174122.bak
+|           index.html.2025-12-14_174133.bak
+|           index.html.2025-12-14_175205.bak
+|           index.html.2025-12-15_182240.bak
+|           index.html.2025-12-15_203338.bak
+|           
++---data
+|       site_manifest.json
+|       spotlights_registry.json
+|       
++---js
+|   |   kiosk-runtime.js
+|   |   
+|   \---nppBackup
+|           kiosk-runtime.js.2026-01-16_181348.bak
+|           kiosk-runtime.js.2026-01-16_181618.bak
+|           kiosk-runtime.js.2026-01-16_181813.bak
+|           kiosk-runtime.js.2026-01-16_183321.bak
+|           kiosk-runtime.js.2026-01-16_183401.bak
+|           kiosk-runtime.js.2026-01-16_184614.bak
+|           kiosk-runtime.js.2026-01-16_204212.bak
+|           kiosk-runtime.js.2026-01-16_204408.bak
+|           kiosk-runtime.js.2026-01-16_204920.bak
+|           kiosk-runtime.js.2026-01-17_111318.bak
+|           kiosk-runtime.js.2026-01-17_111512.bak
+|           kiosk-runtime.js.2026-01-17_112811.bak
+|           kiosk-runtime.js.2026-01-17_112944.bak
+|           kiosk-runtime.js.2026-01-22_191134.bak
+|           
++---newsletters
+|   |   index.html
+|   |   
+|   \---2026
+|       +---01
+|       |       index.html
+|       |       newsletter-1.html
+|       |       
+|       +---02
+|       |       index.html
+|       |       newsletter-2.html
+|       |       
+|       +---03
+|       |       index.html
+|       |       newsletter-3.html
+|       |       
+|       \---04
+|               index.html
+|               newsletter-4.html
+|               
+\---spotlights
+    |   index.html
+    |   
+    +---children
+    |       most_children_top5.html
+    |       
+    +---longevity
+    |   |   longevity_published.json
+    |   |   
+    |   +---gilroy
+    |   |       longest_lived_female_gilroy.html
+    |   |       longest_lived_gilroy_I00016.html
+    |   |       longest_lived_gilroy_I00421.html
+    |   |       longest_lived_male_gilroy.html
+    |   |       
+    |   +---law
+    |   |       longest_lived_female_law.html
+    |   |       longest_lived_law_I344.html
+    |   |       longest_lived_law_I353.html
+    |   |       longest_lived_male_law.html
+    |   |       
+    |   +---overall
+    |   |       longest_lived_overall.html
+    |   |       longest_lived_overall_I00421.html
+    |   |       longest_lived_overall_I2.html
+    |   |       
+    |   +---reynolds
+    |   |       longest_lived_female_reynolds.html
+    |   |       longest_lived_male_reynolds.html
+    |   |       longest_lived_reynolds_I17.html
+    |   |       longest_lived_reynolds_I2.html
+    |   |       
+    |   \---wilson
+    |           longest_lived_female_wilson.html
+    |           longest_lived_male_wilson.html
+    |           longest_lived_wilson_I00512.html
+    |           longest_lived_wilson_I00545.html
+    |           
+    +---nppBackup
+    |       I00421_spotlight.html.2025-12-14_150705.bak
+    |       index.html.2025-12-13_194959.bak
+    |       index.html.2025-12-14_174225.bak
+    |       index.html.2025-12-14_174855.bak
+    |       index.html.2025-12-14_175142.bak
+    |       index.html.2025-12-20_190712.bak
+    |       
+    +---origins
+    |   +---gilroy_wilson
+    |   |       origins_gilroy_wilson.html
+    |   |       
+    |   +---reynolds_law
+    |   |       origins_reynolds_law.html
+    |   |       
+    |   \---tree
+    |           origins_tree.html
+    |           
+    +---plantagenet
+    |       plantagenet.html
+    |       royal_connection_edward_iii.html
+    |       
+    +---press
+    |   |   press_media_1775.html
+    |   |   press_media_2473.html
+    |   |   press_media_3023.html
+    |   |   
+    |   \---nppBackup
+    |           spotlight_william_james_gilroy_press_1931.html.2025-12-17_215506.bak
+    |           spotlight_william_james_gilroy_press_1931.html.2025-12-17_220358.bak
+    |           spotlight_william_james_gilroy_press_1931.html.2025-12-19_144553.bak
+    |           
+    \---zodiac
+        +---gilroy_wilson
+        |       zodiac_gilroy_wilson.html
+        |       
+        +---reynolds_law
+        |       zodiac_reynolds_law.html
+        |       
+        \---tree
+                zodiac_tree.html
+                

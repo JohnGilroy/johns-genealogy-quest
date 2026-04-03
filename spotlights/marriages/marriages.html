@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta name="jwg:catalog_key" content="records" />
+    <meta name="jwg:division_key" content="scottish_marriage" />
+    <meta name="jwg:link_title" content="Marriage in Scotland" />
+
+    <meta charset="utf-8" />
+    <title>Marriage in Scotland</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="/johns-genealogy-quest/" />
+
+    <link rel="stylesheet" href="assets/css/jwg-site.css" />
+    <link rel="stylesheet" href="assets/css/jwg-spotlight.css" />
+
+    <style>
+      .spotlight-marriage .spotlight-main {
+        grid-template-columns: 1fr;
+      }
+
+      .marriage-hero-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+      }
+
+      .marriage-hero-image img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: var(--jwg-shadow-soft);
+      }
+
+      .marriage-section + .marriage-section {
+        margin-top: 1.6rem;
+        padding-top: 1.3rem;
+        border-top: 1px solid var(--jwg-border-subtle);
+      }
+
+      .marriage-snippet {
+        margin: 0.85rem 0 1rem;
+      }
+
+      .marriage-snippet a {
+        display: inline-block;
+      }
+
+      .marriage-snippet img {
+        display: block;
+        width: 100%;
+        max-width: 340px;
+        border-radius: 10px;
+        border: 1px solid var(--jwg-border-subtle);
+        box-shadow: var(--jwg-shadow-soft);
+        cursor: zoom-in;
+      }
+
+      .marriage-snippet figcaption {
+        font-size: 0.9rem;
+        color: var(--jwg-text-muted);
+        margin-top: 0.45rem;
+      }
+
+      /* Default: mobile-first (stacked) */
+      .marriage-snippet-wrap {
+        margin: 1rem 0;
+      }
+
+      .marriage-snippet-wrap img {
+        width: 100%;
+        max-width: 340px;
+      }
+
+.marriage-snippet-wrap {
+  margin: 1rem auto;
+  max-width: 340px;
+}
+
+.marriage-snippet {
+  margin: 0;
+  text-align: center;
+}
+
+.marriage-snippet a {
+  display: inline-block;
+}
+
+.marriage-snippet img {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.marriage-snippet figcaption {
+  text-align: center;
+}
+
+      /* Desktop: wrap text */
+      @media (min-width: 720px) {
+        .marriage-snippet-wrap {
+          max-width: 320px;
+        }
+
+        .marriage-snippet-wrap.right {
+          float: right;
+          margin: 0.25rem 0 1rem 1.25rem;
+        }
+
+        .marriage-snippet-wrap.left {
+          float: left;
+          margin: 0.25rem 1.25rem 1rem 0;
+        }
+
+        /* Clear floats between sections */
+        .marriage-section::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+      }
+
+      .marriage-type-label {
+        display: inline-block;
+        margin: 0 0 0.55rem;
+        padding: 0.22rem 0.58rem;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        background: rgba(30, 150, 237, 0.08);
+        color: var(--jwg-blue-dark);
+        border: 1px solid rgba(30, 150, 237, 0.18);
+      }
+
+      .marriage-quick-list {
+        margin: 0.5rem 0 0;
+        padding-left: 1.1rem;
+      }
+
+      .marriage-quick-list li {
+        margin: 0.35rem 0;
+      }
+
+      .marriage-quote {
+        margin: 1rem 0;
+        padding: 0.9rem 1rem;
+        border-left: 4px solid var(--jwg-blue);
+        background: rgba(30, 150, 237, 0.05);
+        border-radius: 8px;
+        font-style: italic;
+      }
+
+      .marriage-quote p {
+        margin: 0;
+      }
+
+      .marriage-quote cite {
+        display: block;
+        margin-top: 0.5rem;
+        font-style: normal;
+        font-size: 0.9rem;
+        color: var(--jwg-text-muted);
+      }
+
+      .marriage-context {
+        margin-top: 20px;
+      }
+
+      .marriage-context h3 {
+        margin-top: 1.2rem;
+        color: var(--jwg-brown);
+      }
+
+      @media (max-width: 720px) {
+        .marriage-hero-image img {
+          width: 96px;
+          height: 96px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="spotlight spotlight-marriage">
+    <div class="spotlight-wrap">
+      <header class="site-header spotlight-header">
+        <div class="site-header-inner spotlight-header-inner">
+          <button
+            class="spotlight-nav-toggle"
+            type="button"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="spotlightNav"
+          >
+            <span class="spotlight-nav-icon" aria-hidden="true"></span>
+          </button>
+
+          <a href="index.html" class="site-title">John&#39;s Genealogy Quest</a>
+
+          <nav id="spotlightNav" class="spotlight-nav" aria-label="Site">
+            <a href="index.html">Home</a>
+            <a href="bios/index.html">Biographies</a>
+            <a href="spotlights/index.html">Spotlights</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <header class="spotlight-hero">
+        <div class="spotlight-hero-top">
+          <div class="spotlight-hero-label">Marriage records and customs</div>
+        </div>
+
+        <div class="spotlight-hero-subject">
+          <div class="spotlight-hero-subject-text">
+            <h1 class="spotlight-hero-title">Marriage in Scotland</h1>
+            <p class="spotlight-hero-subtitle">
+              Regular and irregular marriage in Scottish records
+            </p>
+            <p class="spotlight-hero-relationship">
+              Scottish marriage law differed markedly from that of England. The
+              records reflect a legal tradition in which mutual consent mattered
+              greatly, and in which both regular and irregular marriages could
+              be recognised.
+            </p>
+          </div>
+
+          <div class="marriage-hero-image">
+            <img
+              src="assets/img/wedding.jpg"
+              alt="Historic wedding image"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </header>
+
+      <!-- BODY -->
+      <main class="spotlight-main">
+        <section class="spotlight-card">
+          <h2>In brief</h2>
+          <p>
+            Until the mid-twentieth century, most people in Scotland married in
+            a <strong>regular marriage</strong>, conducted by a minister after
+            the publication of banns. Alongside this, however, Scottish law also
+            recognised <strong>irregular marriage</strong>, in which a couple
+            could form a legally valid marriage by mutual consent without the
+            same formal church ceremony.
+          </p>
+
+          <p>
+            This helps explain why Scottish marriage evidence appears in several
+            different forms: proclamation entries, parish register entries, kirk
+            session minutes, sheriff warrants, and later statutory registration.
+          </p>
+
+          <h3>What this page highlights</h3>
+          <ul class="marriage-quick-list">
+            <li>Regular marriage after banns</li>
+            <li>Irregular marriage by declaration</li>
+            <li>Kirk session discipline and acknowledgement</li>
+            <li>The main recognised forms of irregular marriage</li>
+            <li>The legal importance of consent</li>
+            <li>The contrast with England</li>
+          </ul>
+        </section>
+
+        <section class="spotlight-card">
+          <h2>How marriage worked in Scotland</h2>
+
+          <div class="marriage-section">
+            <h3>Marriage after proclamation</h3>
+           <div class="marriage-snippet-wrap right">
+              <figure class="marriage-snippet">
+                <a
+                  href="assets/img/spotlights/marriages/full/ScoMarriageProclamation.jpg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/img/spotlights/marriages/thumbs/ScoMarriageProclamation.jpg"
+                    alt="Scottish parish register entry showing a regular marriage after banns"
+                  />
+                </a>
+                <figcaption>
+                  Marriage of my third great grandparents after proclamation.
+                  Click to view full image.
+                </figcaption>
+              </figure>
+            </div>
+            <p>
+              Until the mid-twentieth century, most people in Scotland were
+              married by a minister in what was known as a
+              <strong>regular marriage</strong>. This normally involved being
+              proclaimed on three consecutive Sundays at the parish church
+              before the ceremony itself took place.
+            </p>
+
+            <p>
+              These are the entries that often look most familiar to family
+              historians: a couple publicly announced, then married under the
+              oversight of the Church.
+            </p>
+ 
+          </div>
+
+          <div class="marriage-section">
+            <h3>Consent made the marriage</h3>
+            <div class="marriage-snippet-wrap left">
+                <figure>
+                    <a
+                    href="assets/img/spotlights/marriages/full/ScoMarriageByDeclaration.jpg"
+                    target="_blank"
+                    rel="noopener"
+                    >
+                    <img
+                        src="assets/img/spotlights/marriages/thumbs/ScoMarriageByDeclaration.jpg"
+                        alt="Record relating to a Scottish irregular marriage by declaration"
+                    />
+                    </a>
+                    <figcaption>
+                    Marriage of my grandparents by declaration. Click to view full
+                    image.
+                    </figcaption>
+                </figure>
+            </div>
+
+            <p>
+              Alongside regular marriage, Scottish law also recognised
+              <strong>irregular marriage</strong>. In its simplest form, a man
+              and a woman could make a declaration before witnesses that they
+              accepted one another as husband and wife. For that reason it was
+              also known as a <strong>marriage by declaration</strong>.
+            </p>
+
+            <p>
+              By showing proof of the marriage, the parties could obtain a
+              warrant from a sheriff or sheriff substitute to have the union
+              registered by the local registrar. Churches objected to such
+              marriages in principle, but often accepted them in practice for
+              fear that couples would otherwise “live in sin”.
+            </p>
+
+            <div class="marriage-quote">
+              <p>
+                “The law of Scotland as to marriage was this – it adopted the
+                principle that consent alone made marriage… The law of Scotland
+                did not require the presence of a priest, nor the intervention
+                of any religious ceremony.”
+              </p>
+              <cite
+                >Hansard, Registration of Births and Marriages (Scotland) Bill,
+                August 1848</cite
+              >
+            </div>
+          </div>
+
+          <div class="marriage-section">
+            <h3>Rebuked for irregularity, then accepted</h3>
+<div class="marriage-snippet-wrap right">
+            <figure class="marriage-snippet">
+              <a
+                href="assets/img/spotlights/marriages/full/ScoMarrIrregKirk.jpg"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="assets/img/spotlights/marriages/thumbs/ScoMarrIrregKirk.jpg"
+                  alt="Kirk session minute acknowledging a couple as husband and wife and rebuking them for irregular marriage"
+                />
+              </a>
+              <figcaption>
+                Irregular marriage of my third great grandparents from kirk
+                session minutes. Click to view full image.
+              </figcaption>
+            </figure>
+          </div>
+            <p>
+              Before statutory registration began in 1855, some couples appeared
+              before a kirk session acknowledging themselves to be husband and
+              wife. The session minutes sometimes record that they were
+              <em>rebuked for their irregularity and absolved</em>, and in some
+              cases fined.
+            </p>
+
+            <p>
+              These records show the tension between legal recognition and
+              religious discipline. The Church disapproved of the route by which
+              the marriage had been formed, yet still dealt with the couple as
+              married.
+            </p>
+          <div class="marriage-section">
+             <h3>Forms of irregular marriage</h3>
+
+            <p>
+              Scottish law recognised several ways in which a valid irregular
+              marriage could be formed or proved:
+            </p>
+
+            <p>
+              <strong>Per verba de praesenti</strong> was a present exchange of
+              consent by both parties to be husband and wife. Ideally this was
+              done before witnesses. A marriage without witnesses could still be
+              legal, but it was much harder to prove.
+            </p>
+
+            <p>
+              <strong>Per verba de futuro subsequente copula</strong> was a
+              promise of future marriage followed at a later time by sexual
+              intercourse.
+            </p>
+
+            <p>
+              <strong>Marriage by cohabitation with habit and repute</strong>
+              referred to a couple living together and publicly behaving as
+              husband and wife. This was not so much a ceremony as a form of
+              evidence that a marriage had taken place, based on reputation and
+              conduct over time.
+            </p>
+          </div>
+
+          <div class="marriage-section">
+            <h3>Why irregular marriage mattered</h3>
+
+            <p>
+              In Scotland, an irregular marriage, once proved, had the same
+              legal consequences as a regular one. It could affect property
+              rights, inheritance, and the claims of a widow and children on a
+              husband’s estate.
+            </p>
+
+            <p>
+              As T. C. Smout observed, the Scots held to the simple doctrine
+              that if two unmarried people of lawful age freely expressed their
+              wish to marry and accepted one another in marriage, then they were
+              married. Consent made the marriage, not the clergy or the civil
+              official.
+            </p>
+
+            <p>
+              This helps explain why such marriages remained legally valid until
+              1939, even if they sat uneasily alongside the Church’s preferred
+              practice.
+            </p>
+          </div>
+
+          <div class="marriage-section">
+        
+            <h3>A different system in England</h3>
+
+            <p>
+              The law of marriage in England developed along a more restrictive
+              path. Lord Hardwicke’s Marriage Act of 1753 tightened the rules
+              around valid marriage, and later reforms allowed marriages to take
+              place either in church or before a registrar, but within a far
+              more formal legal framework.
+            </p>
+
+            <p>
+              In Scotland, by contrast, mutual consent remained at the heart of
+              the law for much longer. That difference is one reason why
+              Scottish marriage records can look so unlike those found south of
+              the border.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <section class="spotlight-card marriage-context">
+        <h2>Why these records matter</h2>
+
+        <p>
+          The recent release of National Records of Scotland kirk session
+          minutes on Scotland’s People has made it easier to explore how
+          irregular marriage affected real lives and how the Church of Scotland
+          responded to it. These records add colour and human detail to the
+          legal framework, showing not only how marriages were recognised, but
+          how communities reacted to them.
+        </p>
+
+        <p>
+          Together, parish registers, sheriff warrants, kirk session minutes,
+          and later statutory registers reveal a distinctive Scottish marriage
+          tradition. They show a legal system in which consent was central, yet
+          one that also had to be explained, defended, and sometimes regularised
+          in the face of religious disapproval.
+        </p>
+
+        <h3>A note on the images</h3>
+        <p>
+          The images on this page are excerpts from original records linked to
+          individuals and families in the tree. Click any image to open a larger
+          version and examine the document in more detail.
+        </p>
+      </section>
+
+      <footer class="site-footer">
+        <div class="site-footer-inner">
+          <div class="site-footer-text">
+            <p class="site-footer-line">
+              John’s Genealogy Quest brings together family history research,
+              biographies, spotlights, and supporting historical material.
+            </p>
+            <p class="site-footer-line site-footer-line--short">
+              John’s Genealogy Quest — family history, biographies, and
+              spotlights.
+            </p>
+          </div>
+
+          <div class="site-footer-actions">
+            <a class="jwg-btn jwg-btn--footer" href="index.html">Home</a>
+            <a class="jwg-btn jwg-btn--footer" href="bios/index.html"
+              >Biographies</a
+            >
+            <a class="jwg-btn jwg-btn--footer" href="spotlights/index.html"
+              >Spotlights</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const toggle = document.querySelector(".spotlight-nav-toggle");
+        const nav = document.getElementById("spotlightNav");
+        if (!toggle || !nav) return;
+
+        toggle.addEventListener("click", function () {
+          const expanded = toggle.getAttribute("aria-expanded") === "true";
+          toggle.setAttribute("aria-expanded", expanded ? "false" : "true");
+          nav.classList.toggle("is-open");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!nav.classList.contains("is-open")) return;
+          if (nav.contains(event.target) || toggle.contains(event.target))
+            return;
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      })();
+    </script>
+  </body>
+</html>
