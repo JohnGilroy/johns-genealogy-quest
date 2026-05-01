@@ -478,16 +478,45 @@
         },
         {
             "key": "deaths",
-            "title": "Strange Deaths",
-            "description": "Some of the most unusual causes of death or death locations.",
-            "status": "planned",
-            "icon": "assets/img/icons/phosphor/skull.svg",
-            "sort": 60,
+            "title": "Deaths",
+            "description": "Death and Correction in Scotland.",
+            "status": "implemented",
+            "icon": "assets/img/icons/phosphor/baby.svg",
+            "sort": 20,
             "layout_hint": "stat-led",
-            "hero_label": "Star Signs",
-            "hero_title": "Reynolds & Law",
-            "hero_subtitle": "A light-hearted look at the Reynolds and Law branches by zodiac sign.",
-            "divisions": []
+            "divisions": [
+                {
+                    "key": "death_scotland",
+                    "title": "Deaths and Correction",
+                    "description": "",
+                    "status": "implemented",
+                    "icon": "assets/img/icons/phosphor/baby.svg",
+                    "sort": 0,
+                    "hero_label": "",
+                    "hero_title": "",
+                    "hero_subtitle": "",
+                    "hero_image": "assets/img/wedding.jpg",
+                    "hero_alt": "Wedding",
+                    "summary": "",
+                    "generator": {
+                        "script": "",
+                        "class": "",
+                        "parameters": {
+                            "tree": "Gilroy1",
+                            "limit": 5
+                        }
+                    },
+                    "output": {
+                        "dir": "spotlights/deaths",
+                        "filename": "death-and-correction-scotland.html",
+                        "pattern": "death-and-correction-scotland.html",
+                        "context_file": "assets/content/spotlights/marriages/deaths-context.html",
+                        "css": [
+                            "assets/css/jwg-spotlight.css"
+                        ]
+                    }
+                }
+            ]
         },
         {
             "key": "plantagenet",

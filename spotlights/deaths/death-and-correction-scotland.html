@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta name="jwg:catalog_key" content="records" />
+    <meta name="jwg:division_key" content="scottish_deaths_rce" />
+    <meta name="jwg:link_title" content="Death and Correction in Scotland" />
+
+    <meta charset="utf-8" />
+    <title>Death and Correction in Scotland</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="/johns-genealogy-quest/" />
+
+    <link rel="stylesheet" href="assets/css/jwg-site.css" />
+    <link rel="stylesheet" href="assets/css/jwg-spotlight.css" />
+
+    <style>
+      .spotlight-death .spotlight-main {
+        grid-template-columns: 1fr;
+      }
+
+      .death-hero-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+      }
+
+      .death-hero-image img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: var(--jwg-shadow-soft);
+      }
+
+      .death-section + .death-section {
+        margin-top: 1.6rem;
+        padding-top: 1.3rem;
+        border-top: 1px solid var(--jwg-border-subtle);
+      }
+
+      .death-snippet {
+        margin: 0;
+        text-align: center;
+      }
+
+      .death-snippet a {
+        display: inline-block;
+      }
+
+      .death-snippet img {
+        display: block;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        border-radius: 10px;
+        border: 1px solid var(--jwg-border-subtle);
+        box-shadow: var(--jwg-shadow-soft);
+        cursor: zoom-in;
+      }
+
+      .death-snippet figcaption {
+        font-size: 0.9rem;
+        color: var(--jwg-text-muted);
+        margin-top: 0.45rem;
+        text-align: center;
+      }
+
+      .death-snippet-wrap {
+        margin: 1rem auto;
+        max-width: 340px;
+         text-align: center;
+
+      }
+
+      @media (min-width: 720px) {
+        .death-snippet-wrap {
+          max-width: 320px;
+        }
+
+        .death-snippet-wrap.right {
+          float: right;
+          margin: 0.25rem 0 1rem 1.25rem;
+        }
+
+        .death-snippet-wrap.left {
+          float: left;
+          margin: 0.25rem 1.25rem 1rem 0;
+        }
+
+        .death-section::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+      }
+
+      .death-type-label {
+        display: inline-block;
+        margin: 0 0 0.55rem;
+        padding: 0.22rem 0.58rem;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        background: rgba(30, 150, 237, 0.08);
+        color: var(--jwg-blue-dark);
+        border: 1px solid rgba(30, 150, 237, 0.18);
+      }
+
+      .death-quick-list {
+        margin: 0.5rem 0 0;
+        padding-left: 1.1rem;
+      }
+
+      .death-quick-list li {
+        margin: 0.35rem 0;
+      }
+
+      .death-quote {
+        margin: 1rem 0;
+        padding: 0.9rem 1rem;
+        border-left: 4px solid var(--jwg-blue);
+        background: rgba(30, 150, 237, 0.05);
+        border-radius: 8px;
+        font-style: italic;
+      }
+
+      .death-quote p {
+        margin: 0;
+      }
+
+      .death-quote cite {
+        display: block;
+        margin-top: 0.5rem;
+        font-style: normal;
+        font-size: 0.9rem;
+        color: var(--jwg-text-muted);
+      }
+
+      .death-context {
+        margin-top: 20px;
+      }
+
+      .death-context h3 {
+        margin-top: 1.2rem;
+        color: var(--jwg-brown);
+      }
+
+      .death-cause {
+        margin: 0.75rem 0 1rem;
+        padding: 0.75rem 0.9rem;
+        border-radius: 10px;
+        background: rgba(121, 86, 45, 0.06);
+        border: 1px solid var(--jwg-border-subtle);
+        clear: both;
+          margin-top: 0.5rem;
+      }
+
+      .death-cause strong {
+        color: var(--jwg-brown);
+      }
+
+      .death-doc-pair {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin: 1rem auto;
+        max-width: 340px;
+      }
+
+      @media (min-width: 720px) {
+        .death-doc-pair {
+          grid-template-columns: 1fr 1fr;
+          max-width: 640px;
+        }
+      }
+      @media (max-width: 720px) {
+        .death-hero-image img {
+          width: 96px;
+          height: 96px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="spotlight spotlight-death">
+    <div class="spotlight-wrap">
+      <header class="site-header spotlight-header">
+        <div class="site-header-inner spotlight-header-inner">
+          <button
+            class="spotlight-nav-toggle"
+            type="button"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="spotlightNav"
+          >
+            <span class="spotlight-nav-icon" aria-hidden="true"></span>
+          </button>
+
+          <a href="index.html" class="site-title">John&#39;s Genealogy Quest</a>
+
+          <nav id="spotlightNav" class="spotlight-nav" aria-label="Site">
+            <a href="index.html">Home</a>
+            <a href="bios/index.html">Biographies</a>
+            <a href="spotlights/index.html">Spotlights</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <header class="spotlight-hero">
+        <div class="spotlight-hero-top">
+          <div class="spotlight-hero-label">Death records and corrections</div>
+        </div>
+
+        <div class="spotlight-hero-subject">
+          <div class="spotlight-hero-subject-text">
+            <h1 class="spotlight-hero-title">
+              Death and Correction in Scotland
+            </h1>
+            <p class="spotlight-hero-subtitle">
+              Causes of death and the Register of Corrected Entries
+            </p>
+            <p class="spotlight-hero-relationship">
+              Scottish death records can be remarkably detailed, but the first
+              entry was not always the final word. In cases of accident, sudden
+              death, or uncertainty, later information could be recorded in the
+              Register of Corrected Entries.
+            </p>
+          </div>
+
+          <div class="death-hero-image">
+            <img
+              src="assets/img/rip.jpg"
+              alt="RIP"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </header>
+
+      <!-- BODY -->
+      <main class="spotlight-main">
+        <section class="spotlight-card">
+          <h2>In brief</h2>
+          <p>
+            Scottish death certificates often record more than a date and place.
+            They may give a precise cause of death, the duration of illness, the
+            certifying doctor, and sometimes enough detail to make a modern
+            reader wince. Other entries are much less certain, using words such
+            as <em>apparently</em>, <em>probable</em>, or simply
+            <em>not certified</em>.
+          </p>
+
+          <p>
+            When further information came to light, the original statutory entry
+            was not changed. Instead, an amendment was entered separately in the
+            <strong>Register of Corrected Entries</strong>, usually abbreviated
+            to <strong>RCE</strong>, and a cross-reference was added in the
+            margin of the original register.
+          </p>
+
+          <h3>What this page highlights</h3>
+          <ul class="death-quick-list">
+            <li>The variety of causes of death found in the family tree</li>
+            <li>Medical language that now feels unfamiliar or startling</li>
+            <li>Deaths where the first entry did not tell the whole story</li>
+            <li>The role of the Scottish Register of Corrected Entries</li>
+            <li>Five family examples with document extracts</li>
+          </ul>
+        </section>
+
+        <section class="spotlight-card">
+          <h2>How death was recorded in Scotland</h2>
+
+          <div class="death-section">
+            <h3>The first entry was not always the final word</h3>
+            <p>
+              Deaths in Scotland had to be registered quickly. In ordinary
+              cases, the cause could be supplied from medical knowledge already
+              available to the family or registrar. In sudden, accidental, or
+              violent deaths, however, the facts might not be clear at the time
+              of registration.
+            </p>
+
+            <div class="death-quote">
+              <p>
+                “Original entries in the Statutory Registers of Births, Deaths
+                and Marriages cannot be altered but sometimes an error is noted
+                or additional information comes to light. These amendments are
+                recorded in a separate register - the Register of Corrected
+                Entries (RCE).”
+              </p>
+              <cite
+                >Scotland’s People, guidance on the Register of Corrected
+                Entries</cite
+              >
+            </div>
+
+            <p>
+              This means that a death record may have two parts: the original
+              statutory entry and, where necessary, a later correction or
+              addition. For family historians, the correction can be the part
+              that explains what really happened.
+            </p>
+          </div>
+
+          <div class="death-section">
+            <h3>The language of death</h3>
+            <p>
+              Some causes of death in the tree are familiar today, such as
+              bronchitis, pneumonia, cancer, or heart disease. Others reflect
+              the medical language of an earlier age: <em>dropsy</em>,
+              <em>phthisis</em>, <em>apoplexy</em>,
+              <em>softening of the brain</em>, and <em>senile decay</em>.
+            </p>
+
+            <p>
+              The wording can be blunt, descriptive, and sometimes unsettling. A
+              certificate might describe symptoms, visible effects, or the
+              immediate event that caused death, rather than a diagnosis in the
+              modern sense.
+            </p>
+          </div>
+
+          <div class="death-section">
+            <h3>Uncertainty in the register</h3>
+            <p>
+              Several entries in the family data use uncertain wording:
+              <em>probable heart failure</em>,
+              <em>apparently heart disease</em>, and <em>not certified</em>.
+              These phrases are reminders that the records were created by
+              people working with the knowledge and evidence available at the
+              time.
+            </p>
+
+            <p>
+              The Register of Corrected Entries is especially valuable in this
+              setting. It can turn a vague or provisional entry into a fuller
+              account, particularly where the procurator fiscal or another
+              official later reported the result of an inquiry.
+            </p>
+          </div>
+        </section>
+
+        <section class="spotlight-card">
+          <h2>Five deaths from the records</h2>
+
+          <div class="death-section">
+            <h3>A lingering decline</h3>
+          
+            <div class="death-snippet-wrap">
+              <figure class="death-snippet">
+                <a
+                  href="assets/img/spotlights/deaths/full/I00017-death.jpg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/img/spotlights/deaths/thumbs/I00017-death.jpg"
+                    alt="Death register extract for I00017"
+                  />
+                </a>
+                <figcaption>
+                  Death entry for John's great-uncle John Whitelaw. Click to
+                  view full image.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="death-cause">
+              <strong>Cause recorded:</strong> chronic gastric catarrh, debility
+            </div>
+
+            <p>
+              This entry points to a slow and uncomfortable decline. Chronic
+              gastric catarrh was an inflammation of the stomach lining, while
+              debility suggests weakness or wasting rather than a single sudden
+              illness.
+            </p>
+
+            <p>
+              Read with modern eyes, the wording raises uncomfortable questions.
+              Was this simply disease, or was there also an element of neglect,
+              poor nourishment, or inability to keep food down? The record does
+              not answer that directly, but it does show how a brief medical
+              phrase can hint at a much longer story.
+            </p>
+          </div>
+
+          <div class="death-section">
+            <h3>A diagnosis that still makes readers wince</h3>
+          
+            <div class="death-snippet-wrap">
+              <figure class="death-snippet">
+                <a
+                  href="assets/img/spotlights/deaths/full/I00452-death.jpg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/img/spotlights/deaths/thumbs/I00452-death.jpg"
+                    alt="Death register extract for I00452"
+                  />
+                </a>
+                <figcaption>
+                  Death entry for John's second great uncle Joseph Collingwood
+                  Wilson. Click to view full image.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="death-cause">
+              <strong>Cause recorded:</strong> epithelioma of the penis and a
+              haemorrhage
+            </div>
+
+            <p>
+              Some death certificates are startling because they are so direct.
+              Epithelioma was a term used for a form of cancer affecting
+              epithelial tissue, and in this case the affected part of the body
+              was recorded plainly.
+            </p>
+
+            <p>
+              The entry is uncomfortable to read, but that discomfort is part of
+              its value. These were official records, not polite family notices.
+              They recorded the facts as the registrar understood them, even
+              when the result still has the power to make a modern reader
+              flinch.
+            </p>
+          </div>
+
+          <div class="death-section">
+            <h3>A familiar name in a dangerous form</h3>
+          
+            <div class="death-doc-pair right">
+              <figure class="death-snippet">
+                <a
+                  href="assets/img/spotlights/deaths/full/I00565-death.jpg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/img/spotlights/deaths/thumbs/I00565-death.jpg"
+                    alt="Death register extract for I00565"
+                  />
+                </a>
+                <figcaption>
+                  Death entry for John's great grandfather James Whitton. Click
+                  to view full image.
+                </figcaption>
+              </figure>
+              <figure class="death-snippet">
+                <a
+                  href="assets/img/spotlights/deaths/full/I00565-rce.jpg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/img/spotlights/deaths/thumbs/I00565-rce.jpg"
+                    alt="Register of Corrected Entries for James Whitton"
+                  />
+                </a>
+                <figcaption>
+                  Register of Corrected Entries for James Whitton. Click to view full image.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="death-cause">
+              <strong>Cause recorded:</strong> Lysol poisoning
+            </div>
+
+            <p>
+              To many modern readers, Lysol is simply a familiar household
+              disinfectant. In earlier decades, however, it was a much stronger
+              and more hazardous substance. Poisoning could occur if it was
+              swallowed, misused, or handled without proper care.
+            </p>
+
+            <p>
+              The Register of Corrected Entries does not substantially alter the
+              original record in this case. It confirms that James Whitton, aged
+              40, died on 19 December 1931 in the Royal Infirmary, Edinburgh,
+              and records the same cause of death: Lysol poisoning. Rather than
+              changing the story, the correction reinforces it.
+            </p>
+
+            <p>
+              What adds context here is his occupation. James worked as an
+              oncostman and later as a pump attendant in a colliery, roles that
+              would have brought him into regular contact with disinfectants
+              such as Lysol. Substances like this were commonly used in
+              industrial and sanitary settings, often with far fewer safeguards
+              than would be expected today.
+            </p>
+
+            <p>
+              Lysol poisoning could cause severe internal burning, abdominal
+              pain, vomiting, and collapse, and in serious cases led to failure
+              of the heart or lungs. The record does not explain how the
+              poisoning occurred, but the combination of occupation and
+              substance suggests a hazardous working environment as well as a
+              domestic one.
+            </p>
+
+            <p>
+              In this instance, the Register of Corrected Entries serves as
+              confirmation rather than correction. Even so, it illustrates the
+              same principle: that official processes were used to verify and
+              document deaths where the circumstances warranted closer scrutiny.
+            </p>
+          </div>
+
+          <div class="death-section">
+            <h3>An accident serious enough for inquiry</h3>
+          
+            <div class="death-doc-pair left">
+              <figure class="death-snippet">
+                <a
+                  href="assets/img/spotlights/deaths/full/I00462-death.jpg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/img/spotlights/deaths/thumbs/I00462-death.jpg"
+                    alt="Death register and RCE extract for I00462"
+                  />
+                </a>
+                <figcaption>
+                  Death entry extract for John's second great-uncle John
+                  Anderson. Click to view full image.
+                </figcaption>
+              </figure>
+              <figure class="death-snippet">
+                <a
+                  href="assets/img/spotlights/deaths/full/I00462-rce.jpg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/img/spotlights/deaths/thumbs/I00462-rce.jpg"
+                    alt="Register of Corrected Entries for John Anderson"
+                  />
+                </a>
+                <figcaption>
+                  Register of Corrected Entries for John Anderson. Click to view full image.
+                </figcaption>
+              </figure>
+            </div>
+            <div class="death-cause">
+              <strong>Cause recorded:</strong> killed by being injured with
+              wagons
+            </div>
+
+            <p>
+              The original entry is vivid but imprecise. It tells us that wagons
+              were involved, but not how the accident occurred or under what
+              circumstances. Like many such records, it captures the fact of
+              death without fully explaining it.
+            </p>
+
+            <p>
+              The Register of Corrected Entries provides that missing detail. It
+              records that John Anderson, aged 54, died on 22 April 1909 at
+              Newcraighall Colliery, having been
+              <em>crushed between two railway waggons</em>. The cause of death
+              is given in accordance with the verdict of a jury, following
+              official inquiry.
+            </p>
+
+            <p>
+              This additional information transforms the record. What was once a
+              brief and somewhat ambiguous phrase becomes a clear industrial
+              accident, rooted in the working environment of a colliery. The
+              involvement of a jury also shows that the death was formally
+              investigated, rather than simply recorded.
+            </p>
+
+            <p>
+              The correction does more than clarify the cause. It restores
+              context: the place, the mechanism of injury, and the official
+              process that established the facts. In doing so, it illustrates
+              exactly how the Register of Corrected Entries can turn a fragment
+              of information into a fuller account of what happened.
+            </p>
+          </div>
+
+          <div class="death-section">
+            <h3>An uncomfortable place and manner of death</h3>
+          
+            <div class="death-doc-pair right">
+              <figure class="death-snippet">
+                <a
+                  href="assets/img/spotlights/deaths/full/I00485-death.jpg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/img/spotlights/deaths/thumbs/I00485-death.jpg"
+                    alt="Death register extract for I00465"
+                  />
+                </a>
+                <figcaption>
+                  Death entry extract for John's third great grandmother Agnes Gall. Click to view full
+                  image.
+                </figcaption>
+              </figure>
+
+              <figure class="death-snippet">
+                <a
+                  href="assets/img/spotlights/deaths/full/I00485-rce.jpg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/img/spotlights/deaths/thumbs/I00485-rce.jpg"
+                    alt="RCE extract for I00465"
+                  />
+                </a>
+                <figcaption>
+                  Register of Corrected Entries for Agnes Gall. Click to view full
+                  image.
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="death-cause">
+              <strong>Cause recorded:</strong> rupture of the heart
+            </div>
+
+            <p>
+              Few entries are as arresting as this one. A “rupture of the heart”
+              describes a sudden and catastrophic failure of the heart or the
+              major vessels connected to it. In modern terms, it is often
+              associated with a severe cardiac event, but the wording here
+              captures only the final moment rather than the underlying
+              condition.
+            </p>
+
+            <p>
+              The Register of Corrected Entries adds a fuller and more human
+              context. It records that Agnes Gall or McLellan, aged 64, died on
+              7 November 1864
+              <em
+                >on the public footpath in the Parish of Douglas, commonly
+                called “The Puddock Row”</em
+              >. The report, issued from the Procurator Fiscal’s Office in
+              Lanark, notes that the cause was a rupture of the heart
+              <em>or of the large blood vessels connected therewith</em>, with
+              the duration of the condition unknown.
+            </p>
+
+            <p>
+              This additional detail transforms the bare statement of cause into
+              something more vivid. The place of death, a public footpath,
+              suggests a sudden collapse away from home, while the involvement
+              of the procurator fiscal indicates that the circumstances required
+              official inquiry. The correction does not change the essential
+              cause, but it enriches it, turning a stark medical phrase into a
+              scene that can be imagined.
+            </p>
+
+            <p>
+              Together, the original entry and the corrected record show how
+              Scottish death records can operate on two levels: the immediate
+              registration of death, and the later effort to understand and
+              document what truly happened.
+            </p>
+          </div>
+        </section>
+
+        <div class="death-section">
+          <h3>A final note from south of the border</h3>
+        
+          <div class="death-snippet-wrap">
+            <figure class="death-snippet">
+              <a
+                href="assets/img/spotlights/deaths/full/I30-death.jpg"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="assets/img/spotlights/deaths/thumbs/I30-death.jpg"
+                  alt="Death register entry for William James Reynolds"
+                />
+              </a>
+              <figcaption>
+                Death entry for William James Reynolds. Click to view full
+                image.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="death-cause">
+            <strong>Cause recorded:</strong> diseased heart, suddenly
+          </div>
+
+          <p>
+            Not all deaths in the family took place in Scotland. William James
+            Reynolds, a retired farmer, died on 3 July 1858 at the Sign of the
+            Crown and Sceptre in Chester Street, Westminster, aged 63.
+          </p>
+
+          <p>
+            The cause of death was recorded simply as
+            <em>diseased heart, suddenly</em>, a familiar phrase in
+            nineteenth-century registers. What makes this entry stand out is the
+            place: a London public house rather than a home or hospital.
+          </p>
+
+          <p>
+            The death was registered by James Penn, the licensed victualler and
+            landlord of the premises, who was present at the time. The detail
+            gives us a small but vivid glimpse of the circumstances. Whether
+            William had called in for refreshment or was lodging there, we
+            cannot say, but it is not hard to picture the scene.
+          </p>
+
+          <p>
+            After the Scottish examples and their formal corrections, this
+            English record feels more straightforward. Yet it reminds us that
+            even a brief entry can carry a story, sometimes in the most
+            unexpected of places.
+          </p>
+        </div>
+      </main>
+
+      <section class="spotlight-card death-context">
+        <h2>Why these records matter</h2>
+
+        <p>
+          Death records can be difficult documents. They reduce a life to a few
+          lines and often preserve the hardest moment in a family’s story. Yet
+          they also carry detail that might otherwise have disappeared: medical
+          language, workplace risks, domestic hazards, illness, uncertainty, and
+          official investigation.
+        </p>
+
+        <p>
+          The Register of Corrected Entries adds another layer. It reminds us
+          that records were not perfect at the moment they were made. Sometimes
+          the first entry was provisional. Sometimes the truth emerged only
+          after further inquiry. Together, the original register and the RCE can
+          give a fuller account of how a death was understood.
+        </p>
+
+        <h3>A note on the images</h3>
+        <p>
+          The images on this page are excerpts from original records linked to
+          individuals in the tree. Click any image to open a larger version and
+          examine the document in more detail.
+        </p>
+      </section>
+
+      <footer class="site-footer">
+        <div class="site-footer-inner">
+          <div class="site-footer-text">
+            <p class="site-footer-line">
+              John’s Genealogy Quest brings together family history research,
+              biographies, spotlights, and supporting historical material.
+            </p>
+            <p class="site-footer-line site-footer-line--short">
+              John’s Genealogy Quest — family history, biographies, and
+              spotlights.
+            </p>
+          </div>
+
+          <div class="site-footer-actions">
+            <a class="jwg-btn jwg-btn--footer" href="index.html">Home</a>
+            <a class="jwg-btn jwg-btn--footer" href="bios/index.html"
+              >Biographies</a
+            >
+            <a class="jwg-btn jwg-btn--footer" href="spotlights/index.html"
+              >Spotlights</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const toggle = document.querySelector(".spotlight-nav-toggle");
+        const nav = document.getElementById("spotlightNav");
+        if (!toggle || !nav) return;
+
+        toggle.addEventListener("click", function () {
+          const expanded = toggle.getAttribute("aria-expanded") === "true";
+          toggle.setAttribute("aria-expanded", expanded ? "false" : "true");
+          nav.classList.toggle("is-open");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!nav.classList.contains("is-open")) return;
+          if (nav.contains(event.target) || toggle.contains(event.target))
+            return;
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      })();
+    </script>
+
+    <script src="js/kiosk-runtime.js"></script>
+  </body>
+</html>

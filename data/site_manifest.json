@@ -54,6 +54,15 @@
         },
         {
             "type": "spotlight",
+            "catalog_key": "deaths",
+            "division_key": "death_scotland",
+            "title": "Death And Correction Scotland",
+            "description": "",
+            "href": "spotlights/deaths/death-and-correction-scotland.html",
+            "link_title": "Death and Correction in Scotland"
+        },
+        {
+            "type": "spotlight",
             "catalog_key": "longevity",
             "division_key": "gilroy_f",
             "title": "Longest Lived Female Gilroy",
