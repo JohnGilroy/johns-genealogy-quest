@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <base href="/johns-genealogy-quest/" />
+
+    <title>John's Ancestors</title>
+
+    <link rel="stylesheet" href="assets/css/jwg-site.css" />
+    <link rel="stylesheet" href="assets/css/jwg-spotlight.css" />
+    <link rel="stylesheet" href="assets/css/jwg-ancestors.css" />
+  </head>
+
+  <body>
+    <header class="site-header spotlight-header">
+      <div class="site-header-inner spotlight-header-inner">
+        <!-- Hamburger (left of title) -->
+        <button
+          class="spotlight-nav-toggle"
+          type="button"
+          aria-label="Menu"
+          aria-expanded="false"
+          aria-controls="spotlightNav"
+        >
+          <span class="spotlight-nav-icon" aria-hidden="true"></span>
+        </button>
+
+        <a href="index.html" class="site-title">John&#39;s Genealogy Quest</a>
+
+        <!-- Dropdown menu -->
+        <nav id="spotlightNav" class="spotlight-nav" aria-label="Site">
+          <a href="index.html">Home</a>
+          <a href="bios/index.html">Biographies</a>
+          <a href="spotlights/index.html">Spotlights</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="ancestor-page">
+      <div id="ancestor-hero">
+        <p>Loading ancestor outline...</p>
+      </div>
+
+      <section id="ancestor-generations" class="ancestor-generations"></section>
+    </main>
+
+    <script>
+      const DATA_URL = "data/ancestors-john.json";
+
+      async function loadAncestors() {
+        const response = await fetch(DATA_URL);
+
+        if (!response.ok) {
+          throw new Error(`Could not load ${DATA_URL}`);
+        }
+
+        return await response.json();
+      }
+
+      function renderSummary(data) {
+        const summary = data.summary || {};
+        const focus = data.focus || {};
+
+        document.title = focus.display_title || "John's Ancestors";
+
+        document.getElementById("ancestor-hero").innerHTML = `
+    <header class="spotlight-hero ancestor-hero">
+      <div class="spotlight-hero-top">
+        <div class="spotlight-hero-label">
+          ${escapeHtml(focus.hero_label || "Ancestor outline")}
+        </div>
+      </div>
+
+      <div class="spotlight-hero-subject">
+        <div class="spotlight-hero-subject-text">
+          <h1 class="spotlight-hero-title">
+            ${escapeHtml(focus.display_title || "John's Ancestors")}
+          </h1>
+
+          <p class="spotlight-hero-subtitle">
+            ${escapeHtml(focus.hero_subtitle || "Direct ancestral lines by generation")}
+          </p>
+
+          <p class="spotlight-hero-relationship">
+            ${escapeHtml(summary.generation_count_label || "")}<br />
+            ${escapeHtml(summary.earliest_birth_label || "")}
+          </p>
+
+          <p class="spotlight-hero-relationship">
+            ${escapeHtml(summary.reader_explanation || "")}
+          </p>
+        </div>
+
+        <div class="ancestor-hero-image">
+          <img
+            src="${escapeHtml(focus.hero_image || "")}"
+            alt="${escapeHtml(focus.hero_alt || focus.display_title || "")}"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </header>
+  `;
+      }
+
+      function renderGenerations(data) {
+        const container = document.getElementById("ancestor-generations");
+        container.innerHTML = "";
+
+        for (const generation of data.generations || []) {
+          if (generation.generation === 1) {
+            continue;
+          }
+          const section = document.createElement("section");
+          section.className = "ancestor-generation";
+
+          section.innerHTML = `
+  <header class="ancestor-generation-header">
+    <button
+      class="ancestor-generation-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="generation-${generation.generation}-body"
+    >
+      <span class="ancestor-toggle-symbol" aria-hidden="true">+</span>
+      <span class="ancestor-generation-title">
+        Generation ${generation.generation} — ${escapeHtml(generation.label)}
+      </span>
+    </button>
+
+    <div class="ancestor-generation-summary">
+      <p>${escapeHtml(generation.time_period || "")}</p>
+      ${generation.birth_counties?.label ? `<p>${escapeHtml(generation.birth_counties.label)}</p>` : ""}
+      </div>
+  </header>
+
+  <div
+    id="generation-${generation.generation}-body"
+    class="ancestor-generation-body"
+    hidden
+  >
+    <div class="ancestor-couple-list">
+      ${(generation.couples || []).map(renderCoupleRow).join("")}
+    </div>
+  </div>
+`;
+
+          container.appendChild(section);
+        }
+        container
+          .querySelectorAll(".ancestor-generation-toggle")
+          .forEach((button) => {
+            button.addEventListener("click", () => {
+              const body = document.getElementById(
+                button.getAttribute("aria-controls"),
+              );
+              const expanded = button.getAttribute("aria-expanded") === "true";
+
+              button.setAttribute("aria-expanded", String(!expanded));
+              body.hidden = expanded;
+
+              const symbol = button.querySelector(".ancestor-toggle-symbol");
+              if (symbol) {
+                symbol.textContent = expanded ? "+" : "–";
+              }
+            });
+          });
+      }
+
+      function renderCoupleRow(couple) {
+        const father = couple.father || null;
+        const mother = couple.mother || null;
+        const relationship = couple.relationship || {};
+        const readerNote = couple.reader_note || "";
+
+        return `
+        <article class="ancestor-couple-row ${couple.end_of_line ? "ancestor-couple-end" : ""}">
+
+          <header class="ancestor-couple-header">
+          <h3>${escapeHtml(couple.display_label || couple.plain_label || "")}</h3>
+            ${couple.end_of_line ? `<p class="ancestor-end-line">${escapeHtml(couple.end_of_line_reason || "")}</p>` : ""}
+          </header>
+
+          <div class="ancestor-couple-cards">
+            ${father ? renderPersonCard(father) : ""}
+            ${mother ? renderPersonCard(mother) : ""}
+          </div>
+
+          ${relationship.label ? `<p class="ancestor-relationship">${escapeHtml(relationship.label)}</p>` : ""}
+
+          ${readerNote ? `<p class="ancestor-reader-note">${escapeHtml(readerNote)}</p>` : ""}
+
+        </article>
+      `;
+      }
+
+      function renderPersonCard(person) {
+        const privacy = person.privacy || {};
+        const isPublic = privacy.is_public !== false;
+        const isKnown = person.is_known !== false;
+
+        if (!isKnown) {
+          return `
+                <article class="ancestor-card ancestor-card-unknown">
+                  <h3>Unknown</h3>
+                </article>
+              `;
+        }
+
+        if (!isPublic) {
+          return `
+                <article class="ancestor-card ancestor-card-private">
+                  <h3>Private person</h3>
+                </article>
+              `;
+        }
+
+        const raw = person.raw || {};
+        const lifespan = buildLifespan(raw);
+
+        return `
+              <article class="ancestor-card">
+                <h3>${escapeHtml(person.name || "Unnamed person")}</h3>
+                <p>${escapeHtml(lifespan)}</p>
+                <p>${escapeHtml(raw.birthplace || raw.deathplace || "")}</p>
+              </article>
+            `;
+      }
+
+      function buildLifespan(raw) {
+        const birth = raw.birthdate || "";
+        const death = raw.deathdate || "";
+
+        if (birth && death) return `${birth} – ${death}`;
+        if (birth) return `Born ${birth}`;
+        if (death) return `Died ${death}`;
+        return "Dates not yet known";
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      loadAncestors()
+        .then((data) => {
+          renderSummary(data);
+          renderGenerations(data);
+        })
+        .catch((error) => {
+          document.getElementById("ancestor-hero").innerHTML = `
+                <h2>Ancestor outline unavailable</h2>
+                <p>${escapeHtml(error.message)}</p>
+              `;
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+.ancestor-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.ancestor-summary {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #f7f3ea;
+  border: 1px solid #e1d6c2;
+}
+
+.ancestor-summary h2 {
+  margin-top: 0;
+}
+
+.ancestor-generation {
+  margin-bottom: 1rem;
+  border: 1px solid #e1d6c2;
+  border-radius: 0.9rem;
+  background: #fbfaf6;
+  overflow: hidden;
+}
+
+.ancestor-generation-header {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-left: 0.35rem solid #8a6f3d;
+  background: #ffffff;
+  border-radius: 0;
+}
+
+.ancestor-generation-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: left;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.ancestor-generation-toggle::before {
+  content: none;
+}
+
+.ancestor-toggle-symbol {
+  width: 1.2rem;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.ancestor-generation-summary {
+  margin-top: 0.5rem;
+  padding-left: 1.7rem;
+  font-size: 0.95rem;
+  color: #4f4637;
+}
+
+.ancestor-generation-summary p {
+  margin: 0.2rem 0;
+}
+
+.ancestor-generation-body {
+  padding: 1rem;
+  background: #ffffff; /* match header */
+  border-left: 0.35rem solid #8a6f3d;
+}
+
+
+.ancestor-generation-header h2 {
+  margin: 0 0 0.35rem 0;
+}
+
+.ancestor-generation-header p {
+  margin: 0.25rem 0;
+}
+
+.ancestor-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.ancestor-card {
+  padding: 1rem;
+  border-radius: 0.9rem;
+  background: #ffffff;
+  border: 1px solid #ddd6c8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.ancestor-card h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.1rem;
+}
+
+.ancestor-card p {
+  margin: 0.25rem 0;
+}
+
+.ancestor-meta {
+  font-size: 0.9rem;
+  color: #6d6250;
+}
+
+.ancestor-card-unknown,
+.ancestor-card-private {
+  background: #f4f1eb;
+  color: #6d6250;
+  border-style: dashed;
+}
+
+.ancestor-couple-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.ancestor-couple-row {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #fbfaf6;
+  border: 1px solid #e1d6c2;
+}
+
+.ancestor-couple-header {
+  margin-bottom: 0.75rem;
+}
+
+.ancestor-couple-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.ancestor-end-line {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+  color: #7a4f2a;
+}
+
+.ancestor-couple-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 700px) {
+  .ancestor-couple-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .ancestor-page {
+    padding: 1rem;
+  }
+
+  .ancestor-summary,
+  .ancestor-generation-header,
+  .ancestor-card {
+    border-radius: 0.75rem;
+  }
+
+  .ancestor-card-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ancestor-hero-image img {
+  max-width: 180px;
+  border-radius: 0.75rem;
+}
+
+.ancestor-side {
+  font-size: 0.9rem;
+  color: #6d6250;
+  margin: 0.2rem 0 0 0;
+}
+
+.ancestor-relationship {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: #4f4637;
+  font-style: italic;
+}
+
+.ancestor-reader-note {
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+  color: #3e3a33;
+}
