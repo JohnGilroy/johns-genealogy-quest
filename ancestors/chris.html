@@ -6,7 +6,7 @@
 
     <base href="/johns-genealogy-quest/" />
 
-    <title>John's Ancestors</title>
+    <title>Chris' Ancestors</title>
 
     <link rel="stylesheet" href="assets/css/jwg-site.css" />
     <link rel="stylesheet" href="assets/css/jwg-spotlight.css" />
@@ -47,7 +47,7 @@
     </main>
 
     <script>
-      const DATA_URL = "data/ancestors-john.json";
+      const DATA_URL = "data/ancestors-chris.json";
 
       async function loadAncestors() {
         const response = await fetch(DATA_URL);
@@ -63,7 +63,7 @@
         const summary = data.summary || {};
         const focus = data.focus || {};
 
-        document.title = focus.display_title || "John's Ancestors";
+        document.title = focus.display_title || "Chris' Ancestors";
 
         document.getElementById("ancestor-hero").innerHTML = `
     <header class="spotlight-hero ancestor-hero">
@@ -76,7 +76,7 @@
       <div class="spotlight-hero-subject">
         <div class="spotlight-hero-subject-text">
           <h1 class="spotlight-hero-title">
-            ${escapeHtml(focus.display_title || "John's Ancestors")}
+            ${escapeHtml(focus.display_title || "Chris' Ancestors")}
           </h1>
 
           <p class="spotlight-hero-subtitle">
