@@ -133,7 +133,8 @@
 
     <div class="ancestor-generation-summary">
       <p>${escapeHtml(generation.time_period || "")}</p>
-      ${generation.birth_counties?.label ? `<p>${escapeHtml(generation.birth_counties.label)}</p>` : ""}
+    ${generation.birth_places_summary?.uk_counties_label ? `<p>${escapeHtml(generation.birth_places_summary.uk_counties_label)}</p>` : ""}
+${generation.birth_places_summary?.other_countries_label ? `<p class="ancestor-overseas">${escapeHtml(generation.birth_places_summary.other_countries_label)}</p>` : ""}
       </div>
   </header>
 
@@ -276,6 +277,26 @@
                 <p>${escapeHtml(error.message)}</p>
               `;
         });
+
+            (function () {
+        const toggle = document.querySelector(".spotlight-nav-toggle");
+        const nav = document.getElementById("spotlightNav");
+        if (!toggle || !nav) return;
+
+        toggle.addEventListener("click", function () {
+          const expanded = toggle.getAttribute("aria-expanded") === "true";
+          toggle.setAttribute("aria-expanded", expanded ? "false" : "true");
+          nav.classList.toggle("is-open");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!nav.classList.contains("is-open")) return;
+          if (nav.contains(event.target) || toggle.contains(event.target))
+            return;
+          nav.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      })();
     </script>
   </body>
 </html>

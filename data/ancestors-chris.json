@@ -1,6 +1,6 @@
 {
     "schema_version": "1.0",
-    "generated_at": "2026-05-03T16:39:10+00:00",
+    "generated_at": "2026-05-03T20:56:46+00:00",
     "site_section": "ancestors",
     "focus": {
         "personID": "I10",
@@ -124,11 +124,13 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Gloucestershire"
                 ],
-                "label": "Birth counties: Gloucestershire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Gloucestershire",
+                "other_countries_label": ""
             }
         },
         {
@@ -324,12 +326,14 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Norfolk",
                     "Wiltshire"
                 ],
-                "label": "Birth counties: Norfolk, Wiltshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Norfolk, Wiltshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -704,13 +708,15 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Berkshire",
                     "Gloucestershire",
                     "Wiltshire"
                 ],
-                "label": "Birth counties: Berkshire, Gloucestershire, Wiltshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Berkshire, Gloucestershire, Wiltshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -1439,14 +1445,16 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "County Durham",
                     "Gloucestershire",
                     "Middlesex",
                     "Wiltshire"
                 ],
-                "label": "Birth counties: County Durham, Gloucestershire, Middlesex, Wiltshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: County Durham, Gloucestershire, Middlesex, Wiltshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -2611,16 +2619,19 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "County Durham",
                     "Gloucestershire",
                     "Herefordshire",
                     "London",
-                    "Surat",
                     "Wiltshire"
                 ],
-                "label": "Birth counties: County Durham, Gloucestershire, Herefordshire, London, Surat, Wiltshire"
+                "other_countries": [
+                    "India"
+                ],
+                "uk_counties_label": "Birth counties: County Durham, Gloucestershire, Herefordshire, London, Wiltshire",
+                "other_countries_label": "Also born in: India"
             }
         },
         {
@@ -4811,8 +4822,8 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "City of London",
                     "County Durham",
                     "Cumberland",
@@ -4821,7 +4832,9 @@
                     "Wiltshire",
                     "Yorkshire"
                 ],
-                "label": "Birth counties: City of London, County Durham, Cumberland, Gloucestershire, Herefordshire, Wiltshire, Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: City of London, County Durham, Cumberland, Gloucestershire, Herefordshire, Wiltshire, Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -8848,8 +8861,8 @@
                     "end_of_line_reason": "This is currently the end of this known ancestral line."
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "City of London",
                     "Gloucestershire",
                     "Herefordshire",
@@ -8859,7 +8872,9 @@
                     "Wiltshire",
                     "Yorkshire"
                 ],
-                "label": "Birth counties: City of London, Gloucestershire, Herefordshire, London, North Yorkshire, Westmorland, Wiltshire, Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: City of London, Gloucestershire, Herefordshire, London, North Yorkshire, Westmorland, Wiltshire, Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -13963,8 +13978,8 @@
                     "end_of_line_reason": "This is currently the end of this known ancestral line."
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Gloucestershire",
                     "Herefordshire",
                     "London",
@@ -13972,7 +13987,9 @@
                     "Wiltshire",
                     "Yorkshire"
                 ],
-                "label": "Birth counties: Gloucestershire, Herefordshire, London, Westmorland, Wiltshire, Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Gloucestershire, Herefordshire, London, Westmorland, Wiltshire, Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -17693,14 +17710,16 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Herefordshire",
                     "Westmorland",
                     "Wiltshire",
                     "Yorkshire"
                 ],
-                "label": "Birth counties: Herefordshire, Westmorland, Wiltshire, Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Herefordshire, Westmorland, Wiltshire, Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -19386,9 +19405,9 @@
                     "relationship": {
                         "familyID": "F65",
                         "type": "Marriage",
-                        "date": "",
-                        "place": "",
-                        "label": "Relationship details not yet recorded"
+                        "date": "ABT 1678",
+                        "place": "Yorkshire, England",
+                        "label": "Marriage: ABT 1678, Yorkshire, England"
                     },
                     "continues": true,
                     "end_of_line": false,
@@ -19621,12 +19640,14 @@
                     "end_of_line_reason": "This is currently the end of this known ancestral line."
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Westmorland",
                     "Yorkshire"
                 ],
-                "label": "Birth counties: Westmorland, Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Westmorland, Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -21031,11 +21052,13 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Yorkshire"
                 ],
-                "label": "Birth counties: Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -22362,11 +22385,13 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Yorkshire"
                 ],
-                "label": "Birth counties: Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -23649,12 +23674,14 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Lancashire",
                     "Yorkshire"
                 ],
-                "label": "Birth counties: Lancashire, Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Lancashire, Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -24747,12 +24774,14 @@
                     "end_of_line_reason": "This is currently the end of this known ancestral line."
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Lancashire",
                     "Yorkshire"
                 ],
-                "label": "Birth counties: Lancashire, Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Lancashire, Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -25415,11 +25444,13 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Yorkshire"
                 ],
-                "label": "Birth counties: Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -25946,12 +25977,14 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Northumberland",
                     "Yorkshire"
                 ],
-                "label": "Birth counties: Northumberland, Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Northumberland, Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -26294,12 +26327,14 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Devon",
                     "Northumberland"
                 ],
-                "label": "Birth counties: Devon, Northumberland"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Devon, Northumberland",
+                "other_countries_label": ""
             }
         },
         {
@@ -26577,12 +26612,14 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Monmouthshire",
                     "Yorkshire"
                 ],
-                "label": "Birth counties: Monmouthshire, Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Monmouthshire, Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -26861,12 +26898,14 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Suffolk",
                     "Yorkshire"
                 ],
-                "label": "Birth counties: Suffolk, Yorkshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Suffolk, Yorkshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -27146,12 +27185,14 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "County Durham",
                     "Northumberland"
                 ],
-                "label": "Birth counties: County Durham, Northumberland"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: County Durham, Northumberland",
+                "other_countries_label": ""
             }
         },
         {
@@ -27432,12 +27473,14 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Monmouthshire",
                     "Northumberland"
                 ],
-                "label": "Birth counties: Monmouthshire, Northumberland"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Monmouthshire, Northumberland",
+                "other_countries_label": ""
             }
         },
         {
@@ -27850,14 +27893,16 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Brecknockshire",
                     "County Durham",
                     "Kent",
                     "Northumberland"
                 ],
-                "label": "Birth counties: Brecknockshire, County Durham, Kent, Northumberland"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Brecknockshire, County Durham, Kent, Northumberland",
+                "other_countries_label": ""
             }
         },
         {
@@ -28272,12 +28317,14 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
-                    "Antrim",
-                    "Antwerp"
+            "birth_places_summary": {
+                "uk_counties": [],
+                "other_countries": [
+                    "Belgium",
+                    "Ireland"
                 ],
-                "label": "Birth counties: Antrim, Antwerp"
+                "uk_counties_label": "",
+                "other_countries_label": "Also born in: Belgium, Ireland"
             }
         },
         {
@@ -28561,12 +28608,15 @@
                     "end_of_line_reason": "This is currently the end of this known ancestral line."
                 }
             ],
-            "birth_counties": {
-                "items": [
-                    "Berkshire",
-                    "Hainault"
+            "birth_places_summary": {
+                "uk_counties": [
+                    "Berkshire"
                 ],
-                "label": "Birth counties: Berkshire, Hainault"
+                "other_countries": [
+                    "Belgium"
+                ],
+                "uk_counties_label": "Birth counties: Berkshire",
+                "other_countries_label": "Also born in: Belgium"
             }
         }
     ]

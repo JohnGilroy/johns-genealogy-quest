@@ -1,6 +1,6 @@
 {
     "schema_version": "1.0",
-    "generated_at": "2026-05-03T16:38:45+00:00",
+    "generated_at": "2026-05-03T20:56:21+00:00",
     "site_section": "ancestors",
     "focus": {
         "personID": "I00033",
@@ -124,11 +124,13 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Edinburgh"
                 ],
-                "label": "Birth counties: Edinburgh"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Edinburgh",
+                "other_countries_label": ""
             }
         },
         {
@@ -324,12 +326,14 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Edinburgh",
                     "Midlothian"
                 ],
-                "label": "Birth counties: Edinburgh, Midlothian"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Edinburgh, Midlothian",
+                "other_countries_label": ""
             }
         },
         {
@@ -704,14 +708,16 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Dunbartonshire",
                     "Edinburgh",
                     "Edinburghshire",
                     "London"
                 ],
-                "label": "Birth counties: Dunbartonshire, Edinburgh, Edinburghshire, London"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Dunbartonshire, Edinburgh, Edinburghshire, London",
+                "other_countries_label": ""
             }
         },
         {
@@ -1446,8 +1452,8 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Edinburgh",
                     "Edinburghshire",
                     "Haddingtonshire",
@@ -1456,7 +1462,9 @@
                     "Midlothian",
                     "Perthshire"
                 ],
-                "label": "Birth counties: Edinburgh, Edinburghshire, Haddingtonshire, Lanarkshire, Middlesex, Midlothian, Perthshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Edinburgh, Edinburghshire, Haddingtonshire, Lanarkshire, Middlesex, Midlothian, Perthshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -2801,8 +2809,8 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Edinburgh",
                     "Edinburghshire",
                     "Haddingtonshire",
@@ -2810,7 +2818,9 @@
                     "Lanarkshire",
                     "Perthshire"
                 ],
-                "label": "Birth counties: Edinburgh, Edinburghshire, Haddingtonshire, Kincardineshire, Lanarkshire, Perthshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Edinburgh, Edinburghshire, Haddingtonshire, Kincardineshire, Lanarkshire, Perthshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -5133,8 +5143,8 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Aberdeenshire",
                     "Edinburghshire",
                     "Fifeshire",
@@ -5145,7 +5155,9 @@
                     "Northumberland",
                     "Perthshire"
                 ],
-                "label": "Birth counties: Aberdeenshire, Edinburghshire, Fifeshire, Haddingtonshire, Kent, Kincardineshire, Lanarkshire, Northumberland, Perthshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Aberdeenshire, Edinburghshire, Fifeshire, Haddingtonshire, Kent, Kincardineshire, Lanarkshire, Northumberland, Perthshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -8360,14 +8372,18 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Fifeshire",
                     "Haddingtonshire",
                     "Lanarkshire",
                     "Warwickshire"
                 ],
-                "label": "Birth counties: Fifeshire, Haddingtonshire, Lanarkshire, Warwickshire"
+                "other_countries": [
+                    "Stenton"
+                ],
+                "uk_counties_label": "Birth counties: Fifeshire, Haddingtonshire, Lanarkshire, Warwickshire",
+                "other_countries_label": "Also born in: Stenton"
             }
         },
         {
@@ -11143,12 +11159,14 @@
                     "end_of_line_reason": "This is currently the end of this known ancestral line."
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Edinburghshire",
                     "Haddingtonshire"
                 ],
-                "label": "Birth counties: Edinburghshire, Haddingtonshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Edinburghshire, Haddingtonshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -12459,11 +12477,13 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Haddingtonshire"
                 ],
-                "label": "Birth counties: Haddingtonshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Haddingtonshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -12984,11 +13004,13 @@
                     "end_of_line_reason": ""
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Haddingtonshire"
                 ],
-                "label": "Birth counties: Haddingtonshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Haddingtonshire",
+                "other_countries_label": ""
             }
         },
         {
@@ -13391,11 +13413,13 @@
                     "end_of_line_reason": "This is currently the end of this known ancestral line."
                 }
             ],
-            "birth_counties": {
-                "items": [
+            "birth_places_summary": {
+                "uk_counties": [
                     "Haddingtonshire"
                 ],
-                "label": "Birth counties: Haddingtonshire"
+                "other_countries": [],
+                "uk_counties_label": "Birth counties: Haddingtonshire",
+                "other_countries_label": ""
             }
         }
     ]
