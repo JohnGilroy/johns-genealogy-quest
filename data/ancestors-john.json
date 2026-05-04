@@ -1,6 +1,6 @@
 {
     "schema_version": "1.0",
-    "generated_at": "2026-05-03T20:56:21+00:00",
+    "generated_at": "2026-05-04T11:55:38+00:00",
     "site_section": "ancestors",
     "focus": {
         "personID": "I00033",
@@ -19,7 +19,7 @@
         "ancestor_generations": 10,
         "known_ancestors": 104,
         "earliest_birth_year": 1640,
-        "latest_birth_year": 1921,
+        "latest_birth_year": 1896,
         "generation_count_label": "104 known ancestors over 10 ancestral generations",
         "earliest_birth_label": "Earliest known birth: 1640",
         "reader_explanation": "Each section shows one generation of direct ancestors. Couples are grouped together, and the surname trail shows how that line connects back to myself or Chris."
@@ -29,11 +29,11 @@
             "generation": 1,
             "label": "Self",
             "relationship_label": "Self",
-            "time_period": "born around 1949",
+            "time_period": "birth years not yet known",
             "birth_year_range": {
-                "from": 1949,
-                "to": 1949,
-                "label": "born around 1949"
+                "from": null,
+                "to": null,
+                "label": "birth years not yet known"
             },
             "known_count": 1,
             "possible_count": 1,
@@ -42,8 +42,8 @@
                     "ahnentafel": 1,
                     "generation": 1,
                     "personID": "I00033",
-                    "name": "John Whitelaw Gilroy",
-                    "sex": "M",
+                    "name": "Private living person",
+                    "sex": "",
                     "fatherID": "I00031",
                     "motherID": "I00032",
                     "parent_familyID": "F00010",
@@ -53,25 +53,25 @@
                     },
                     "privacy": {
                         "living": true,
-                        "private": false,
+                        "private": true,
                         "is_public": false
                     },
                     "raw": {
-                        "birthdate": "31 Jan 1949",
-                        "birthdatetr": "1949-01-31",
-                        "birthplace": "Elsie Inglis Maternity Hospital, Abbeyhill, Edinburgh, Scotland",
+                        "birthdate": "",
+                        "birthdatetr": "",
+                        "birthplace": "",
                         "deathdate": "",
-                        "deathdatetr": "0000-00-00",
+                        "deathdatetr": "",
                         "deathplace": "",
-                        "branch": "Reynolds",
-                        "famc": "F00010"
+                        "branch": "",
+                        "famc": ""
                     },
                     "display": {
-                        "birthplace": "Abbeyhill, Edinburgh, Scotland",
+                        "birthplace": "",
                         "deathplace": "",
-                        "main_place": "Abbeyhill, Edinburgh, Scotland"
+                        "main_place": ""
                     },
-                    "birth_year": 1949,
+                    "birth_year": null,
                     "slot": 1
                 }
             ],
@@ -86,8 +86,8 @@
                         "ahnentafel": 1,
                         "generation": 1,
                         "personID": "I00033",
-                        "name": "John Whitelaw Gilroy",
-                        "sex": "M",
+                        "name": "Private living person",
+                        "sex": "",
                         "fatherID": "I00031",
                         "motherID": "I00032",
                         "parent_familyID": "F00010",
@@ -97,25 +97,25 @@
                         },
                         "privacy": {
                             "living": true,
-                            "private": false,
+                            "private": true,
                             "is_public": false
                         },
                         "raw": {
-                            "birthdate": "31 Jan 1949",
-                            "birthdatetr": "1949-01-31",
-                            "birthplace": "Elsie Inglis Maternity Hospital, Abbeyhill, Edinburgh, Scotland",
+                            "birthdate": "",
+                            "birthdatetr": "",
+                            "birthplace": "",
                             "deathdate": "",
-                            "deathdatetr": "0000-00-00",
+                            "deathdatetr": "",
                             "deathplace": "",
-                            "branch": "Reynolds",
-                            "famc": "F00010"
+                            "branch": "",
+                            "famc": ""
                         },
                         "display": {
-                            "birthplace": "Abbeyhill, Edinburgh, Scotland",
+                            "birthplace": "",
                             "deathplace": "",
-                            "main_place": "Abbeyhill, Edinburgh, Scotland"
+                            "main_place": ""
                         },
-                        "birth_year": 1949,
+                        "birth_year": null,
                         "slot": 1
                     },
                     "mother": null,
@@ -125,11 +125,9 @@
                 }
             ],
             "birth_places_summary": {
-                "uk_counties": [
-                    "Edinburgh"
-                ],
+                "uk_counties": [],
                 "other_countries": [],
-                "uk_counties_label": "Birth counties: Edinburgh",
+                "uk_counties_label": "",
                 "other_countries_label": ""
             }
         },
@@ -137,11 +135,11 @@
             "generation": 2,
             "label": "Parents",
             "relationship_label": "Parents",
-            "time_period": "Mostly born 1918–1921",
+            "time_period": "birth years not yet known",
             "birth_year_range": {
-                "from": 1918,
-                "to": 1921,
-                "label": "Mostly born 1918–1921"
+                "from": null,
+                "to": null,
+                "label": "birth years not yet known"
             },
             "known_count": 2,
             "possible_count": 2,
@@ -150,7 +148,7 @@
                     "ahnentafel": 2,
                     "generation": 2,
                     "personID": "I00031",
-                    "name": "John Gilroy",
+                    "name": "J. Gilroy",
                     "sex": "M",
                     "fatherID": "I00003",
                     "motherID": "I00004",
@@ -161,32 +159,32 @@
                     },
                     "privacy": {
                         "living": false,
-                        "private": false,
-                        "is_public": true
+                        "private": true,
+                        "is_public": false
                     },
                     "raw": {
-                        "birthdate": "8 Aug 1921",
-                        "birthdatetr": "1921-08-08",
-                        "birthplace": "9 Thorburn Terrace, Penicuik, Midlothian, Scotland",
-                        "deathdate": "20 May 1992",
-                        "deathdatetr": "1992-05-20",
-                        "deathplace": "Royal Infirmary, Lauriston Place, Edinburgh, Scotland",
+                        "birthdate": "1921",
+                        "birthdatetr": "1921",
+                        "birthplace": "Midlothian, Scotland",
+                        "deathdate": "1992",
+                        "deathdatetr": "1992",
+                        "deathplace": "Edinburgh, Scotland",
                         "branch": "Gilroy",
                         "famc": "F00002"
                     },
                     "display": {
-                        "birthplace": "Penicuik, Midlothian, Scotland",
-                        "deathplace": "Lauriston Place, Edinburgh, Scotland",
-                        "main_place": "Penicuik, Midlothian, Scotland"
+                        "birthplace": "Midlothian, Scotland",
+                        "deathplace": "Edinburgh, Scotland",
+                        "main_place": "Midlothian, Scotland"
                     },
-                    "birth_year": 1921,
+                    "birth_year": null,
                     "slot": 2
                 },
                 {
                     "ahnentafel": 3,
                     "generation": 2,
                     "personID": "I00032",
-                    "name": "Jane Inglis Geall Wilson",
+                    "name": "J. Wilson",
                     "sex": "F",
                     "fatherID": "I00444",
                     "motherID": "I00445",
@@ -197,25 +195,25 @@
                     },
                     "privacy": {
                         "living": false,
-                        "private": false,
-                        "is_public": true
+                        "private": true,
+                        "is_public": false
                     },
                     "raw": {
-                        "birthdate": "8 Sep 1918",
-                        "birthdatetr": "1918-09-08",
-                        "birthplace": "13 Arthur Street, Edinburgh, Scotland",
-                        "deathdate": "18 Sep 1970",
-                        "deathdatetr": "1970-09-18",
-                        "deathplace": "Deaconess Hospital, Edinburgh, Scotland",
+                        "birthdate": "1918",
+                        "birthdatetr": "1918",
+                        "birthplace": "Edinburgh, Scotland",
+                        "deathdate": "1970",
+                        "deathdatetr": "1970",
+                        "deathplace": "Edinburgh, Scotland",
                         "branch": "Gilroy",
                         "famc": "F00121"
                     },
                     "display": {
-                        "birthplace": "13 Arthur Street, Edinburgh, Scotland",
-                        "deathplace": "Deaconess Hospital, Edinburgh, Scotland",
-                        "main_place": "13 Arthur Street, Edinburgh, Scotland"
+                        "birthplace": "Edinburgh, Scotland",
+                        "deathplace": "Edinburgh, Scotland",
+                        "main_place": "Edinburgh, Scotland"
                     },
-                    "birth_year": 1918,
+                    "birth_year": null,
                     "slot": 3
                 }
             ],
@@ -228,19 +226,19 @@
                     "path_label": "Self",
                     "plain_label": "Self’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy",
+                        "label": "person",
                         "surnames": [
-                            "Gilroy"
+                            "person"
                         ]
                     },
-                    "display_label": "Gilroy",
+                    "display_label": "person",
                     "father_ahnentafel": 2,
                     "mother_ahnentafel": 3,
                     "father": {
                         "ahnentafel": 2,
                         "generation": 2,
                         "personID": "I00031",
-                        "name": "John Gilroy",
+                        "name": "J. Gilroy",
                         "sex": "M",
                         "fatherID": "I00003",
                         "motherID": "I00004",
@@ -251,32 +249,32 @@
                         },
                         "privacy": {
                             "living": false,
-                            "private": false,
-                            "is_public": true
+                            "private": true,
+                            "is_public": false
                         },
                         "raw": {
-                            "birthdate": "8 Aug 1921",
-                            "birthdatetr": "1921-08-08",
-                            "birthplace": "9 Thorburn Terrace, Penicuik, Midlothian, Scotland",
-                            "deathdate": "20 May 1992",
-                            "deathdatetr": "1992-05-20",
-                            "deathplace": "Royal Infirmary, Lauriston Place, Edinburgh, Scotland",
+                            "birthdate": "1921",
+                            "birthdatetr": "1921",
+                            "birthplace": "Midlothian, Scotland",
+                            "deathdate": "1992",
+                            "deathdatetr": "1992",
+                            "deathplace": "Edinburgh, Scotland",
                             "branch": "Gilroy",
                             "famc": "F00002"
                         },
                         "display": {
-                            "birthplace": "Penicuik, Midlothian, Scotland",
-                            "deathplace": "Lauriston Place, Edinburgh, Scotland",
-                            "main_place": "Penicuik, Midlothian, Scotland"
+                            "birthplace": "Midlothian, Scotland",
+                            "deathplace": "Edinburgh, Scotland",
+                            "main_place": "Midlothian, Scotland"
                         },
-                        "birth_year": 1921,
+                        "birth_year": null,
                         "slot": 2
                     },
                     "mother": {
                         "ahnentafel": 3,
                         "generation": 2,
                         "personID": "I00032",
-                        "name": "Jane Inglis Geall Wilson",
+                        "name": "J. Wilson",
                         "sex": "F",
                         "fatherID": "I00444",
                         "motherID": "I00445",
@@ -287,39 +285,39 @@
                         },
                         "privacy": {
                             "living": false,
-                            "private": false,
-                            "is_public": true
+                            "private": true,
+                            "is_public": false
                         },
                         "raw": {
-                            "birthdate": "8 Sep 1918",
-                            "birthdatetr": "1918-09-08",
-                            "birthplace": "13 Arthur Street, Edinburgh, Scotland",
-                            "deathdate": "18 Sep 1970",
-                            "deathdatetr": "1970-09-18",
-                            "deathplace": "Deaconess Hospital, Edinburgh, Scotland",
+                            "birthdate": "1918",
+                            "birthdatetr": "1918",
+                            "birthplace": "Edinburgh, Scotland",
+                            "deathdate": "1970",
+                            "deathdatetr": "1970",
+                            "deathplace": "Edinburgh, Scotland",
                             "branch": "Gilroy",
                             "famc": "F00121"
                         },
                         "display": {
-                            "birthplace": "13 Arthur Street, Edinburgh, Scotland",
-                            "deathplace": "Deaconess Hospital, Edinburgh, Scotland",
-                            "main_place": "13 Arthur Street, Edinburgh, Scotland"
+                            "birthplace": "Edinburgh, Scotland",
+                            "deathplace": "Edinburgh, Scotland",
+                            "main_place": "Edinburgh, Scotland"
                         },
-                        "birth_year": 1918,
+                        "birth_year": null,
                         "slot": 3
                     },
                     "direct_child": {
                         "ahnentafel": 1,
-                        "name": "John Whitelaw Gilroy",
+                        "name": "Private living person",
                         "personID": "I00033"
                     },
-                    "reader_note": "Their child in the direct line was John Whitelaw Gilroy.",
+                    "reader_note": "Their child in the direct line was Private living person.",
                     "relationship": {
                         "familyID": "F00010",
                         "type": "Marriage",
-                        "date": "29 Mar 1947",
-                        "place": "Haymarket Registry Office, Edinburgh, Scotland",
-                        "label": "Marriage: 29 Mar 1947, Haymarket Registry Office, Edinburgh, Scotland"
+                        "date": "1947",
+                        "place": "Edinburgh, Scotland",
+                        "label": "Marriage: 1947, Edinburgh, Scotland"
                     },
                     "continues": true,
                     "end_of_line": false,
@@ -503,13 +501,13 @@
                     "path_label": "Father",
                     "plain_label": "father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy",
+                        "label": "person → Gilroy",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy",
+                    "display_label": "person → Gilroy",
                     "father_ahnentafel": 4,
                     "mother_ahnentafel": 5,
                     "father": {
@@ -586,16 +584,16 @@
                     },
                     "direct_child": {
                         "ahnentafel": 2,
-                        "name": "John Gilroy",
+                        "name": "J. Gilroy",
                         "personID": "I00031"
                     },
-                    "reader_note": "Their child in the direct line was John Gilroy.",
+                    "reader_note": "Their child in the direct line was J. Gilroy.",
                     "relationship": {
                         "familyID": "F00002",
                         "type": "Marriage",
-                        "date": "21 Oct 1914",
-                        "place": "Gayfield Square, Edinburgh, Scotland",
-                        "label": "Marriage: 21 Oct 1914, Gayfield Square, Edinburgh, Scotland"
+                        "date": "1914",
+                        "place": "Edinburgh, Scotland",
+                        "label": "Marriage: 1914, Edinburgh, Scotland"
                     },
                     "continues": true,
                     "end_of_line": false,
@@ -609,13 +607,13 @@
                     "path_label": "Mother",
                     "plain_label": "mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson",
+                        "label": "person → Wilson",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson",
+                    "display_label": "person → Wilson",
                     "father_ahnentafel": 6,
                     "mother_ahnentafel": 7,
                     "father": {
@@ -692,16 +690,16 @@
                     },
                     "direct_child": {
                         "ahnentafel": 3,
-                        "name": "Jane Inglis Geall Wilson",
+                        "name": "J. Wilson",
                         "personID": "I00032"
                     },
-                    "reader_note": "Their child in the direct line was Jane Inglis Geall Wilson.",
+                    "reader_note": "Their child in the direct line was J. Wilson.",
                     "relationship": {
                         "familyID": "F00121",
                         "type": "Marriage",
                         "date": "24 Apr 1918",
-                        "place": "13 Arthur Street, Edinburgh, Scotland",
-                        "label": "Marriage: 24 Apr 1918, 13 Arthur Street, Edinburgh, Scotland"
+                        "place": "Edinburgh, Scotland",
+                        "label": "Marriage: 24 Apr 1918, Edinburgh, Scotland"
                     },
                     "continues": true,
                     "end_of_line": false,
@@ -1031,14 +1029,14 @@
                     "path_label": "Father → Father",
                     "plain_label": "father’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Gilroy",
+                        "label": "person → Gilroy → Gilroy",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Gilroy"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Gilroy",
+                    "display_label": "person → Gilroy → Gilroy",
                     "father_ahnentafel": 8,
                     "mother_ahnentafel": 9,
                     "father": {
@@ -1138,14 +1136,14 @@
                     "path_label": "Father → Mother",
                     "plain_label": "father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw",
+                        "label": "person → Gilroy → Whitelaw",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw",
+                    "display_label": "person → Gilroy → Whitelaw",
                     "father_ahnentafel": 10,
                     "mother_ahnentafel": 11,
                     "father": {
@@ -1230,8 +1228,8 @@
                         "familyID": "F00003",
                         "type": "Marriage",
                         "date": "31 Dec 1888",
-                        "place": "North Esk Manse, Musselburgh, East Lothian, Scotland",
-                        "label": "Marriage: 31 Dec 1888, North Esk Manse, Musselburgh, East Lothian, Scotland"
+                        "place": "Musselburgh, East Lothian, Scotland",
+                        "label": "Marriage: 31 Dec 1888, Musselburgh, East Lothian, Scotland"
                     },
                     "continues": true,
                     "end_of_line": false,
@@ -1245,14 +1243,14 @@
                     "path_label": "Mother → Father",
                     "plain_label": "mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Wilson",
+                        "label": "person → Wilson → Wilson",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Wilson"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Wilson",
+                    "display_label": "person → Wilson → Wilson",
                     "father_ahnentafel": 12,
                     "mother_ahnentafel": 13,
                     "father": {
@@ -1337,8 +1335,8 @@
                         "familyID": "F00122",
                         "type": "Marriage",
                         "date": "7 Feb 1891",
-                        "place": "The Register Office, Newcastle upon Tyne, Northumberland, England",
-                        "label": "Marriage: 7 Feb 1891, The Register Office, Newcastle upon Tyne, Northumberland, England"
+                        "place": "Newcastle upon Tyne, Northumberland, England",
+                        "label": "Marriage: 7 Feb 1891, Newcastle upon Tyne, Northumberland, England"
                     },
                     "continues": true,
                     "end_of_line": false,
@@ -1352,14 +1350,14 @@
                     "path_label": "Mother → Mother",
                     "plain_label": "mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis",
+                        "label": "person → Wilson → Inglis",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis",
+                    "display_label": "person → Wilson → Inglis",
                     "father_ahnentafel": 14,
                     "mother_ahnentafel": 15,
                     "father": {
@@ -2060,15 +2058,15 @@
                     "path_label": "Father → Father → Mother",
                     "plain_label": "father’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Gilroy → Harris",
+                        "label": "person → Gilroy → Gilroy → Harris",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Gilroy",
                             "Harris"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Gilroy → Harris",
+                    "display_label": "person → Gilroy → Gilroy → Harris",
                     "father_ahnentafel": 18,
                     "mother_ahnentafel": 19,
                     "father": {
@@ -2168,15 +2166,15 @@
                     "path_label": "Father → Mother → Father",
                     "plain_label": "father’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw",
                     "father_ahnentafel": 20,
                     "mother_ahnentafel": 21,
                     "father": {
@@ -2261,8 +2259,8 @@
                         "familyID": "F00006",
                         "type": "Marriage",
                         "date": "2 Jun 1862",
-                        "place": "4 Inverleith Row, Edinburgh, Scotland",
-                        "label": "Marriage: 2 Jun 1862, 4 Inverleith Row, Edinburgh, Scotland"
+                        "place": "Edinburgh, Scotland",
+                        "label": "Marriage: 2 Jun 1862, Edinburgh, Scotland"
                     },
                     "continues": true,
                     "end_of_line": false,
@@ -2276,15 +2274,15 @@
                     "path_label": "Father → Mother → Mother",
                     "plain_label": "father’s mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Blacklaw",
+                        "label": "person → Gilroy → Whitelaw → Blacklaw",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Blacklaw"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Blacklaw",
+                    "display_label": "person → Gilroy → Whitelaw → Blacklaw",
                     "father_ahnentafel": 22,
                     "mother_ahnentafel": 23,
                     "father": {
@@ -2384,15 +2382,15 @@
                     "path_label": "Mother → Father → Father",
                     "plain_label": "mother’s father’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Wilson → Hinshelwood",
+                        "label": "person → Wilson → Wilson → Hinshelwood",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Wilson",
                             "Hinshelwood"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Wilson → Hinshelwood",
+                    "display_label": "person → Wilson → Wilson → Hinshelwood",
                     "father_ahnentafel": 24,
                     "mother_ahnentafel": 25,
                     "father": {
@@ -2477,8 +2475,8 @@
                         "familyID": "F00126",
                         "type": "Marriage",
                         "date": "14 Jun 1855",
-                        "place": "10 Windmill Street, Edinburgh, Scotland",
-                        "label": "Marriage: 14 Jun 1855, 10 Windmill Street, Edinburgh, Scotland"
+                        "place": "Edinburgh, Scotland",
+                        "label": "Marriage: 14 Jun 1855, Edinburgh, Scotland"
                     },
                     "continues": true,
                     "end_of_line": false,
@@ -2492,15 +2490,15 @@
                     "path_label": "Mother → Father → Mother",
                     "plain_label": "mother’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Wilson → Wilson",
+                        "label": "person → Wilson → Wilson → Wilson",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Wilson",
                             "Wilson"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Wilson → Wilson",
+                    "display_label": "person → Wilson → Wilson → Wilson",
                     "father_ahnentafel": 26,
                     "mother_ahnentafel": 27,
                     "father": {
@@ -2600,15 +2598,15 @@
                     "path_label": "Mother → Mother → Father",
                     "plain_label": "mother’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → Whitton",
+                        "label": "person → Wilson → Inglis → Whitton",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "Whitton"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → Whitton",
+                    "display_label": "person → Wilson → Inglis → Whitton",
                     "father_ahnentafel": 28,
                     "mother_ahnentafel": 29,
                     "father": {
@@ -2693,8 +2691,8 @@
                         "familyID": "F00157",
                         "type": "Marriage",
                         "date": "13 Feb 1863",
-                        "place": "Guildtown, St Martins, Perthshire, Scotland",
-                        "label": "Marriage: 13 Feb 1863, Guildtown, St Martins, Perthshire, Scotland"
+                        "place": "St Martins, Perthshire, Scotland",
+                        "label": "Marriage: 13 Feb 1863, St Martins, Perthshire, Scotland"
                     },
                     "continues": true,
                     "end_of_line": false,
@@ -2708,15 +2706,15 @@
                     "path_label": "Mother → Mother → Mother",
                     "plain_label": "mother’s mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → McLellan",
+                        "label": "person → Wilson → Inglis → McLellan",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "McLellan"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → McLellan",
+                    "display_label": "person → Wilson → Inglis → McLellan",
                     "father_ahnentafel": 30,
                     "mother_ahnentafel": 31,
                     "father": {
@@ -3250,7 +3248,7 @@
                     },
                     "display": {
                         "birthplace": "Ashford, Kent, England",
-                        "deathplace": "3 Canongate, Edinburgh, Scotland",
+                        "deathplace": "Edinburgh, Scotland",
                         "main_place": "Ashford, Kent, England"
                     },
                     "birth_year": 1812,
@@ -3682,7 +3680,7 @@
                     },
                     "display": {
                         "birthplace": "Bendochy, Perthshire, Scotland",
-                        "deathplace": "9 Kinnaird Street, Dundee, Scotland",
+                        "deathplace": "Dundee, Scotland",
                         "main_place": "Bendochy, Perthshire, Scotland"
                     },
                     "birth_year": 1808,
@@ -3842,16 +3840,16 @@
                     "path_label": "Father → Mother → Father → Father",
                     "plain_label": "father’s mother’s father’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
                             "Whitelaw"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw",
                     "father_ahnentafel": 40,
                     "mother_ahnentafel": 41,
                     "father": {
@@ -3951,16 +3949,16 @@
                     "path_label": "Father → Mother → Father → Mother",
                     "plain_label": "father’s mother’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Forbes",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
                             "Forbes"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Forbes",
                     "father_ahnentafel": 42,
                     "mother_ahnentafel": 43,
                     "father": {
@@ -4060,16 +4058,16 @@
                     "path_label": "Father → Mother → Mother → Father",
                     "plain_label": "father’s mother’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Blacklaw → Blacklaw",
+                        "label": "person → Gilroy → Whitelaw → Blacklaw → Blacklaw",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Blacklaw",
                             "Blacklaw"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Blacklaw → Blacklaw",
+                    "display_label": "person → Gilroy → Whitelaw → Blacklaw → Blacklaw",
                     "father_ahnentafel": 44,
                     "mother_ahnentafel": 45,
                     "father": {
@@ -4169,16 +4167,16 @@
                     "path_label": "Father → Mother → Mother → Mother",
                     "plain_label": "father’s mother’s mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Blacklaw → Mathieson",
+                        "label": "person → Gilroy → Whitelaw → Blacklaw → Mathieson",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Blacklaw",
                             "Mathieson"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Blacklaw → Mathieson",
+                    "display_label": "person → Gilroy → Whitelaw → Blacklaw → Mathieson",
                     "father_ahnentafel": 46,
                     "mother_ahnentafel": 47,
                     "father": {
@@ -4247,7 +4245,7 @@
                         },
                         "display": {
                             "birthplace": "Ashford, Kent, England",
-                            "deathplace": "3 Canongate, Edinburgh, Scotland",
+                            "deathplace": "Edinburgh, Scotland",
                             "main_place": "Ashford, Kent, England"
                         },
                         "birth_year": 1812,
@@ -4278,16 +4276,16 @@
                     "path_label": "Mother → Father → Father → Father",
                     "plain_label": "mother’s father’s father’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Wilson → Hinshelwood → Hinshelwood",
+                        "label": "person → Wilson → Wilson → Hinshelwood → Hinshelwood",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Wilson",
                             "Hinshelwood",
                             "Hinshelwood"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Wilson → Hinshelwood → Hinshelwood",
+                    "display_label": "person → Wilson → Wilson → Hinshelwood → Hinshelwood",
                     "father_ahnentafel": 48,
                     "mother_ahnentafel": 49,
                     "father": {
@@ -4387,16 +4385,16 @@
                     "path_label": "Mother → Father → Father → Mother",
                     "plain_label": "mother’s father’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Wilson → Hinshelwood → Messer",
+                        "label": "person → Wilson → Wilson → Hinshelwood → Messer",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Wilson",
                             "Hinshelwood",
                             "Messer"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Wilson → Hinshelwood → Messer",
+                    "display_label": "person → Wilson → Wilson → Hinshelwood → Messer",
                     "father_ahnentafel": 50,
                     "mother_ahnentafel": 51,
                     "father": {
@@ -4481,8 +4479,8 @@
                         "familyID": "F00128",
                         "type": "Marriage",
                         "date": "25 Oct 1821",
-                        "place": "St Cuthberts, Edinburgh, Scotland",
-                        "label": "Marriage: 25 Oct 1821, St Cuthberts, Edinburgh, Scotland"
+                        "place": "Edinburgh, Scotland",
+                        "label": "Marriage: 25 Oct 1821, Edinburgh, Scotland"
                     },
                     "continues": true,
                     "end_of_line": false,
@@ -4496,16 +4494,16 @@
                     "path_label": "Mother → Father → Mother → Father",
                     "plain_label": "mother’s father’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Wilson → Wilson → Wilson",
+                        "label": "person → Wilson → Wilson → Wilson → Wilson",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Wilson",
                             "Wilson",
                             "Wilson"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Wilson → Wilson → Wilson",
+                    "display_label": "person → Wilson → Wilson → Wilson → Wilson",
                     "father_ahnentafel": 52,
                     "mother_ahnentafel": 53,
                     "father": {
@@ -4605,16 +4603,16 @@
                     "path_label": "Mother → Father → Mother → Mother",
                     "plain_label": "mother’s father’s mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Wilson → Wilson → Penman",
+                        "label": "person → Wilson → Wilson → Wilson → Penman",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Wilson",
                             "Wilson",
                             "Penman"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Wilson → Wilson → Penman",
+                    "display_label": "person → Wilson → Wilson → Wilson → Penman",
                     "father_ahnentafel": 54,
                     "mother_ahnentafel": 55,
                     "father": {
@@ -4714,16 +4712,16 @@
                     "path_label": "Mother → Mother → Father → Father",
                     "plain_label": "mother’s mother’s father’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → Whitton → Whitton",
+                        "label": "person → Wilson → Inglis → Whitton → Whitton",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "Whitton",
                             "Whitton"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → Whitton → Whitton",
+                    "display_label": "person → Wilson → Inglis → Whitton → Whitton",
                     "father_ahnentafel": 56,
                     "mother_ahnentafel": 57,
                     "father": {
@@ -4823,16 +4821,16 @@
                     "path_label": "Mother → Mother → Father → Mother",
                     "plain_label": "mother’s mother’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → Whitton → McDonald",
+                        "label": "person → Wilson → Inglis → Whitton → McDonald",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "Whitton",
                             "McDonald"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → Whitton → McDonald",
+                    "display_label": "person → Wilson → Inglis → Whitton → McDonald",
                     "father_ahnentafel": 58,
                     "mother_ahnentafel": 59,
                     "father": {
@@ -4901,7 +4899,7 @@
                         },
                         "display": {
                             "birthplace": "Bendochy, Perthshire, Scotland",
-                            "deathplace": "9 Kinnaird Street, Dundee, Scotland",
+                            "deathplace": "Dundee, Scotland",
                             "main_place": "Bendochy, Perthshire, Scotland"
                         },
                         "birth_year": 1808,
@@ -4917,8 +4915,8 @@
                         "familyID": "F00158",
                         "type": "Marriage",
                         "date": "22 Nov 1827",
-                        "place": "St Martins, Perthshire, Scotland",
-                        "label": "Marriage: 22 Nov 1827, St Martins, Perthshire, Scotland"
+                        "place": "Perthshire, Scotland",
+                        "label": "Marriage: 22 Nov 1827, Perthshire, Scotland"
                     },
                     "continues": true,
                     "end_of_line": false,
@@ -4932,16 +4930,16 @@
                     "path_label": "Mother → Mother → Mother → Father",
                     "plain_label": "mother’s mother’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → McLellan → Inglis",
+                        "label": "person → Wilson → Inglis → McLellan → Inglis",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "McLellan",
                             "Inglis"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → McLellan → Inglis",
+                    "display_label": "person → Wilson → Inglis → McLellan → Inglis",
                     "father_ahnentafel": 60,
                     "mother_ahnentafel": 61,
                     "father": {
@@ -5041,16 +5039,16 @@
                     "path_label": "Mother → Mother → Mother → Mother",
                     "plain_label": "mother’s mother’s mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → McLellan → McLellan",
+                        "label": "person → Wilson → Inglis → McLellan → McLellan",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "McLellan",
                             "McLellan"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → McLellan → McLellan",
+                    "display_label": "person → Wilson → Inglis → McLellan → McLellan",
                     "father_ahnentafel": 62,
                     "mother_ahnentafel": 63,
                     "father": {
@@ -6845,9 +6843,9 @@
                     "path_label": "Father → Mother → Father → Father → Father",
                     "plain_label": "father’s mother’s father’s father’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -6855,7 +6853,7 @@
                             "Whitlie"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie",
                     "father_ahnentafel": 80,
                     "mother_ahnentafel": 81,
                     "father": {
@@ -6955,9 +6953,9 @@
                     "path_label": "Father → Mother → Father → Father → Mother",
                     "plain_label": "father’s mother’s father’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw → Turnbull",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw → Turnbull",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -6965,7 +6963,7 @@
                             "Turnbull"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw → Turnbull",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw → Turnbull",
                     "father_ahnentafel": 82,
                     "mother_ahnentafel": 83,
                     "father": {
@@ -7065,9 +7063,9 @@
                     "path_label": "Father → Mother → Father → Mother → Father",
                     "plain_label": "father’s mother’s father’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -7075,7 +7073,7 @@
                             "Forbes"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes",
                     "father_ahnentafel": 84,
                     "mother_ahnentafel": 85,
                     "father": {
@@ -7175,9 +7173,9 @@
                     "path_label": "Father → Mother → Father → Mother → Mother",
                     "plain_label": "father’s mother’s father’s mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Anderson",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Anderson",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -7185,7 +7183,7 @@
                             "Anderson"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Anderson",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Anderson",
                     "father_ahnentafel": 86,
                     "mother_ahnentafel": 87,
                     "father": {
@@ -7285,9 +7283,9 @@
                     "path_label": "Father → Mother → Mother → Mother → Mother",
                     "plain_label": "father’s mother’s mother’s mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Blacklaw → Mathieson → Stretton",
+                        "label": "person → Gilroy → Whitelaw → Blacklaw → Mathieson → Stretton",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Blacklaw",
@@ -7295,7 +7293,7 @@
                             "Stretton"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Blacklaw → Mathieson → Stretton",
+                    "display_label": "person → Gilroy → Whitelaw → Blacklaw → Mathieson → Stretton",
                     "father_ahnentafel": 94,
                     "mother_ahnentafel": 95,
                     "father": {
@@ -7395,9 +7393,9 @@
                     "path_label": "Mother → Father → Father → Mother → Mother",
                     "plain_label": "mother’s father’s father’s mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Wilson → Hinshelwood → Messer → Alston",
+                        "label": "person → Wilson → Wilson → Hinshelwood → Messer → Alston",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Wilson",
                             "Hinshelwood",
@@ -7405,7 +7403,7 @@
                             "Alston"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Wilson → Hinshelwood → Messer → Alston",
+                    "display_label": "person → Wilson → Wilson → Hinshelwood → Messer → Alston",
                     "father_ahnentafel": 102,
                     "mother_ahnentafel": 103,
                     "father": {
@@ -7502,9 +7500,9 @@
                     "path_label": "Mother → Father → Mother → Mother → Father",
                     "plain_label": "mother’s father’s mother’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Wilson → Wilson → Penman → Penman",
+                        "label": "person → Wilson → Wilson → Wilson → Penman → Penman",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Wilson",
                             "Wilson",
@@ -7512,7 +7510,7 @@
                             "Penman"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Wilson → Wilson → Penman → Penman",
+                    "display_label": "person → Wilson → Wilson → Wilson → Penman → Penman",
                     "father_ahnentafel": 108,
                     "mother_ahnentafel": 109,
                     "father": {
@@ -7612,9 +7610,9 @@
                     "path_label": "Mother → Mother → Father → Father → Mother",
                     "plain_label": "mother’s mother’s father’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → Whitton → Whitton → Mill",
+                        "label": "person → Wilson → Inglis → Whitton → Whitton → Mill",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "Whitton",
@@ -7622,7 +7620,7 @@
                             "Mill"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → Whitton → Whitton → Mill",
+                    "display_label": "person → Wilson → Inglis → Whitton → Whitton → Mill",
                     "father_ahnentafel": 114,
                     "mother_ahnentafel": 115,
                     "father": {
@@ -7719,9 +7717,9 @@
                     "path_label": "Mother → Mother → Father → Mother → Father",
                     "plain_label": "mother’s mother’s father’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → Whitton → McDonald → McDonald",
+                        "label": "person → Wilson → Inglis → Whitton → McDonald → McDonald",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "Whitton",
@@ -7729,7 +7727,7 @@
                             "McDonald"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → Whitton → McDonald → McDonald",
+                    "display_label": "person → Wilson → Inglis → Whitton → McDonald → McDonald",
                     "father_ahnentafel": 116,
                     "mother_ahnentafel": 117,
                     "father": {
@@ -7829,9 +7827,9 @@
                     "path_label": "Mother → Mother → Father → Mother → Mother",
                     "plain_label": "mother’s mother’s father’s mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → Whitton → McDonald → Stewart",
+                        "label": "person → Wilson → Inglis → Whitton → McDonald → Stewart",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "Whitton",
@@ -7839,7 +7837,7 @@
                             "Stewart"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → Whitton → McDonald → Stewart",
+                    "display_label": "person → Wilson → Inglis → Whitton → McDonald → Stewart",
                     "father_ahnentafel": 118,
                     "mother_ahnentafel": 119,
                     "father": {
@@ -7939,9 +7937,9 @@
                     "path_label": "Mother → Mother → Mother → Father → Father",
                     "plain_label": "mother’s mother’s mother’s father’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → McLellan → Inglis → Inglis",
+                        "label": "person → Wilson → Inglis → McLellan → Inglis → Inglis",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "McLellan",
@@ -7949,7 +7947,7 @@
                             "Inglis"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → McLellan → Inglis → Inglis",
+                    "display_label": "person → Wilson → Inglis → McLellan → Inglis → Inglis",
                     "father_ahnentafel": 120,
                     "mother_ahnentafel": 121,
                     "father": {
@@ -8049,9 +8047,9 @@
                     "path_label": "Mother → Mother → Mother → Father → Mother",
                     "plain_label": "mother’s mother’s mother’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → McLellan → Inglis → Syme",
+                        "label": "person → Wilson → Inglis → McLellan → Inglis → Syme",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "McLellan",
@@ -8059,7 +8057,7 @@
                             "Syme"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → McLellan → Inglis → Syme",
+                    "display_label": "person → Wilson → Inglis → McLellan → Inglis → Syme",
                     "father_ahnentafel": 122,
                     "mother_ahnentafel": 123,
                     "father": {
@@ -8159,9 +8157,9 @@
                     "path_label": "Mother → Mother → Mother → Mother → Father",
                     "plain_label": "mother’s mother’s mother’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → McLellan → McLellan → McLellan",
+                        "label": "person → Wilson → Inglis → McLellan → McLellan → McLellan",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "McLellan",
@@ -8169,7 +8167,7 @@
                             "McLellan"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → McLellan → McLellan → McLellan",
+                    "display_label": "person → Wilson → Inglis → McLellan → McLellan → McLellan",
                     "father_ahnentafel": 124,
                     "mother_ahnentafel": 125,
                     "father": {
@@ -8269,9 +8267,9 @@
                     "path_label": "Mother → Mother → Mother → Mother → Mother",
                     "plain_label": "mother’s mother’s mother’s mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → McLellan → McLellan → Gall",
+                        "label": "person → Wilson → Inglis → McLellan → McLellan → Gall",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "McLellan",
@@ -8279,7 +8277,7 @@
                             "Gall"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → McLellan → McLellan → Gall",
+                    "display_label": "person → Wilson → Inglis → McLellan → McLellan → Gall",
                     "father_ahnentafel": 126,
                     "mother_ahnentafel": 127,
                     "father": {
@@ -10173,9 +10171,9 @@
                     "path_label": "Father → Mother → Father → Father → Father → Mother",
                     "plain_label": "father’s mother’s father’s father’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie → Cairncross",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie → Cairncross",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -10184,7 +10182,7 @@
                             "Cairncross"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie → Cairncross",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie → Cairncross",
                     "father_ahnentafel": 162,
                     "mother_ahnentafel": 163,
                     "father": {
@@ -10284,9 +10282,9 @@
                     "path_label": "Father → Mother → Father → Father → Mother → Father",
                     "plain_label": "father’s mother’s father’s father’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw → Turnbull → Turnbull",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw → Turnbull → Turnbull",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -10295,7 +10293,7 @@
                             "Turnbull"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw → Turnbull → Turnbull",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw → Turnbull → Turnbull",
                     "father_ahnentafel": 164,
                     "mother_ahnentafel": 165,
                     "father": {
@@ -10395,9 +10393,9 @@
                     "path_label": "Father → Mother → Father → Mother → Father → Father",
                     "plain_label": "father’s mother’s father’s mother’s father’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -10406,7 +10404,7 @@
                             "Forbes"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes",
                     "father_ahnentafel": 168,
                     "mother_ahnentafel": 169,
                     "father": {
@@ -10506,9 +10504,9 @@
                     "path_label": "Father → Mother → Father → Mother → Father → Mother",
                     "plain_label": "father’s mother’s father’s mother’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Peden",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Peden",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -10517,7 +10515,7 @@
                             "Peden"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Peden",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Peden",
                     "father_ahnentafel": 170,
                     "mother_ahnentafel": 171,
                     "father": {
@@ -10617,9 +10615,9 @@
                     "path_label": "Father → Mother → Father → Mother → Mother → Mother",
                     "plain_label": "father’s mother’s father’s mother’s mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Anderson → Edinton",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Anderson → Edinton",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -10628,7 +10626,7 @@
                             "Edinton"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Anderson → Edinton",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Anderson → Edinton",
                     "father_ahnentafel": 174,
                     "mother_ahnentafel": 175,
                     "father": {
@@ -10728,9 +10726,9 @@
                     "path_label": "Father → Mother → Mother → Mother → Mother → Father",
                     "plain_label": "father’s mother’s mother’s mother’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Blacklaw → Mathieson → Stretton → Stretton",
+                        "label": "person → Gilroy → Whitelaw → Blacklaw → Mathieson → Stretton → Stretton",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Blacklaw",
@@ -10739,7 +10737,7 @@
                             "Stretton"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Blacklaw → Mathieson → Stretton → Stretton",
+                    "display_label": "person → Gilroy → Whitelaw → Blacklaw → Mathieson → Stretton → Stretton",
                     "father_ahnentafel": 188,
                     "mother_ahnentafel": 189,
                     "father": {
@@ -10839,9 +10837,9 @@
                     "path_label": "Mother → Mother → Mother → Father → Father → Father",
                     "plain_label": "mother’s mother’s mother’s father’s father’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → McLellan → Inglis → Inglis → Inglis",
+                        "label": "person → Wilson → Inglis → McLellan → Inglis → Inglis → Inglis",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "McLellan",
@@ -10850,7 +10848,7 @@
                             "Inglis"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → McLellan → Inglis → Inglis → Inglis",
+                    "display_label": "person → Wilson → Inglis → McLellan → Inglis → Inglis → Inglis",
                     "father_ahnentafel": 240,
                     "mother_ahnentafel": 241,
                     "father": {
@@ -10947,9 +10945,9 @@
                     "path_label": "Mother → Mother → Mother → Father → Mother → Father",
                     "plain_label": "mother’s mother’s mother’s father’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → McLellan → Inglis → Syme → Syme",
+                        "label": "person → Wilson → Inglis → McLellan → Inglis → Syme → Syme",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "McLellan",
@@ -10958,7 +10956,7 @@
                             "Syme"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → McLellan → Inglis → Syme → Syme",
+                    "display_label": "person → Wilson → Inglis → McLellan → Inglis → Syme → Syme",
                     "father_ahnentafel": 244,
                     "mother_ahnentafel": 245,
                     "father": {
@@ -11058,9 +11056,9 @@
                     "path_label": "Mother → Mother → Mother → Mother → Mother → Mother",
                     "plain_label": "mother’s mother’s mother’s mother’s mother’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Wilson → Inglis → McLellan → McLellan → Gall → Muir",
+                        "label": "person → Wilson → Inglis → McLellan → McLellan → Gall → Muir",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Wilson",
                             "Inglis",
                             "McLellan",
@@ -11069,7 +11067,7 @@
                             "Muir"
                         ]
                     },
-                    "display_label": "Gilroy → Wilson → Inglis → McLellan → McLellan → Gall → Muir",
+                    "display_label": "person → Wilson → Inglis → McLellan → McLellan → Gall → Muir",
                     "father_ahnentafel": 254,
                     "mother_ahnentafel": 255,
                     "father": {
@@ -12260,9 +12258,9 @@
                     "path_label": "Father → Mother → Father → Father → Father → Mother → Father",
                     "plain_label": "father’s mother’s father’s father’s father’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie → Cairncross → Cairncross",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie → Cairncross → Cairncross",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -12272,7 +12270,7 @@
                             "Cairncross"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie → Cairncross → Cairncross",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie → Cairncross → Cairncross",
                     "father_ahnentafel": 324,
                     "mother_ahnentafel": 325,
                     "father": {
@@ -12372,9 +12370,9 @@
                     "path_label": "Father → Mother → Father → Mother → Father → Father → Mother",
                     "plain_label": "father’s mother’s father’s mother’s father’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes → Allan",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes → Allan",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -12384,7 +12382,7 @@
                             "Allan"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes → Allan",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes → Allan",
                     "father_ahnentafel": 338,
                     "mother_ahnentafel": 339,
                     "father": {
@@ -12785,9 +12783,9 @@
                     "path_label": "Father → Mother → Father → Father → Father → Mother → Father → Mother",
                     "plain_label": "father’s mother’s father’s father’s father’s mother’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie → Cairncross → Cairncross → Lamb",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie → Cairncross → Cairncross → Lamb",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -12798,7 +12796,7 @@
                             "Lamb"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie → Cairncross → Cairncross → Lamb",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Whitelaw → Whitlie → Cairncross → Cairncross → Lamb",
                     "father_ahnentafel": 650,
                     "mother_ahnentafel": 651,
                     "father": {
@@ -12898,9 +12896,9 @@
                     "path_label": "Father → Mother → Father → Mother → Father → Father → Mother → Father",
                     "plain_label": "father’s mother’s father’s mother’s father’s father’s mother’s father’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes → Allan → Allan",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes → Allan → Allan",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -12911,7 +12909,7 @@
                             "Allan"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes → Allan → Allan",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes → Allan → Allan",
                     "father_ahnentafel": 676,
                     "mother_ahnentafel": 677,
                     "father": {
@@ -13306,9 +13304,9 @@
                     "path_label": "Father → Mother → Father → Mother → Father → Father → Mother → Father → Mother",
                     "plain_label": "father’s mother’s father’s mother’s father’s father’s mother’s father’s mother’s parents",
                     "breadcrumb": {
-                        "label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes → Allan → Allan → Jackson",
+                        "label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes → Allan → Allan → Jackson",
                         "surnames": [
-                            "Gilroy",
+                            "person",
                             "Gilroy",
                             "Whitelaw",
                             "Whitelaw",
@@ -13320,7 +13318,7 @@
                             "Jackson"
                         ]
                     },
-                    "display_label": "Gilroy → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes → Allan → Allan → Jackson",
+                    "display_label": "person → Gilroy → Whitelaw → Whitelaw → Forbes → Forbes → Forbes → Allan → Allan → Jackson",
                     "father_ahnentafel": 1354,
                     "mother_ahnentafel": 1355,
                     "father": {
