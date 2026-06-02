@@ -641,57 +641,6 @@ hr {
   border: 1px solid var(--jwg-border-subtle);
 }
 
-.bio-card-row {
-  display: flex;
-  gap: 1rem;
-}
-.bio-card-row-2 {
-  margin-top: 0.25rem; /* was .6rem */
-  padding-top: 0.35rem;
-  border-top: 1px solid var(--jwg-border-subtle);
-}
-
-.bio-card-rel {
-  opacity: 0.85;
-  font-size: 0.95rem;
-}
-
-.bio-card-row-1 {
-  align-items: center;
-  justify-content: space-between;
-}
-
-.bio-card-main {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  flex-wrap: nowrap;
-  min-width: 0;
-}
-
-.bio-card-title {
-  margin: 0;
-  font-size: 1.1rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.bio-card-meta {
-  margin: 0;
-  opacity: 0.85;
-  font-size: 0.95rem;
-  white-space: nowrap;
-}
-
-.bio-card-side {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  flex-wrap: nowrap; /* key: don’t stack badge/button */
-  justify-content: flex-end;
-}
-
 .badge {
   display: inline-block;
   padding: 0.2rem 0.55rem;
