@@ -1,0 +1,16 @@
+George Blacklaw publication assets required in this folder before publication:
+
+1. George Blacklaw.pdf
+   Final 85-page landscape biography.
+
+2. cover.jpg
+   Export or crop of the front cover page.
+
+3. George Blacklaw-page010.jpg
+   Suggested sample: Midlothian map spread/page.
+
+4. George Blacklaw-page014.jpg
+   Suggested sample: Wester Millerhill/Caroline Mathieson story page.
+
+The preview page and biography index already reference these filenames.
+The retained I00009.html redirects the old public address to preview.html.
