@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>The Journey Begins – From Memories to History</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="/johns-genealogy-quest/" />
+    <link rel="stylesheet" href="assets/css/jwg-site.css" />
+    <link rel="stylesheet" href="assets/css/jwg-spotlight.css" />
+    <link rel="stylesheet" href="assets/css/jwg-stories-index.css" />
+    <style>
+      .story-preview-hero {
+        display: grid;
+        grid-template-columns: minmax(240px, 42%) 1fr;
+        gap: 1.5rem;
+        align-items: start;
+      }
+      .story-cover-card {
+        background: #fff;
+        border: 1px solid var(--jwg-border-subtle);
+        border-radius: var(--jwg-radius-lg);
+        box-shadow: var(--jwg-shadow-soft);
+        padding: 0.75rem;
+      }
+      .story-cover-card img {
+        display: block;
+        border-radius: 8px;
+        border: 1px solid var(--jwg-border-subtle);
+      }
+      .story-preview-title {
+        font-family: var(--jwg-font-serif);
+        color: #1d355d;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        line-height: 1.05;
+        margin: 0 0 0.25rem;
+      }
+      .story-preview-subtitle {
+        font-family: var(--jwg-font-serif);
+        color: var(--jwg-brown);
+        font-size: 1.35rem;
+        margin: 0 0 0.75rem;
+      }
+      .story-preview-meta {
+        color: var(--jwg-text-muted);
+        margin: 0 0 1rem;
+      }
+      .story-blurb {
+        font-family: var(--jwg-font-serif);
+        font-size: 1.12rem;
+        line-height: 1.65;
+      }
+      @media (max-width: 760px) {
+        .story-preview-hero {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header spotlight-header">
+      <div class="site-header-inner spotlight-header-inner">
+        <button
+          class="spotlight-nav-toggle"
+          type="button"
+          aria-label="Menu"
+          aria-expanded="false"
+          aria-controls="spotlightNav"
+        >
+          <span class="spotlight-nav-icon" aria-hidden="true"></span></button
+        ><a href="index.html" class="site-title">John&#39;s Genealogy Quest</a>
+        <nav id="spotlightNav" class="spotlight-nav" aria-label="Site">
+          <a href="index.html">Home</a
+          ><a class="is-active" href="stories/index.html">Stories</a
+          ><a href="spotlights/index.html">Spotlights</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="page-inner">
+        <p class="small-note">
+          <a href="stories/index.html">← Back to Stories</a>
+        </p>
+        <article class="card">
+          <section class="story-preview-hero">
+            <div class="story-cover-card">
+              <img
+                src="stories/the-journey-begins/cover.jpg"
+                alt="Cover of The Journey Begins"
+              />
+            </div>
+            <div>
+              <p class="page-kicker">From Memories to History</p>
+              <h1 class="story-preview-title">The Journey Begins</h1>
+              <p class="story-preview-subtitle">
+                The introduction to our family story
+              </p>
+              <p class="story-preview-meta">
+                Illustrated introduction · Landscape format · 2026
+              </p>
+              <div class="story-blurb">
+                <p>
+                  <em>The Journey Begins</em> introduces the From Memories to
+                  History project: how family memories, photographs, documents
+                  and genealogical research are being brought together as a
+                  connected series of illustrated stories.
+                </p>
+                <p>
+                  It provides the starting point for the individual lives and
+                  wider family branches presented elsewhere in this collection.
+                </p>
+              </div>
+
+              <div class="bio-action-row">
+            <a class="jwg-btn jwg-btn-primary" href="stories/the-journey-begins/The Journey Begins.pdf">Download the full story</a>
+          </div>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <div class="site-footer-text">
+          <p class="site-footer-line">
+            Data from John’s research · Design JWG and ChatGPT
+          </p>
+          <p class="site-footer-line site-footer-line--short">
+            John’s research · JWG + ChatGPT
+          </p>
+        </div>
+        <div class="site-footer-actions">
+          <a class="jwg-btn jwg-btn--footer" href="index.html">Home</a
+          ><a
+            class="jwg-btn jwg-btn--footer is-active"
+            href="stories/index.html"
+            >Stories</a
+          ><a class="jwg-btn jwg-btn--footer" href="spotlights/index.html"
+            >Spotlights</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        function c(b, n) {
+          n.classList.remove("is-open");
+          b.setAttribute("aria-expanded", "false");
+        }
+        document.addEventListener("click", function (e) {
+          const b = e.target.closest(".spotlight-nav-toggle"),
+            n = document.getElementById("spotlightNav");
+          if (!n) return;
+          if (b) {
+            const o = !n.classList.contains("is-open");
+            n.classList.toggle("is-open", o);
+            b.setAttribute("aria-expanded", o ? "true" : "false");
+            return;
+          }
+          if (
+            n.classList.contains("is-open") &&
+            !e.target.closest("#spotlightNav")
+          ) {
+            const x = document.querySelector(".spotlight-nav-toggle");
+            if (x) c(x, n);
+          }
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key !== "Escape") return;
+          const n = document.getElementById("spotlightNav"),
+            b = document.querySelector(".spotlight-nav-toggle");
+          if (n && b && n.classList.contains("is-open")) c(b, n);
+        });
+      })();
+    </script>
+    <script src="js/kiosk-runtime.js"></script>
+  </body>
+</html>
