@@ -1,29 +1,31 @@
 {
     "home": "index.html",
     "pages": [
-        "spotlights/longevity/reynolds/longest_lived_male_reynolds.html",
-        "spotlights/origins/gilroy_wilson/origins_gilroy_wilson.html",
-        "spotlights/plantagenet/royal_connection_edward_iii.html",
-        "spotlights/children/most_children_top5.html",
-        "spotlights/origins/tree/origins_tree.html",
-        "spotlights/longevity/law/longest_lived_male_law.html",
-        "spotlights/longevity/wilson/longest_lived_female_wilson.html",
-        "spotlights/zodiac/tree/zodiac_tree.html",
-        "spotlights/press/press_media_1775.html",
-        "spotlights/zodiac/reynolds_law/zodiac_reynolds_law.html",
-        "spotlights/press/press_media_2473.html",
-        "spotlights/longevity/overall/longest_lived_overall.html",
-        "spotlights/marriages/marriages.html",
         "spotlights/longevity/gilroy/longest_lived_female_gilroy.html",
-        "bios/I00009.html",
-        "spotlights/zodiac/gilroy_wilson/zodiac_gilroy_wilson.html",
         "spotlights/origins/reynolds_law/origins_reynolds_law.html",
+        "spotlights/longevity/law/longest_lived_male_law.html",
         "spotlights/deaths/death-and-correction-scotland.html",
+        "spotlights/origins/tree/origins_tree.html",
+        "spotlights/longevity/wilson/longest_lived_female_wilson.html",
+        "stories/the-journey-begins/preview.html",
+        "spotlights/children/most_children_top5.html",
+        "spotlights/press/press_media_1775.html",
         "spotlights/longevity/gilroy/longest_lived_male_gilroy.html",
-        "spotlights/press/press_media_3023.html",
+        "spotlights/zodiac/reynolds_law/zodiac_reynolds_law.html",
+        "spotlights/plantagenet/royal_connection_edward_iii.html",
+        "spotlights/longevity/law/longest_lived_female_law.html",
+        "spotlights/origins/gilroy_wilson/origins_gilroy_wilson.html",
         "spotlights/longevity/wilson/longest_lived_male_wilson.html",
+        "spotlights/zodiac/tree/zodiac_tree.html",
+        "spotlights/press/press_media_2473.html",
+        "stories/william-james-gilroy/preview.html",
+        "spotlights/longevity/reynolds/longest_lived_male_reynolds.html",
+        "spotlights/zodiac/gilroy_wilson/zodiac_gilroy_wilson.html",
         "spotlights/longevity/reynolds/longest_lived_female_reynolds.html",
-        "spotlights/longevity/law/longest_lived_female_law.html"
+        "spotlights/press/press_media_3023.html",
+        "spotlights/marriages/marriages.html",
+        "spotlights/longevity/overall/longest_lived_overall.html",
+        "stories/george-blacklaw/preview.html"
     ],
     "schema_version": "kiosk-manifest-2",
     "titles": {
@@ -49,6 +51,8 @@
         "spotlights/zodiac/gilroy_wilson/zodiac_gilroy_wilson.html": "Star Signs \u2014 Gilroy & Wilson",
         "spotlights/zodiac/reynolds_law/zodiac_reynolds_law.html": "Star Signs \u2014 Reynolds & Law",
         "spotlights/zodiac/tree/zodiac_tree.html": "Star Signs \u2014 All Lines",
-        "bios/I00009.html": "George Blacklaw"
+        "stories/george-blacklaw/preview.html": "George Blacklaw",
+        "stories/the-journey-begins/preview.html": "The Journey Begins",
+        "stories/william-james-gilroy/preview.html": "William James Gilroy"
     }
 }
